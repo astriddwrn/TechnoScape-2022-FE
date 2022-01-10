@@ -81,7 +81,7 @@ https://drive.google.com/storage-object-generated-by-google
 In developing the web, you would put full of your attention to the design. We would using Figma to make everything easier. Here is the link: \
 https://figma.com/link-to-the-draft/some-random-id
 
-The frontend need to be intgrated to backend for fully functionally use. Usually, backend dev would integrate everything in MVC model. Afterthat, frontend dev could start patching the HTML directly from the backend environtment. Guidance for integration could be found in their repository. Here is it...
+The frontend need to be intgrated to backend for fully functionally use. Usually, backend dev would integrate everything in MVC model. Afterthat, frontend dev could start patching the HTML directly from the backend environtment. Guidance for integration could be found in their repository. Here is it... \
 https://gitlab.com/username/technoscape2022-be 
 
 *You may not be informed when the design, content, or FRD updated. That's why you must put your attention to each document... or you just ask your friends who are DnD, Event, or Publication. Communication is the key!*
@@ -166,9 +166,9 @@ feat: put assets and give styling to about us
 [fix] register: fix password validation logic 
 ```
 
-`<status>`: add, patch, enable, disable, fix, bugfix, hotfix refactor, remove, merge. 
-`<scope>` : test, doc, conflict, feat, section, mixed
-`<scope>` (FE): api, page, section, style, asset, util, logic, etc.
+`<status>`: init, add, patch, enable, disable, fix, bugfix, hotfix refactor, remove, merge. \
+`<scope>` : test, doc, conflict, feat, section, mixed \
+`<scope>` (FE): api, page, section, style, asset, util, logic, etc. \
 
 **CSS Naming Standarization**
 
