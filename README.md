@@ -1,93 +1,268 @@
-# TechnoScape2022-FE
+# Technoscape 2022
 
+Rise up to Technoscape 2022. There would be a bunch of experience made in this year. And of course, a bunch of homeworks to be solved, a.k.a. features and bugs. So, keep brave yourself, stay curious, and ask for help. Aaaaand... Fighting!
 
+## Setting Up
 
-## Getting started
+To make web developing easier, we would do basic life skills of developers, copying and pasting. And of course, using another developer's modules to patch everything up, and well using every solved questions popping in stackoverflow. In conclusion... don't be shy to add something else not listed here... or using another thing we may never know. Suprise us.
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+So here is the list...
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+**Backbone**
+- W3C HTML5 Standard
 
-## Add your files
-
-- [ ] [Create](https://gitlab.com/-/experiment/new_project_readme_content:7e4ea1ec9161dc09282839eb45fc809b?https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://gitlab.com/-/experiment/new_project_readme_content:7e4ea1ec9161dc09282839eb45fc809b?https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://gitlab.com/-/experiment/new_project_readme_content:7e4ea1ec9161dc09282839eb45fc809b?https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
-
-```
-cd existing_repo
-git remote add origin https://gitlab.com/alfianzv/technoscape2022-fe.git
-git branch -M main
-git push -uf origin main
+**Styling Modules**
+- Bootstrap 5
+```html
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 ```
 
-## Integrate with your tools
+**Logic Modules**
+- jQuery 3.6 (Google CDN)
+```html
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+```
 
-- [ ] [Set up project integrations](https://gitlab.com/-/experiment/new_project_readme_content:7e4ea1ec9161dc09282839eb45fc809b?https://gitlab.com/alfianzv/technoscape2022-fe/-/settings/integrations)
+- Scroll Magic
+```html
+<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+```
 
-## Collaborate with your team
+**3D Asset**
+- ThreeJS
+- Model Viewer: https://modelviewer.dev/
 
-- [ ] [Invite team members and collaborators](https://gitlab.com/-/experiment/new_project_readme_content:7e4ea1ec9161dc09282839eb45fc809b?https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://gitlab.com/-/experiment/new_project_readme_content:7e4ea1ec9161dc09282839eb45fc809b?https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://gitlab.com/-/experiment/new_project_readme_content:7e4ea1ec9161dc09282839eb45fc809b?https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://gitlab.com/-/experiment/new_project_readme_content:7e4ea1ec9161dc09282839eb45fc809b?https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Automatically merge when pipeline succeeds](https://gitlab.com/-/experiment/new_project_readme_content:7e4ea1ec9161dc09282839eb45fc809b?https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
-
-## Test and Deploy
-
-Use the built-in continuous integration in GitLab.
-
-- [ ] [Get started with GitLab CI/CD](https://gitlab.com/-/experiment/new_project_readme_content:7e4ea1ec9161dc09282839eb45fc809b?https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://gitlab.com/-/experiment/new_project_readme_content:7e4ea1ec9161dc09282839eb45fc809b?https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://gitlab.com/-/experiment/new_project_readme_content:7e4ea1ec9161dc09282839eb45fc809b?https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://gitlab.com/-/experiment/new_project_readme_content:7e4ea1ec9161dc09282839eb45fc809b?https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://gitlab.com/-/experiment/new_project_readme_content:7e4ea1ec9161dc09282839eb45fc809b?https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
-
-***
-
-# Editing this README
-
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!).  Thank you to [makeareadme.com](https://gitlab.com/-/experiment/new_project_readme_content:7e4ea1ec9161dc09282839eb45fc809b?https://www.makeareadme.com/) for this template.
-
-## Suggestions for a good README
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
-
-## Name
-Choose a self-explaining name for your project.
-
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+*P.s. We wouldn't use any styling engine such as sass, postcss, and webpack. And yeah, we would use CDN rather put everything in server. Please update this document if you use any CDN.* \
+*P.s. 3D Asset modules will follow DnD creativity.*
 
 ## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+These installation are need for testing, preview, and QA test. If you use Node Modules, Composer, Choco, or any package manager out there, do not hesitate to put your guidance here.
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+**Liveserver**
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+1. Install [Live server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension to VS Code.
+2. Run it by clicking "Go Live" from the status bar.
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
+**Ngrok**
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+1. Download [Ngrok](https://ngrok.com/download)
+2. Sign up or Sign in your self in Ngrok site.
+3. Open terminal/bash/command prompt and connect your accout by adding your authtoken
 
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+```bash
+$ cd /route/to/unzipped/node
+$ ./ngrok authtoken <token>
+```
 
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+4. Run it with `ngrok http <port>`
+
+## Running Up
+
+When you want to test the site you have been made, just click "Go Live" from the right-bottom corner of VS Code's status bar.
+
+After that, you may want to preview your site online. You could use `ngrok` to forward it from your localhost to internet. This thing called `tunneling` (hope you could understand). To run it, just do...
+
+```bash
+# format
+$ ngrok http <port>
+
+# example
+$ ngrok http 8000
+```
+
+## Program Workflow
+
+We already have functional requirement document (FRD) which would be your base in build the web. Please read this first: \
+https://drive.google.com/storage-object-generated-by-google
+
+In developing the web, you would put full of your attention to the design. We would using Figma to make everything easier. Here is the link: \
+https://figma.com/link-to-the-draft/some-random-id
+
+The frontend need to be intgrated to backend for fully functionally use. Usually, backend dev would integrate everything in MVC model. Afterthat, frontend dev could start patching the HTML directly from the backend environtment. Guidance for integration could be found in their repository. Here is it...
+https://gitlab.com/username/technoscape2022-be 
+
+*You may not be informed when the design, content, or FRD updated. That's why you must put your attention to each document... or you just ask your friends who are DnD, Event, or Publication. Communication is the key!*
+
+*Oh, hey! You could also ask us too...*
+
+## Semantic and Standarization
+
+**Folder Structure**
+
+```css
+docs
+\_ another-docs.md
+\_ some-image.png
+assets
+\_ 3d
+   \_ rocket.glb
+\_ sponsor
+   \_ netsky_512.png
+   \_ carbon_64.webp
+\_ medpar
+\_ medsos
+   \_ facebook.svg
+   \_ instagram.svg
+\_ navigation
+   \_ home.svg
+   \_ back.svg
+   \_ key.svg
+\_ hackathon
+   \_ trophy_1.svg
+   \_ trophy_2.svg
+css
+\_ base
+   \_ base.css
+   \_ slider.css
+   \_ button.css
+\_ home.css
+\_ user-dashboard.css
+\_ virtual-converence.css
+js
+\_ base
+   \_ form-validation.js
+   \_ slider.js
+\_ home.js
+\_ register.js
+index.html
+login.html
+register.html
+```
+
+**Semantic Branching**
+```bash
+# format
+<type>/<feature-title>/<sub-title>/<feature-number>/<date>
+
+# example
+main
+stable/2021-12-24
+development
+experiment/2021-12-24
+
+feature/register
+hotfix/register/password-validation
+
+page/home
+section/home/about-us
+```
+
+`<type>`: main, test, stable, release, experimental, hotfix, bugfix, feature, page, section
+
+**Semantic Committing & Merging**
+
+```bash
+# format
+[<status>](<scope>) <section-name|page-name>: <changes description>
+[<status>] <section-name|page-name>: <changes description>
+<status|scope>: <changes description>
+
+# example
+[add](feat) about-us in home: put assets and give styling to about us
+feat: put assets and give styling to about us
+[fix] register: fix password validation logic 
+```
+
+`<status>`: add, patch, enable, disable, fix, bugfix, hotfix refactor, remove, merge. 
+`<scope>` : test, doc, conflict, feat, section, mixed
+`<scope>` (FE): api, page, section, style, asset, util, logic, etc.
+
+**CSS Naming Standarization**
+
+```css
+/* this rule will effect in every size of device. */
+div#id-for-only-one-element .mainFunction-subFeature-subFeature{
+    /* ... */
+}
+
+/* this rule will effect for desktop size. 
+   sometimes we could ignore this rules and 
+   hope it would do the same thing as larger 
+   screen.*/
+@media only screen and (max-width:1024){
+    /* ... */
+}
+
+/* this rule will effect for tablet size */
+@media only screen and (max-width:768){
+    /* ... */
+}
+
+/* this rule will effect for mobile size */
+@media only screen and (max-width:320){
+    /* ... */
+}
+
+/* if there are some condition which cannot be meet
+   in every case of media rules above, you could
+   add your own. */
+@media only screen and (max-width:673){
+    /* ...  */
+}
+```
+
+REMEMBER! The latest rules stated in css would overide every rules above it.
+
+**Form Standarization**
+
+Remember to encapsulate every div/element which has input that would send data to backend using `<form>` tag. Please use `<button>` instead `<div>` if it wants to interact with backend.
+
+```html
+<form id="register" action="" method="POST" enctype="application/x-www-form-urlencoded">
+    <input type="text" name="table_colomn_name"
+                       value="input name is same as colomn name in database">
+    <button type="submit">Register</button>
+</form>
+```
+
+**Javascript Standarization**
+
+```js
+var variableName = "using camelCase";
+var _hiddenProps = "add underscore";
+
+function alsoUseCamelCase(){}
+function mainFunction__subFeature(){}
+function function_for_technical_use(){}
+```
+
+**HTML Structure Standarization**
+- Screen Size Responsiveness
+- use kebab-case for naming id and class of CSS.
+- use kebab-case for form field `input[name="confirm-password"]`.
+- use camelCase for JS variabel and function.
+- use snake_case for JS serializer and props modifier.
+- use PascalCase for JS class.
+
+**Etc. Standarization**
+- You MUST USE Spaces 4 as indentation
+- DO NOT USE tab or anything else than 4 as indentation.
+
+## Notes
+- don't hesitate to change this readme as long as you need it
+- if you use modules aren't listed above, add the list by yourself. You could ask Project Manager if you need any help
+- Semantic and standarization is recommended to make us easier to track changes and fix everything up. We would be really gratefull if you did it.
+- Along time ago, Chrome works well in everything. Yep E V E R Y T H I N G. As a result, it messing another browser. For example, look up about glassmorphism in Chrome and Firefox, and you would see how chrome mess in everything. So here what I suggest... Check in every browser's render engine you could use
+    - Chromium: Chrome, Edge
+    - Gecko: Firefox, Tor Browser
+    - Webkit: Safari
+    - Internet Explorer (nope), Edge legacy (well... try it)
+    - Opera, Brave, etc.
+    - We like to suggest just Chrome and Firefox if you mind that much.
+- Dealing with Git Merge Conflict? Fix it by yourself. Solving this would help your future self. Prove me.
+- I have a suprise for you all if you could make me suprised too... <br /> *Clue: key to legacy.*
+
+## Security Issue
+> there is nothing to see here.
+
+## References
+- Checking supported rendering feature: https://caniuse.com/
+- Test in real browser: https://www.browserstack.com/
+- Git Cheatsheet: https://www.freecodecamp.org/news/git-cheat-sheet/
+- Git tutorials: https://www.atlassian.com/git/tutorials/what-is-version-control
 
 ## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
-
+> there is nothing to see here.
