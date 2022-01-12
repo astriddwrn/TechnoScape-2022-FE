@@ -1,0 +1,29 @@
+{
+  "name": "technoscape2022-fe",
+  "version": "1.0.0",
+  "description": "Rise up to Technoscape 2022. There would be a bunch of experience made in this year. And of course, a bunch of homeworks to be solved, a.k.a. features and bugs. So, keep brave yourself, stay curious, and ask for help. Aaaaand... Fighting!",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "build": "npx tailwindcss --postcss -i ./postcss/base.css -o ./css/build.css",
+    "watch": "npx tailwindcss --postcss -i ./postcss/base.css -o ./css/build.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/alfianzv/technoscape2022-fe.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/alfianzv/technoscape2022-fe/issues"
+  },
+  "homepage": "https://gitlab.com/alfianzv/technoscape2022-fe#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.2",
+    "postcss": "^8.4.5",
+    "postcss-import": "^14.0.2",
+    "tailwindcss": "^3.0.13"
+  }
+}
