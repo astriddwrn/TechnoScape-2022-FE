@@ -208,7 +208,7 @@ feat: put assets and give styling to about us
 
 `<status>`: init, add, patch, enable, disable, fix, bugfix, hotfix refactor, remove, merge. \
 `<scope>` : test, doc, conflict, feat, section, mixed \
-`<scope>` (FE): api, page, section, style, asset, util, logic, etc.
+`<scope>` (FE): api, page, section, style, asset, util, logic, modules, etc.
 
 **CSS Naming Standarization**
 
@@ -251,9 +251,8 @@ REMEMBER! The latest rules stated in css would overide every rules above it.
 Tailwind is utility-first css frameworks which provide modern browser feature. We could make our own css in more simple way. In the sametime, we would using it with postcss as preprocessor and extend its functionality. First, let we learn how it works.
 
 ```css
-assets
-\_ fonts
-   \_ roboto.tff
+fonts
+\_ roboto.tff
 postcss
 \_ component
    \_ navbar.css
@@ -292,7 +291,7 @@ Better, right? Now, how to mix them. We use `base.css` as the main file. Lets ta
 
 /* components & utilities */
 @import "https://fonts.google.com/";
-@import "./fonts/roboto.tff";
+@import "../fonts/roboto.tff";
 @import "./components/navbar.css";
 @import "./utilities/colors.css";
 
