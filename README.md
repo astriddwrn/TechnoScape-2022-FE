@@ -126,8 +126,6 @@ docs
 \_ another-docs.md
 \_ some-image.png
 assets
-\_ fonts
-   \_ roboto.tff
 \_ 3d
    \_ rocket.glb
 \_ sponsor
@@ -145,6 +143,8 @@ assets
 \_ hackathon
    \_ trophy_1.svg
    \_ trophy_2.svg
+fonts
+\_ roboto.tff
 postcss
 \_ component
    \_ card.css
