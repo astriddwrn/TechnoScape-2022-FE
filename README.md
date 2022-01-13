@@ -108,7 +108,7 @@ We already have functional requirement document (FRD) which would be your base i
 https://drive.google.com/storage-object-generated-by-google
 
 In developing the web, you would put full of your attention to the design. We would using Figma to make everything easier. Here is the link: \
-https://figma.com/link-to-the-draft/some-random-id
+https://www.figma.com/file/1Dy0BIiKX2ady7w8OOBjVq/TechnoScape-2022-Website?node-id=0%3A1
 
 The frontend need to be intgrated to backend for fully functionally use. Usually, backend dev would integrate everything in MVC model. Afterthat, frontend dev could start patching the HTML directly from the backend environtment. Guidance for integration could be found in their repository. Here is it... \
 https://gitlab.com/alfianzv/technoscape2022-be 
