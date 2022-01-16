@@ -126,11 +126,13 @@ docs
 \_ another-docs.md
 \_ some-image.png
 assets
+\_ logo
+   \_ logo-black.svg
 \_ 3d
    \_ rocket.glb
 \_ sponsor
-   \_ netsky_512.png
-   \_ carbon_64.webp
+   \_ netsky-512.png
+   \_ carbon-64.webp
 \_ medpar
    \_ filemagz.png
 \_ medsos
@@ -141,8 +143,8 @@ assets
    \_ back.svg
    \_ key.svg
 \_ hackathon
-   \_ trophy_1.svg
-   \_ trophy_2.svg
+   \_ trophy-1.svg
+   \_ trophy-2.svg
 fonts
 \_ roboto.tff
 postcss
