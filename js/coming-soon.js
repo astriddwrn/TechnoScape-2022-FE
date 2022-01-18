@@ -5,7 +5,7 @@ $('#msg-error').hide();
 $('#msg-success').hide();
 
 $('.btn-close').on('click', function(){
-    $(this).parent().hide();
+    $(this).parent().slideUp('fast');
 });
 
 $('#input-email').on('focus', () => {
@@ -67,7 +67,7 @@ const statusAnimate = (sts) => {
 // validation
 $('#btn-submit').on('click', () => {
     if(!$('#input-email').val()){
-        $('#msg-error').show();
+        $('#msg-error').slideDown('fast');
         $('#msg-error').children('.text').text('Silakan masukan alamat email-mu!');
         statusAnimate('#failed');
     }
@@ -75,12 +75,12 @@ $('#btn-submit').on('click', () => {
         const regex = /^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i;
         const validateEmail = regex.test($('#input-email').val())
         if(!validateEmail){
-            $('#msg-error').show();
+            $('#msg-error').slideDown('fast');
             $('#msg-error').children('.text').text('Email yang kamu masukan tidak valid!');
             statusAnimate('#failed');
         }
         else{
-            $('#msg-error').hide();
+            $('#msg-error').slideUp();
             statusAnimate('#done');
             return;
         }
