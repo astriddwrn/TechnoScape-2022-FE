@@ -62,6 +62,12 @@ const statusAnimate = (sts) => {
         $(sts)
         .removeClass('text-animate');
     }, t4);
+
+    if(sts==='#done'){
+        setTimeout(() => {
+           $('form').submit();
+        }, 3000);
+    }
 }
 
 // validation
