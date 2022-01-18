@@ -512,18 +512,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-right: 1.75rem;
 }
 
-.-mt-10 {
-  margin-top: -2.5rem;
-}
-
-.-mt-5 {
-  margin-top: -1.25rem;
-}
-
-.-mt-3 {
-  margin-top: -0.75rem;
-}
-
 .flex {
   display: flex;
 }
@@ -540,6 +528,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 3.5rem;
 }
 
+.w-full {
+  width: 100%;
+}
+
+.w-96 {
+  width: 24rem;
+}
+
 .w-screen {
   width: 100vw;
 }
@@ -548,20 +544,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 2rem;
 }
 
-.w-full {
-  width: 100%;
-}
-
-.w-10\/12 {
-  width: 83.333333%;
+.w-11\/12 {
+  width: 91.666667%;
 }
 
 .w-56 {
   width: 14rem;
-}
-
-.w-96 {
-  width: 24rem;
 }
 
 .w-40 {
@@ -582,22 +570,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .w-\[350px\] {
   width: 350px;
-}
-
-.w-0 {
-  width: 0px;
-}
-
-.w-9\/12 {
-  width: 75%;
-}
-
-.w-11\/12 {
-  width: 91.666667%;
-}
-
-.transform {
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .cursor-pointer {
@@ -622,10 +594,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .justify-between {
   justify-content: space-between;
-}
-
-.justify-around {
-  justify-content: space-around;
 }
 
 .justify-evenly {
@@ -678,26 +646,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-right: 1.5rem;
 }
 
-.px-0 {
-  padding-left: 0px;
-  padding-right: 0px;
-}
-
-.px-5 {
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-}
-
-.px-7 {
-  padding-left: 1.75rem;
-  padding-right: 1.75rem;
-}
-
-.py-5 {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-}
-
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -725,9 +673,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 1;
 }
 
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 .tracking-wide {
@@ -756,25 +704,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .opacity-0 {
   opacity: 0;
-}
-
-.shadow-bsInput {
-  --tw-shadow: 5px 7px 25px 5px rgba(213, 213, 213, 0.16);
-  --tw-shadow-colored: 5px 7px 25px 5px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.blur {
-  --tw-blur: blur(8px);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
-.transition {
-  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
 }
 
 .transition-all {
@@ -897,10 +826,6 @@ textarea:focus, input:focus{
   margin-top: -0.75rem;
 }
 
-.hover\:bg-cLinearGradientRed:hover {
-  background-image: linear-gradient(90deg, #FF7D7D 50%, #EF7373 122.98%);
-}
-
 .hover\:pt-2:hover {
   padding-top: 0.5rem;
 }
@@ -928,10 +853,6 @@ textarea:focus, input:focus{
 
   .lg\:flex-row {
     flex-direction: row;
-  }
-
-  .lg\:flex-col {
-    flex-direction: column;
   }
 }
 

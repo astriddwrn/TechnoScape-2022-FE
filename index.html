@@ -91,13 +91,20 @@
             </div> 
         </div>
         <div class="right-wrapper">
-            <div class="3d h-[450px] w-[350px] bg-cWhite">
-                3D
+            <div id="model" class="3d h-[450px] w-[350px]">
+                
             </div>
         </div>
     </div>
 
     <script src="./js/coming-soon.js"></script>
+    <script type="module">
+        import Iora from './js/base/Iora.js';
+        window.Iora = Iora;
+
+        var iora = new Iora($("#model"));
+        window.iora = iora;
+    </script>
 
 </body>
 </html>
