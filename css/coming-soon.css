@@ -16,7 +16,7 @@
     transform: translateX(-100%);
 }
 .paper-plane-active{
-    transform: translateX(300%);
+    transform: translateX(400%);
     transition: transform 1s 0.3s ease-in-out;
 }
 
@@ -68,4 +68,12 @@
     100% {
         font-size: 1.125rem
     }
+}
+
+@media (min-width: 640px) {
+    .paper-plane-active{
+        transform: translateX(300%);
+        transition: transform 1s 0.3s ease-in-out;
+    }
+
 }
