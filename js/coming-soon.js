@@ -76,7 +76,7 @@ $('#btn-submit').on('click', () => {
         const validateEmail = regex.test($('#input-email').val())
         if(!validateEmail){
             $('#msg-error').slideDown('fast');
-            $('#msg-error').children('.text').text('Email yang kamu masukan tidak valid!');
+            $('#msg-error').children('.text').text('Alamat email yang kamu masukan tidak valid! (Harus memiliki @ dan .)');
             statusAnimate('#failed');
         }
         else{
