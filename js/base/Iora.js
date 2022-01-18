@@ -135,7 +135,8 @@ class Scene{
 
     ready({objects, container}){
         objects["iora"].then(function(gltf){
-            console.log("load finished");
+            $('#loading-page').hide();
+
             $("body").mousemove(function(e){
                 const offset = container.offset();
                 const width = container.width();
@@ -146,7 +147,6 @@ class Scene{
                 var y = (left - e.pageX) * -1;
                 var x = top - e.pageY;
 
-                document.title = x;
                 objects["iora"].rotation.set((90 + (x * -30/top)) * Math.PI / 180, (y/left) * 30 * Math.PI / 180,0);
             });
         });

@@ -1,6 +1,6 @@
-$(window).on('load', function () {
-    $('#loading-page').hide();
-}) 
+// $(window).on('load', function () {
+//     $('#loading-page').hide();
+// });
 $('#msg-error').hide();
 $('#msg-success').hide();
 
@@ -61,6 +61,10 @@ const statusAnimate = (sts) => {
         .removeClass('icon-animate');
         $(sts)
         .removeClass('text-animate');
+
+        $('#paper-plane')
+        .removeClass('paper-plane-active')
+        .addClass('paper-plane-deactive');
     }, t4);
 }
 

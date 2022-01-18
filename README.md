@@ -105,10 +105,14 @@ $ ngrok http 8000
 ## Program Workflow
 
 We already have functional requirement document (FRD) which would be your base in build the web. Please read this first: \
-https://drive.google.com/storage-object-generated-by-google
+https://docs.google.com/document/d/1EHvv8X8cDJaF9uN81NnpvOlQRwariQEPcWFoWMdmb9Y/edit?usp=sharing
 
 In developing the web, you would put full of your attention to the design. We would using Figma to make everything easier. Here is the link: \
 https://www.figma.com/file/1Dy0BIiKX2ady7w8OOBjVq/TechnoScape-2022-Website?node-id=0%3A1
+
+You may also need assets and documentations, and here are your shortcuts:\
+https://bit.ly/GoogleDrive_TeRe \
+https://bit.ly/SpreadsheatKontenAset_Publikasi_DnD
 
 The frontend need to be intgrated to backend for fully functionally use. Usually, backend dev would integrate everything in MVC model. Afterthat, frontend dev could start patching the HTML directly from the backend environtment. Guidance for integration could be found in their repository. Here is it... \
 https://gitlab.com/alfianzv/technoscape2022-be 
