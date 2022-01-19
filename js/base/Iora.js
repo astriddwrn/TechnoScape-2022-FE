@@ -16,6 +16,30 @@ export function PromiseHooks(){
     return prom;
 }
 
+export function getAllChildren(objects){
+    const mixed = [objects];
+
+    const child = objects.children;
+
+    // mixed.push(...child);
+    child.forEach(function(el, i){
+        mixed.push(...getAllChildren(el));
+    });
+
+    return mixed;
+}
+
+function getChildren(object){
+    console.log({object});
+
+    const children = object.children;
+
+    console.log(children);
+    children.forEach(function(el, i){
+        getChildren(el);
+    });
+}
+
 // CLASS
 class Scene{
     self = null;
@@ -71,8 +95,8 @@ class Scene{
 
     load_lights(context){
         // Hemisphere
-        const hemi = new THREE.HemisphereLight(0xffffff, 0xaaaaaa, 1);
-        hemi.position.set(500,0,500);
+        const hemi = new THREE.HemisphereLight(0xffffff, 0xcccccc, 1.2);
+        hemi.position.set(200,-200,0);
         hemi.castShadow = true;
         this.lights.push(hemi);
         this.scene.add(hemi);
@@ -120,10 +144,14 @@ class Scene{
             model.castShadow = true;
             model.receiveShadow = false;
 
-            const parts = [model.children[0], ...(model.children[0].children)];
+            // const parts = [model.children[0], ...(model.children[0].children)];
+            const parts = getAllChildren(model);
+            console.log(parts);
             parts.forEach(function(el, i){
-                el.material.metalness = 0;
-                el.material.roughness = 1;
+                if(typeof el.material == 'object'){
+                    // el.material.metalness = 0;
+                    // el.material.roughness = 1;
+                }
             });
 
             objects['iora'] = model;
