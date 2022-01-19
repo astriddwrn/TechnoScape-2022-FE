@@ -95,8 +95,10 @@ class Scene{
 
     load_lights(context){
         // Hemisphere
-        const hemi = new THREE.HemisphereLight(0xffffff, 0xcccccc, 1.2);
+        const hemi = new THREE.HemisphereLight(0xffffff, 0xcccccc, 1);
+        // const hemi = new THREE.HemisphereLight(0xffffff, 0xaaaaaa, 2);
         hemi.position.set(200,-200,0);
+        // hemi.position.set(500,0,500);
         hemi.castShadow = true;
         this.lights.push(hemi);
         this.scene.add(hemi);
@@ -105,7 +107,7 @@ class Scene{
     load_cameras(context){
         // Camera
         const camera = new THREE.PerspectiveCamera(75, this.container.width() / this.container.height(), 0.1, 10000);
-        camera.position.set(0, -250, 100);
+        camera.position.set(0, -210, 100);
         camera.rotation.set(90 * Math.PI / 180, 0, 0);
         this.cameras.push(camera);
 
@@ -149,8 +151,10 @@ class Scene{
             console.log(parts);
             parts.forEach(function(el, i){
                 if(typeof el.material == 'object'){
-                    // el.material.metalness = 0;
-                    // el.material.roughness = 1;
+                    el.material.metalness = 0;
+                    el.material.roughness = 1;
+                    // el.material.metalness = 0.5;
+                    // el.material.roughness = 0;
                 }
             });
 
@@ -175,7 +179,9 @@ class Scene{
                 var y = (left - e.pageX) * -1;
                 var x = top - e.pageY;
 
-                objects["iora"].rotation.set((90 + (x * -30/top)) * Math.PI / 180, (y/left) * 30 * Math.PI / 180,0);
+                // atas-bawah (x * NUM/top)
+                // kanan-kiri (y/left) * NUM
+                objects["iora"].rotation.set((90 + (x * -3/top)) * Math.PI / 180, (y/left) * 10 * Math.PI / 180,0);
             });
         });
     }
@@ -191,15 +197,17 @@ class Scene{
         const iora = objects["iora"];
         const A = 0.0001, S0 = -15, Sn = 10;
         const mid = Math.round(S0 + ((Sn - S0)/2));
-        const t = state.move_time / 3;
+        // delay waktu
+        const t = state.move_time / 5;
 
         if(iora instanceof THREE.Object3D){
             state.move_vt = state.move_v0 + (state.move_speed * A * t * t / 2);
             if((t * Math.sign(t)) % 1 == 0) iora.position.z += state.move_vt;
 
             state.move_time++;
-            if(state.move_vt > 0.5 || state.move_vt < -0.5){
-                state.move_v0 = 0.499999 * Math.sign(state.move_vt);
+            // kecepatan optimum
+            if(state.move_vt > 0.3 || state.move_vt < -0.3){
+                state.move_v0 = 0.299999 * Math.sign(state.move_vt);
                 state.move_time = 0;
                 state.move_speed *= -1;
             }

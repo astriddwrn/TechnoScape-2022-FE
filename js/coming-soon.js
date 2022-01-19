@@ -66,6 +66,12 @@ const statusAnimate = (sts) => {
         .removeClass('paper-plane-active')
         .addClass('paper-plane-deactive');
     }, t4);
+
+    if(sts==='#done'){
+        setTimeout(() => {
+           $('form').submit();
+        }, 3000);
+    }
 }
 
 // validation
