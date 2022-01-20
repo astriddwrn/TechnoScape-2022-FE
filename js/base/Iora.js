@@ -160,7 +160,7 @@ class Renderer extends THREE.WebGLRenderer{
                 // atas-bawah (x * NUM/top)
                 // kanan-kiri (y/left) * NUM
                 // objects["iora"].rotation.set((90 + (x * -3/top)) * Math.PI / 180, (y/left) * 10 * Math.PI / 180,0);
-                iora.children[0].rotation.set((x * -3/top) * Math.PI / 180, (-20 + ((y/left) * 10)) * Math.PI / 180,0);
+                iora.children[0].rotation.set((x * -5/top) * Math.PI / 180, (-5 + ((y/left) * 20)) * Math.PI / 180,0);
             });
         });
     }
