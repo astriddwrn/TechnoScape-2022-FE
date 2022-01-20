@@ -5,17 +5,6 @@ import { GLTFLoader } from 'https://cdn.skypack.dev/three/examples/jsm/loaders/G
 // HELPER
 window.THREE = THREE;
 
-export function PromiseHooks(){
-    const hooks = {};
-    const prom = new Promise((res, rej)=>{
-        hooks.res = res;
-        hooks.rej = rej;
-    });
-    prom.resolve = hooks.res;
-    prom.reject = hooks.rej;
-    return prom;
-}
-
 export function getAllChildren(objects){
     const mixed = [objects];
 
@@ -29,19 +18,8 @@ export function getAllChildren(objects){
     return mixed;
 }
 
-function getChildren(object){
-    console.log({object});
-
-    const children = object.children;
-
-    console.log(children);
-    children.forEach(function(el, i){
-        getChildren(el);
-    });
-}
-
 // CLASS
-class Scene extends THREE.EventDispatcher{
+class Renderer extends THREE.WebGLRenderer{
     self = null;
     container = null;
 
@@ -53,30 +31,26 @@ class Scene extends THREE.EventDispatcher{
         move_vt: 0,
         move_v0: 0,
         move_time: 0,
+        ratio_add: -5
     };
 
     scene = null; // Three.Scene
-    renderer = null; // _renderer<Three.WebGLRenderer> | EffectComposer
-    _renderer = null; // Three.WebGLRenderer
+    renderer = null; // this<Three.WebGLRenderer> | EffectComposer
 
-    lights = null; // Three.Group
     camera = null; // Used Camera for Rendering
     cameras = null; // Three.ArrayCamera
 
     materials = [];
     textures = [];
-    objects = [];
 
-    constructor(container){
-        super();
+    constructor(params){
+        super(params);
         this.self = this;
-        this.container = $(container);
+        this.$container = $(params.container);
 
         this.scene = new THREE.Scene();
-        this._renderer = new THREE.WebGLRenderer({alpha:true, antialias:true});
-        this.renderer = this._renderer;
+        this.renderer = this;
 
-        this.lights = new THREE.Group();
         this.load_lights(this);
 
         this.cameras = new THREE.ArrayCamera([]);
@@ -90,7 +64,7 @@ class Scene extends THREE.EventDispatcher{
         this.register_textures(this);
         this.load_objects(this);
 
-        this.container.append(this.renderer.domElement);
+        this.$container.append(this.domElement);
         this.ready(this);
 
         this.clock = new THREE.Clock(true);
@@ -98,38 +72,36 @@ class Scene extends THREE.EventDispatcher{
         this._tick(this);
     }
 
-    load_lights(context){
+    load_lights({scene}){
         // Point Light - Top Front Left
         const point1 = new THREE.PointLight( 0xffffff, 0.8, 10000 );
         point1.position.set(-113,-598,480);
-        this.lights.add(point1);
-        this.scene.add(point1);
+        scene.add(point1);
 
         // Point Light - Bottom Front Right
         const point2 = new THREE.PointLight( 0xffffff, 0.5, 10000 );
         point2.position.set(100,-585,-463);
-        this.lights.add(point2);
-        this.scene.add(point2);
+        scene.add(point2);
     }
 
-    load_cameras(context){
+    load_cameras({$container, cameras, self}){
         // Camera
-        const camera = new THREE.PerspectiveCamera(75, this.container.width() / this.container.height(), 0.1, 10000);
+        const camera = new THREE.PerspectiveCamera(75, $container.width() / $container.height(), 0.1, 10000);
         camera.position.set(0, -210, 100);
         camera.rotation.set(90 * Math.PI / 180, 0, 0);
-        this.cameras.add(camera);
+        cameras.add(camera);
         
-        this.camera = camera;
+        self.camera = camera;
     }
 
     load_controls(context){
         //
     }
 
-    load_effects(context){
+    load_effects({self, scene, camera}){
         // Renderer
-        this.renderer.outputEncoding = THREE.sRGBEncoding;
-        this.renderer.toneMapping = THREE.ACESFilmicToneMapping;
+        self.outputEncoding = THREE.sRGBEncoding;
+        self.toneMapping = THREE.ACESFilmicToneMapping;
     }
 
     register_materials(context){
@@ -140,17 +112,16 @@ class Scene extends THREE.EventDispatcher{
         //
     }
 
-    load_objects({objects, scene}){
+    load_objects({scene}){
         const loader = new GLTFLoader();
 
         // Load IORA
-        const iora = objects['iora'] = PromiseHooks();
-        loader.load('./assets/3d/mascot.glb', iora.resolve, undefined, iora.reject);
-        iora.then(function(gltf){
+        loader.load('./assets/3d/mascot.glb', function(gltf){
             const model = gltf.scene;
             gltf.scene.gltf = gltf;
 
-            model.scale.set(100,100,100);     
+            model.name = 'iora';
+            model.scale.set(100,100,100);
             model.rotation.set(92 * Math.PI / 180, 0, 0);
             model.children[0].rotation.set(0, -20 * Math.PI / 180, 0);
             model.position.set(0,0,-25);
@@ -165,21 +136,21 @@ class Scene extends THREE.EventDispatcher{
                 }
             });
 
-            objects['iora'] = model;
             scene.add(model);
-            return gltf;
-        });
+            scene.dispatchEvent({type:'iora_loaded', gltf});
+        }, undefined, undefined);
 
     }
 
-    ready({objects, container}){
-        objects["iora"].then(function(gltf){
+    ready({$container, scene, self}){
+        scene.addEventListener('iora_loaded', function(gltf){
+            const iora = scene.getObjectByName('iora');
             $('#loading-page').hide();
 
             $("body").mousemove(function(e){
-                const offset = container.offset();
-                const width = container.width();
-                const height = container.height();
+                const offset = $container.offset();
+                const width = $container.width();
+                const height = $container.height();
                 const left = offset.left + (width / 2);
                 const top = offset.top + (height / 2);
 
@@ -189,7 +160,7 @@ class Scene extends THREE.EventDispatcher{
                 // atas-bawah (x * NUM/top)
                 // kanan-kiri (y/left) * NUM
                 // objects["iora"].rotation.set((90 + (x * -3/top)) * Math.PI / 180, (y/left) * 10 * Math.PI / 180,0);
-                objects["iora"].children[0].rotation.set((x * -3/top) * Math.PI / 180, (-20 + ((y/left) * 10)) * Math.PI / 180,0);
+                iora.children[0].rotation.set((x * -3/top) * Math.PI / 180, (-20 + ((y/left) * 10)) * Math.PI / 180,0);
             });
         });
     }
@@ -198,11 +169,9 @@ class Scene extends THREE.EventDispatcher{
         //
     }
 
-    render(context){
-        var {objects, state, time} = context;
-
+    animate({scene, state, clock}){
         // Ngambang [-15 ~ 0 ~ 10]
-        const iora = objects["iora"];
+        const iora = scene.getObjectByName('iora');
 
         // A dalam px / frames ^ 2
         const A = 0.0001, S0 = -15, Sn = 10;
@@ -225,21 +194,21 @@ class Scene extends THREE.EventDispatcher{
         }
     }
 
-    _tick(context){
-        context.frame++;
+    _tick({self, state, scene, renderer, camera, $container}){
+        self.frame++;
         requestAnimationFrame((t)=>{
-            context._time = t;
-            context._tick(context);
+            self._time = t;
+            self._tick(self);
         });
 
-        context.renderer.setSize(context.container.width(), context.container.height());
-        context.camera.aspect = context.container.width() / context.container.height();
-        context.camera.updateProjectionMatrix()
+        renderer.setSize($container.width(), $container.height());
+        camera.aspect = ($container.width() + state.ratio_add) / $container.height();
+        camera.updateProjectionMatrix()
 
-        context.update(context);
-        context.render(context);
-        context.renderer.render(context.scene, context.camera);
+        self.update(self);
+        self.animate(self);
+        renderer.render(scene, camera);
     }
 }
 
-export default Scene;
+export default Renderer;
