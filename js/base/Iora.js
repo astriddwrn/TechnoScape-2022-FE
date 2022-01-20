@@ -41,42 +41,46 @@ function getChildren(object){
 }
 
 // CLASS
-class Scene{
+class Scene extends THREE.EventDispatcher{
     self = null;
     container = null;
 
     frame = 0;
-    time = 0;
-    _time = 0;
-    _start_time = 0;
+    clock = 0; // Three.Clock
+    _time = 0; // requestAnimationFrame((_time)=>{})
     state = {
-        // move: 'up',
-        // move_start: -15,
         move_speed: 1,
         move_vt: 0,
         move_v0: 0,
         move_time: 0,
     };
 
-    scene = null;
-    renderer = null;
+    scene = null; // Three.Scene
+    renderer = null; // _renderer<Three.WebGLRenderer> | EffectComposer
+    _renderer = null; // Three.WebGLRenderer
 
-    lights = [];
-    camera = null;
-    cameras = [];
+    lights = null; // Three.Group
+    camera = null; // Used Camera for Rendering
+    cameras = null; // Three.ArrayCamera
 
     materials = [];
     textures = [];
     objects = [];
 
     constructor(container){
+        super();
         this.self = this;
         this.container = $(container);
 
         this.scene = new THREE.Scene();
-        this.renderer = new THREE.WebGLRenderer({alpha:true, antialias:true});
+        this._renderer = new THREE.WebGLRenderer({alpha:true, antialias:true});
+        this.renderer = this._renderer;
 
+        this.lights = new THREE.Group();
         this.load_lights(this);
+
+        this.cameras = new THREE.ArrayCamera([]);
+        this.scene.add(this.cameras);
         this.load_cameras(this);
 
         this.load_controls(this);
@@ -89,45 +93,23 @@ class Scene{
         this.container.append(this.renderer.domElement);
         this.ready(this);
 
-        this._start_time = performance.now();
+        this.clock = new THREE.Clock(true);
+        this.clock.start();
         this._tick(this);
     }
 
     load_lights(context){
-        // Hemisphere
-        // const hemi = new THREE.HemisphereLight(0xffffff, 0x222222, 1.2);
-        // // const hemi = new THREE.HemisphereLight(0xaaaaaa, 0x555555, 1.5);
-        // // const hemi = new THREE.HemisphereLight(0xffffff, 0xaaaaaa, 2);
-        // // hemi.position.set(200,-1000,0);
-        // hemi.position.set(-113,-598,480);
-        // // hemi.position.set(500,0,500);
-        // hemi.castShadow = true;
-        // this.lights.push(hemi);
-        // this.scene.add(hemi);
-
-        // DirectionalLight
-        // const dire = new THREE.DirectionalLight( 0xffffff,1 );
-        // dire.position.set(-113,-598,480);
-        // this.lights.push(dire);
-        // this.scene.add(dire);
-
         // Point Light - Top Front Left
         const point1 = new THREE.PointLight( 0xffffff, 0.8, 10000 );
         point1.position.set(-113,-598,480);
-        this.lights.push(point1);
+        this.lights.add(point1);
         this.scene.add(point1);
 
         // Point Light - Bottom Front Right
         const point2 = new THREE.PointLight( 0xffffff, 0.5, 10000 );
         point2.position.set(100,-585,-463);
-        this.lights.push(point2);
+        this.lights.add(point2);
         this.scene.add(point2);
-
-        // Point Light - Back
-        // const point3 = new THREE.PointLight( 0xffffff, 0.2, 10000 );
-        // point3.position.set(0,500,200);
-        // this.lights.push(point3);
-        // this.scene.add(point3);
     }
 
     load_cameras(context){
@@ -135,17 +117,8 @@ class Scene{
         const camera = new THREE.PerspectiveCamera(75, this.container.width() / this.container.height(), 0.1, 10000);
         camera.position.set(0, -210, 100);
         camera.rotation.set(90 * Math.PI / 180, 0, 0);
-        this.cameras.push(camera);
-
-        // Orthographic
-        // const camera = new THREE.OrthographicCamera(-200,
-        //                                             this.container.width() - 200,
-        //                                             this.container.height() / 2, 
-        //                                             this.container.height() / -2, 0.1, 10000);
-        // camera.position.set(0, -210, 100);
-        // camera.rotation.set(90 * Math.PI / 180, 0, 0);
-        // this.cameras.push(camera);
-
+        this.cameras.add(camera);
+        
         this.camera = camera;
     }
 
@@ -157,8 +130,6 @@ class Scene{
         // Renderer
         this.renderer.outputEncoding = THREE.sRGBEncoding;
         this.renderer.toneMapping = THREE.ACESFilmicToneMapping;
-        // this.renderer.toneMappingExposure = 2.8;
-        // this.renderer.physicallyCorrectLights = true
     }
 
     register_materials(context){
@@ -186,16 +157,11 @@ class Scene{
             model.castShadow = true;
             model.receiveShadow = false;
 
-            // const parts = [model.children[0], ...(model.children[0].children)];
             const parts = getAllChildren(model);
             parts.forEach(function(el, i){
                 if(typeof el.material == 'object'){
                     el.material.metalness = 0;
                     el.material.roughness = 0.5;
-                    // el.material.metalness = 0.2;
-                    // el.material.roughness = 0.5;
-                    // el.material.metalness = 0.5;
-                    // el.material.roughness = 0;
                 }
             });
 
@@ -222,7 +188,6 @@ class Scene{
 
                 // atas-bawah (x * NUM/top)
                 // kanan-kiri (y/left) * NUM
-                // objects["iora"].rotation.set((90 + (x * -3/top)) * Math.PI / 180, (y/left) * 10 * Math.PI / 180,0);
                 objects["iora"].children[0].rotation.set((x * -3/top) * Math.PI / 180, (y/left) * 10 * Math.PI / 180,0);
             });
         });
@@ -261,7 +226,6 @@ class Scene{
 
     _tick(context){
         context.frame++;
-        context.time = performance.now() - context._start_time;
         requestAnimationFrame((t)=>{
             context._time = t;
             context._tick(context);
