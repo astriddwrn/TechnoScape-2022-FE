@@ -1,6 +1,6 @@
 import * as THREE from 'https://cdn.skypack.dev/three';
 import { GLTFLoader } from 'https://cdn.skypack.dev/three/examples/jsm/loaders/GLTFLoader.js';
-import { ArcballControls } from 'https://cdn.skypack.dev/three/examples/jsm/controls/ArcballControls.js';
+// import { ArcballControls } from 'https://cdn.skypack.dev/three/examples/jsm/controls/ArcballControls.js';
 
 // HELPER
 window.THREE = THREE;
@@ -95,13 +95,39 @@ class Scene{
 
     load_lights(context){
         // Hemisphere
-        const hemi = new THREE.HemisphereLight(0xffffff, 0xcccccc, 1);
-        // const hemi = new THREE.HemisphereLight(0xffffff, 0xaaaaaa, 2);
-        hemi.position.set(200,-200,0);
-        // hemi.position.set(500,0,500);
-        hemi.castShadow = true;
-        this.lights.push(hemi);
-        this.scene.add(hemi);
+        // const hemi = new THREE.HemisphereLight(0xffffff, 0x222222, 1.2);
+        // // const hemi = new THREE.HemisphereLight(0xaaaaaa, 0x555555, 1.5);
+        // // const hemi = new THREE.HemisphereLight(0xffffff, 0xaaaaaa, 2);
+        // // hemi.position.set(200,-1000,0);
+        // hemi.position.set(-113,-598,480);
+        // // hemi.position.set(500,0,500);
+        // hemi.castShadow = true;
+        // this.lights.push(hemi);
+        // this.scene.add(hemi);
+
+        // DirectionalLight
+        // const dire = new THREE.DirectionalLight( 0xffffff,1 );
+        // dire.position.set(-113,-598,480);
+        // this.lights.push(dire);
+        // this.scene.add(dire);
+
+        // Point Light - Top Front Left
+        const point1 = new THREE.PointLight( 0xffffff, 0.8, 10000 );
+        point1.position.set(-113,-598,480);
+        this.lights.push(point1);
+        this.scene.add(point1);
+
+        // Point Light - Bottom Front Right
+        const point2 = new THREE.PointLight( 0xffffff, 0.5, 10000 );
+        point2.position.set(100,-585,-463);
+        this.lights.push(point2);
+        this.scene.add(point2);
+
+        // Point Light - Back
+        // const point3 = new THREE.PointLight( 0xffffff, 0.2, 10000 );
+        // point3.position.set(0,500,200);
+        // this.lights.push(point3);
+        // this.scene.add(point3);
     }
 
     load_cameras(context){
@@ -111,6 +137,15 @@ class Scene{
         camera.rotation.set(90 * Math.PI / 180, 0, 0);
         this.cameras.push(camera);
 
+        // Orthographic
+        // const camera = new THREE.OrthographicCamera(-200,
+        //                                             this.container.width() - 200,
+        //                                             this.container.height() / 2, 
+        //                                             this.container.height() / -2, 0.1, 10000);
+        // camera.position.set(0, -210, 100);
+        // camera.rotation.set(90 * Math.PI / 180, 0, 0);
+        // this.cameras.push(camera);
+
         this.camera = camera;
     }
 
@@ -119,7 +154,11 @@ class Scene{
     }
 
     load_effects(context){
-        //
+        // Renderer
+        this.renderer.outputEncoding = THREE.sRGBEncoding;
+        this.renderer.toneMapping = THREE.ACESFilmicToneMapping;
+        // this.renderer.toneMappingExposure = 2.8;
+        // this.renderer.physicallyCorrectLights = true
     }
 
     register_materials(context){
@@ -141,18 +180,20 @@ class Scene{
             gltf.scene.gltf = gltf;
 
             model.scale.set(100,100,100);     
-            model.rotation.set(90 * Math.PI / 180, -20 * Math.PI / 180, 0);
+            model.rotation.set(90 * Math.PI / 180, 0, 0);
+            model.children[0].rotation.set(0, -20 * Math.PI / 180, 0);
             model.position.set(0,0,-25);
             model.castShadow = true;
             model.receiveShadow = false;
 
             // const parts = [model.children[0], ...(model.children[0].children)];
             const parts = getAllChildren(model);
-            console.log(parts);
             parts.forEach(function(el, i){
                 if(typeof el.material == 'object'){
                     el.material.metalness = 0;
-                    el.material.roughness = 1;
+                    el.material.roughness = 0.5;
+                    // el.material.metalness = 0.2;
+                    // el.material.roughness = 0.5;
                     // el.material.metalness = 0.5;
                     // el.material.roughness = 0;
                 }
@@ -181,7 +222,8 @@ class Scene{
 
                 // atas-bawah (x * NUM/top)
                 // kanan-kiri (y/left) * NUM
-                objects["iora"].rotation.set((90 + (x * -3/top)) * Math.PI / 180, (y/left) * 10 * Math.PI / 180,0);
+                // objects["iora"].rotation.set((90 + (x * -3/top)) * Math.PI / 180, (y/left) * 10 * Math.PI / 180,0);
+                objects["iora"].children[0].rotation.set((x * -3/top) * Math.PI / 180, (y/left) * 10 * Math.PI / 180,0);
             });
         });
     }
@@ -195,9 +237,12 @@ class Scene{
 
         // Ngambang [-15 ~ 0 ~ 10]
         const iora = objects["iora"];
+
+        // A dalam px / frames ^ 2
         const A = 0.0001, S0 = -15, Sn = 10;
         const mid = Math.round(S0 + ((Sn - S0)/2));
-        // delay waktu
+
+        // delay waktu dalam frames
         const t = state.move_time / 5;
 
         if(iora instanceof THREE.Object3D){
