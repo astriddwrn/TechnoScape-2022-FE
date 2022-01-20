@@ -151,7 +151,7 @@ class Scene extends THREE.EventDispatcher{
             gltf.scene.gltf = gltf;
 
             model.scale.set(100,100,100);     
-            model.rotation.set(90 * Math.PI / 180, 0, 0);
+            model.rotation.set(92 * Math.PI / 180, 0, 0);
             model.children[0].rotation.set(0, -20 * Math.PI / 180, 0);
             model.position.set(0,0,-25);
             model.castShadow = true;
@@ -188,7 +188,8 @@ class Scene extends THREE.EventDispatcher{
 
                 // atas-bawah (x * NUM/top)
                 // kanan-kiri (y/left) * NUM
-                objects["iora"].children[0].rotation.set((x * -3/top) * Math.PI / 180, (y/left) * 10 * Math.PI / 180,0);
+                // objects["iora"].rotation.set((90 + (x * -3/top)) * Math.PI / 180, (y/left) * 10 * Math.PI / 180,0);
+                objects["iora"].children[0].rotation.set((x * -3/top) * Math.PI / 180, (-20 + ((y/left) * 10)) * Math.PI / 180,0);
             });
         });
     }
