@@ -84,12 +84,21 @@ class Renderer extends THREE.WebGLRenderer{
         scene.add(point2);
     }
 
-    load_cameras({$container, cameras, self}){
+    load_cameras({$container, cameras, scene, self}){
         // Camera
         const camera = new THREE.PerspectiveCamera(75, $container.width() / $container.height(), 0.1, 10000);
         camera.position.set(0, -210, 100);
         camera.rotation.set(90 * Math.PI / 180, 0, 0);
         cameras.add(camera);
+
+        // Ortho
+        // const width = $container.width();
+        // const height = $container.height();
+        // const camera = new THREE.OrthographicCamera( width / - 2, width / 2, height / 2, height / - 2, 1, 1000 );
+        // camera.position.set(0, -210, 100);
+        // camera.rotation.set(90 * Math.PI / 180, 0, 0);
+        // cameras.add(camera);
+        // scene.add(camera);
         
         self.camera = camera;
     }
