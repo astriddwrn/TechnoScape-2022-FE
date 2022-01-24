@@ -4,59 +4,79 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./assets/logo/favicon.png" type="image/x-icon">
-    <!-- css -->
-    <link rel="stylesheet" href="./css/build.css">
-    <link rel="stylesheet" href="./css/coming-soon.css">
-    <!-- Jquery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
     <title>TechnoScape 2022</title>
+    <link rel="shortcut icon" href="./assets/logo/favicon.png" type="image/x-icon">
+    <!-- <meta name="description" content="TechnoScape is the biggest annual technology event
+    held by Binus Computer Club (BNCC). Participants can learn with experts from the fields to widen
+    their horizons, share ideas along with innovation, and solve real-life problems. TechnoScape has
+    been held annually since 2018."> -->
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://technoscape.id/">
+    <meta property="og:title" content="TechnoScape 2022">
+    <!-- <meta property="og:description" content="TechnoScape is the biggest annual technology event
+    held by Binus Computer Club (BNCC). Participants can learn with experts from the fields to widen
+    their horizons, share ideas along with innovation, and solve real-life problems. TechnoScape has
+    been held annually since 2018."> -->
+    <!-- <meta property="og:image" content="img/Logo/TechnoScape/meta_img.png"> -->
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://technoscape.id/">
+    <meta property="twitter:title" content="TechnoScape 2022">
+    <!-- <meta property="twitter:description" content="TechnoScape is the biggest annual technology event
+    held by Binus Computer Club (BNCC). Participants can learn with experts from the fields to widen
+    their horizons, share ideas along with innovation, and solve real-life problems. TechnoScape has
+    been held annually since 2018."> -->
+    <!-- <meta property="twitter:image" content="./img/Logo/TechnoScape/meta_img.png"> -->
+
+    <!-- css -->
+    <link rel="stylesheet" href="./css/coming-soon.css?t=202201241400">
+
+    <!-- javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
-
-<style>
-
-</style>
 
 <body class="bg-cBgLight">
     <!-- loading page -->
     <div class="w-full h-screen fixed bg-[#f1f1fb] z-50 flex justify-center items-center"
         id="loading-page">
-        <img class="w-10/12 max-w-[500px]" src="./assets/loading-page/loading-animation.gif" alt="">
+        <img class="w-10/12 max-w-[500px]" src="./assets/loading-page/loading-animation.gif" alt="TechnoScape 2022">
     </div>
 
     <div class="body bg-cBgLight flex flex-row items-center justify-center py-10 min-h-screen">
         <!-- message -->
         <div class="sm:text-lg text-base tracking-wide bg-cBtnGradientCS w-screen sm:px-10 px-5 py-4 font-PJSBold text-cWhite fixed top-0 flex justify-between items-center"
-            id="msg-success">
-            <span class="">Email berhasil dikirim! Kami akan memberikan update TechnoScape 2022 kepadamu!</span> 
+            id="msg-success" style="display:none;">
+            <span class="">Email berhasil dikirim! Kami akan memberikan update TechnoScape 2022 kepadamu!</span>
             <button class="btn-close">
-                <img class="w-8" src="./assets/coming-soon/btn-close.svg" alt="">
+                <img class="w-8" src="./assets/coming-soon/btn-close.svg" alt="TechnoScape 2022">
             </button>
         </div>
 
         <div class="sm:text-lg text-base tracking-wide bg-cLinearGradientRed w-screen sm:px-10 px-5 py-4 font-PJSBold text-cWhite fixed top-0 flex flex-row justify-between items-center"
-            id="msg-error">
-            <div class="w-full text w-full">test</div> 
+            id="msg-error" style="display:none;">
+            <div class="w-full text w-full">test</div>
             <button class="btn-close">
-                <img class="w-8" src="./assets/coming-soon/btn-close.svg" alt="">
+                <img class="w-8" src="./assets/coming-soon/btn-close.svg" alt="TechnoScape 2022">
             </button>
         </div>
 
         <!-- main-container -->
         <div class="main-container w-11/12 flex  flex-col-reverse items-center xl:w-9/12 lg:w-11/12 lg:flex-row lg:justify-between">
             <div class="left-wrapper sm:h-[280px] h-[260px] md:h-[180px] lg:h-[450px] max-w-[500px] sm:max-w-full flex flex-col justify-between ">
-                <img class="w-56 hidden lg:block" src="./assets/logo/logo-black.svg" alt="">
+                <img class="w-56 hidden lg:block" src="./assets/logo/logo-black.svg" alt="TechnoScape 2022">
                 <div class="title font-Ethno text-8xl tracking-wide text-cBlue hidden lg:block">
                     COMING<br>SOON
-                </div> 
-                <div class="slogan text-cGray text-sm tracking-wide text-center lg:text-left">
+                </div>
+                <div class="slogan text-cGray text-sm tracking-wide text-center lg:text-left leading-normal">
                     Event teknologi terbesar BNCC akan segera kembali!<br>
                     Masukkan email Anda untuk mendapatkan kabar terbaru dari TechnoScape 2022!
                 </div>
-                <form class="flex flex-col items-center md:flex-row">
-                    <input class="md:w-96 md:text-left text-center sm:w-10/12 w-11/12 sm:text-lg text-base rounded-full sm:h-14 h-10 sm:py-3 py-1 px-6 text-cDarkerGray placeholder-cLigherGray tracking-wide" 
-                        id="input-email" type="email" placeholder="Masukan email Anda">
-                    <div class="relative mt-4 md:mt-0 overflow-hidden sm:ml-5 ml-0 sm:text-lg text-base bg-cBtnGradientCS md:w-40 w-52 sm:h-14 h-10 rounded-full text-cWhite font-PJSBold tracking-wide hover:shadow-bsBtn transition-all ease-in-out duration-300 cursor-pointer" 
+                <form action="" method="POST" class="flex flex-col items-center md:flex-row">
+                    <input class="md:w-96 md:text-left text-center sm:w-10/12 w-11/12 sm:text-lg text-base rounded-full sm:h-14 h-10 sm:py-3 py-1 px-6 text-cDarkerGray placeholder-cLigherGray tracking-wide"
+                        id="input-email" name="email" type="email" placeholder="Masukkan email Anda">
+                    <div class="relative mt-4 md:mt-0 overflow-hidden sm:ml-5 ml-0 sm:text-lg text-base bg-cBtnGradientCS md:w-40 w-52 sm:h-14 h-10 rounded-full text-cWhite font-PJSBold tracking-wide hover:shadow-bsBtn transition-all ease-in-out duration-300 cursor-pointer"
                         type="">
                         <!-- notify -->
                         <div class="notify-deactive absolute md:w-40 w-52 sm:py-3 py-1 px-6 top-1/2 left-1/2 hover:pt-2 hover:pb-4 transition-all ease-in-out duration-300 text-center"
@@ -64,37 +84,37 @@
                             Notify Me!
                         </div>
                         <!-- paper plane -->
-                        <img class="paper-plane-deactive sm:w-auto w-10" 
-                            id="paper-plane" src="./assets/coming-soon/paper-plane.svg" alt="">
+                        <img class="paper-plane-deactive sm:w-auto w-10"
+                            id="paper-plane" src="./assets/coming-soon/paper-plane.svg" alt="TechnoScape 2022">
                         <!-- done -->
                         <div class="status-deactive absolute w-36 py-4 px-3 top-1/2 left-1/2 flex flex-row items-center justify-evenly text-center transition-transform ease-in-out duration-300 opacity-0"
                             id="done">
-                            <img class="sm:w-7 w-5" 
-                                id="done-icon" src="./assets/coming-soon/done-icon.svg" alt="">
+                            <img class="sm:w-7 w-5"
+                                id="done-icon" src="./assets/coming-soon/done-icon.svg" alt="TechnoScape 2022">
                             <span>Done</span>
-                        </div> 
+                        </div>
                         <!-- failed -->
                         <div class="status-deactive absolute bg-cLinearGradientRed md:w-40 w-52 py-4 md:px-3 px-8 top-1/2 left-1/2 flex flex-row items-center justify-evenly text-center transition-transform ease-in-out duration-300 opacity-0"
                             id="failed">
-                            <img class="sm:w-7 w-5" 
-                                id="failed-icon" src="./assets/coming-soon/failed-icon.svg" alt="">
+                            <img class="sm:w-7 w-5"
+                                id="failed-icon" src="./assets/coming-soon/failed-icon.svg" alt="TechnoScape 2022">
                             <span>Failed</span>
-                        </div> 
+                        </div>
                     </div>
                 </form>
                 <div class="socmed-wrapper flex flex-row items-center justify-center lg:justify-start ">
-                    <a href="https://medium.com/technoscape-bncc" target="_blank"><img class="w-10 mr-7 hover:-mt-3 rounded-full hover:shadow-bsBtn transition-all ease-in-out duration-300" src="./assets/coming-soon/socmed-medium.svg" alt=""></a>
-                    <a href="https://www.tiktok.com/@technoscape?lang=en" target="_blank"><img class="w-10 mr-7 hover:-mt-3 rounded-full hover:shadow-bsBtn transition-all ease-in-out duration-300" src="./assets/coming-soon/socmed-tiktok.svg" alt=""></a>
-                    <a href="https://www.instagram.com/technoscapebncc/" target="_blank"><img class="w-10 mr-7 hover:-mt-3 rounded-full hover:shadow-bsBtn transition-all ease-in-out duration-300" src="./assets/coming-soon/socmed-instagram.svg" alt=""></a>
-                    <a href="https://www.facebook.com/bina.nusantara.computer.club/" target="_blank"><img class="w-10 hover:-mt-3 rounded-full hover:shadow-bsBtn transition-all ease-in-out duration-300" src="./assets/coming-soon/socmed-facebook.svg" alt=""></a>
-                </div> 
+                    <a href="https://medium.com/technoscape-bncc" target="_blank"><img class="w-10 mr-7 hover:-mt-3 rounded-full hover:shadow-bsBtn transition-all ease-in-out duration-300" src="./assets/coming-soon/socmed-medium.svg" alt="TechnoScape 2022"></a>
+                    <a href="https://www.tiktok.com/@technoscape?lang=en" target="_blank"><img class="w-10 mr-7 hover:-mt-3 rounded-full hover:shadow-bsBtn transition-all ease-in-out duration-300" src="./assets/coming-soon/socmed-tiktok.svg" alt="TechnoScape 2022"></a>
+                    <a href="https://www.instagram.com/technoscapebncc/" target="_blank"><img class="w-10 mr-7 hover:-mt-3 rounded-full hover:shadow-bsBtn transition-all ease-in-out duration-300" src="./assets/coming-soon/socmed-instagram.svg" alt="TechnoScape 2022"></a>
+                    <a href="https://www.facebook.com/bina.nusantara.computer.club/" target="_blank"><img class="w-10 hover:-mt-3 rounded-full hover:shadow-bsBtn transition-all ease-in-out duration-300" src="./assets/coming-soon/socmed-facebook.svg" alt="TechnoScape 2022"></a>
+                </div>
             </div>
             <div class="right-wrapper flex flex-col items-center">
-                <img class="w-44 lg:hidden mb-3" src="./assets/logo/logo-black.svg" alt="">
+                <img class="w-44 lg:hidden mb-3" src="./assets/logo/logo-black.svg" alt="TechnoScape 2022">
                 <div class="title font-Ethno sm:text-7xl text-5xl tracking-wide text-cBlue text-center lg:hidden ">
                     COMING<br>SOON
                 </div>
-                <div id="model" class="3d sm:w-[400px] w-[300px] h-[300px] sm:h-[450px] lg:h-[450px]"></div> 
+                <div id="model" class="3d sm:w-[400px] w-[300px] h-[300px] sm:h-[450px] lg:h-[450px]"></div>
             </div>
         </div>
     </div>

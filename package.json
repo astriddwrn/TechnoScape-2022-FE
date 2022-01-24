@@ -7,8 +7,8 @@
     "doc": "docs"
   },
   "scripts": {
-    "build": "npx tailwindcss --postcss -i ./postcss/base.css -o ./css/build.css",
-    "watch": "npx tailwindcss --postcss -i ./postcss/base.css -o ./css/build.css --watch"
+    "build": "npx tailwindcss --postcss -i ./postcss/base.css -o ./css/base/build.css",
+    "watch": "npx tailwindcss --postcss -i ./postcss/base.css -o ./css/base/build.css --watch"
   },
   "repository": {
     "type": "git",

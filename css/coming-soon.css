@@ -1,3 +1,5 @@
+@import url('./base/base.css');
+
 .notify-active-up{
     transform: translate(-50%, -150%) !important;
     opacity: 0;
