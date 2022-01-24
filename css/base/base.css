@@ -1,0 +1,60 @@
+@font-face {
+    font-family: "PJSBold";
+    src: url('/fonts/PlusJakartaSans/PlusJakartaSans-Bold.ttf');
+}
+@font-face {
+    font-family: "PJSBoldItalic";
+    src: url('/fonts/PlusJakartaSans/PlusJakartaSans-BoldItalic.ttf');
+}
+@font-face {
+    font-family: "PJSExtraBold";
+    src: url('/fonts/PlusJakartaSans/PlusJakartaSans-ExtraBold.ttf');
+}
+@font-face {
+    font-family: "PJSExtraBoldItalic";
+    src: url('/fonts/PlusJakartaSans/PlusJakartaSans-ExtraBoldItalic.ttf');
+}
+@font-face {
+    font-family: "PJSExtraLight";
+    src: url('/fonts/PlusJakartaSans/PlusJakartaSans-ExtraLight.ttf');
+}
+@font-face {
+    font-family: "PJSItalic";
+    src: url('/fonts/PlusJakartaSans/PlusJakartaSans-Italic.ttf');
+}
+@font-face {
+    font-family: "PJSLight";
+    src: url('/fonts/PlusJakartaSans/PlusJakartaSans-Light.ttf');
+}
+@font-face {
+    font-family: "PJSLightItalic";
+    src: url('/fonts/PlusJakartaSans/PlusJakartaSans-LightItalic.ttf');
+}
+@font-face {
+    font-family: "PJSRegular";
+    src: url('/fonts/PlusJakartaSans/PlusJakartaSans-Regular.ttf');
+}
+@font-face {
+    font-family: "PJSMedium";
+    src: url('/fonts/PlusJakartaSans/PlusJakartaSans-Medium.ttf');
+}
+@font-face {
+    font-family: "PJSMediumItalic";
+    src: url('/fonts/PlusJakartaSans/PlusJakartaSans-MediumItalic.ttf');
+}
+@font-face {
+    font-family: "PJSSemiBold";
+    src: url('/fonts/PlusJakartaSans/PlusJakartaSans-SemiBold.ttf');
+}
+@font-face {
+    font-family: "PJSSemiBoldItalic";
+    src: url('/fonts/PlusJakartaSans/PlusJakartaSans-SemiBoldItalic.ttf');
+}
+@font-face {
+    font-family: "Ethno";
+    src: url('/fonts/Ethnocentric/EthnocentricRegular.ttf');
+}
+@font-face {
+    font-family: "EthnoItalic";
+    src: url('/fonts/Ethnocentric/EthnocentricRegularItalic.ttf');
+}
