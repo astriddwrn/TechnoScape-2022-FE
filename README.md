@@ -227,8 +227,9 @@ div#id-for-only-one-element .mainFunction-subFeature-subFeature{
 /* this rule will effect for desktop size. 
    sometimes we could ignore this rules and 
    hope it would do the same thing as larger 
-   screen.*/
-@media only screen and (max-width:1024){
+   screen. Just be remind you would develop
+   the websites in 1280x768. */
+@media only screen and (max-width:1280){
     /* ... */
 }
 
