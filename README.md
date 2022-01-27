@@ -30,6 +30,11 @@ So here is the list...
 <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
 ```
 
+- ES6 Module Polyfill using ES Module Shim
+```html
+<script async src="https://ga.jspm.io/npm:es-module-shims@1.4.3/dist/es-module-shims.js"></script>
+```
+
 **3D Asset**
 - ThreeJS
 - Model Viewer: https://modelviewer.dev/
@@ -364,7 +369,7 @@ function function_for_technical_use(){}
 **HTML Structure Standarization**
 - Screen Size Responsiveness
 - use kebab-case for naming id and class of CSS.
-- use kebab-case for form field `input[name="confirm-password"]`.
+- use snake_case for form field `input[name="confirm_password"]`.
 - use camelCase for JS variabel and function.
 - use snake_case for JS serializer and props modifier.
 - use PascalCase for JS class.

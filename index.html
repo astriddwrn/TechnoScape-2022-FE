@@ -123,14 +123,8 @@
     </div>
 
     <script src="./js/coming-soon.js"></script>
-    <script type="importmap">
-        {
-            "imports":{
-                "three":"https://cdn.skypack.dev/three"
-            }
-        }
-    </script>
-    <script type="module">
+    <script type="importmap-shim" src="./js/base/esm-maps.json"></script>
+    <script type="module-shim">
         import Iora from './js/base/Iora.js';
         window.Iora = Iora;
 
