@@ -1,6 +1,6 @@
 import * as THREE from 'three';
-import { GLTFLoader } from 'https://unpkg.com/three@0.137.1/examples/jsm/loaders/GLTFLoader.js';
-// import * as postprocessing from 'https://cdn.jsdelivr.net/npm/postprocessing@6.23.5/build/postprocessing.esm.js';
+import { GLTFLoader } from 'https://unpkg.com/three@0.136.0/examples/jsm/loaders/GLTFLoader.js';
+import * as postprocessing from 'https://cdn.jsdelivr.net/npm/postprocessing@6.23.5/build/postprocessing.esm.js';
 // import { ArcballControls } from 'https://cdn.skypack.dev/three/examples/jsm/controls/ArcballControls.js';
 
 // HELPER

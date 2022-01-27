@@ -36,10 +36,19 @@ So here is the list...
 ```
 
 **3D Asset**
-- ThreeJS
+- ThreeJS v0.136.0
+- [Postprocessing](https://github.com/vanruesc/postprocessing) v6.23.5 by vanruesc
+
+```js
+import * as THREE from 'three';
+import { GLTFLoader } from 'https://unpkg.com/three@0.136.0/examples/jsm/loaders/GLTFLoader.js';
+import * as postprocessing from 'https://cdn.jsdelivr.net/npm/postprocessing@6.23.5/build/postprocessing.esm.js';
+```
+
 - Model Viewer: https://modelviewer.dev/
 
 *P.s. We would use postcss as css preprocessor. As long as CDN exists, please use it first. Put everything on server would be hard. Also, don't forget to update this document if you use any CDN not listed above.* \
+*P.s. List of CDN could be found in the notes at the end of this documentation.* \
 *P.s. 3D Asset modules will follow DnD creativity.*
 
 ## Installation
@@ -391,6 +400,12 @@ function function_for_technical_use(){}
     - We like to suggest just Chrome and Firefox if you mind that much.
 - Dealing with Git Merge Conflict? Fix it by yourself. Solving this would help your future self. Prove me.
 - I have a suprise for you all if you could make me suprised too... <br /> *Clue: key to legacy.*
+- List of CDN:
+  - [JSPM](https://jspm.io)
+  - [UNPKG](https://unpkg.com)
+  - [Skypack](https://www.skypack.dev/)
+  - [jsDelivr](https://www.jsdelivr.com/)
+  - [cdnjs](https://cdnjs.com/)
 
 ## Security Issue
 > there is nothing to see here.
