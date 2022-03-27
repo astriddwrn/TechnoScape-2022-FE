@@ -77,7 +77,7 @@ function HaloIora(params){
 
     async function load_cameras(){
         camera = new THREE.PerspectiveCamera(75, $container.width() / $container.height(), 0.1, 10000);
-        camera.position.set(0, -210, 90);
+        camera.position.set(0, -310, 90);
         camera.rotation.set(90 * Math.PI / 180, 0, 0);
         cameras.add(camera);
     }
@@ -151,19 +151,24 @@ function HaloIora(params){
             action.reset();
         }
 
+        var min=-25, max=25;
+        var mid = min + ((max - min) / 2);
+        var period = 20000 / 1.5;
+        var climax = period / 4;
         const tween = [
-            [{z:-25}],
-            [{z:0}, 5000, TWEEN.Easing.Quadratic.In],
-            [{z:25}, 5000, TWEEN.Easing.Quadratic.Out],
-            [{z:0}, 5000, TWEEN.Easing.Quadratic.In],
-            [{z:-25}, 5000, TWEEN.Easing.Quadratic.Out],
+            [{z:min}],
+            [{z:mid}, climax, TWEEN.Easing.Quadratic.In],
+            [{z:max}, climax, TWEEN.Easing.Quadratic.Out],
+            [{z:mid}, climax, TWEEN.Easing.Quadratic.In],
+            [{z:min}, climax, TWEEN.Easing.Quadratic.Out],
         ];
 
         function doTween(tweens, update, finish){
             function nextTween(i=1){
-                console.log([tweens, i, tweens[i], tweens[i-1]]);
+                // console.log([tweens, i, tweens[i], tweens[i-1]]);
                 let pos = Object.assign({}, tweens[i-1][0]);
                 let tween = tweens[i];
+                // console.log([pos.z, tween[0].z]);
                 var x = new TWEEN.Tween(pos)
                                 .to(tween[0], tween[1])
                                 .easing(tween[2])
