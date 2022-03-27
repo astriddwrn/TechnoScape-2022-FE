@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TechnoScape 2022</title>
+    <link rel="shortcut icon" href="./assets/logo/favicon.png" type="image/x-icon">
+
+    <!-- css -->
+    <link rel="stylesheet" href="./css/base/base.css">
+    <link rel="stylesheet" href="./css/base/build.css">
+
+    <!-- javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script async src="https://ga.jspm.io/npm:es-module-shims@1.4.3/dist/es-module-shims.js"></script>
+</head>
+
+<body class="bg-cBgLight m-0 p-0 h-screen">
+    <div id="model" class="w-full h-full"></div>
+
+    <script type="importmap-shim" src="./js/base/esm-maps.json"></script>
+    <script type="module-shim">
+        import HaloIora from './js/base/halo-iora.js';
+        // import HaloIora from './js/base/iora.js';
+        window.HaloIora = HaloIora;
+
+
+        var halo_iora = new HaloIora({alpha:true, antialias:true, container:$("#model")});
+        window.halo_iora = halo_iora;
+    </script>
+
+</body>
+</html>

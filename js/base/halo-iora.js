@@ -2,9 +2,24 @@ import * as THREE from 'three';
 import { GLTFLoader } from 'https://unpkg.com/three@0.136.0/examples/jsm/loaders/GLTFLoader.js';
 import * as postprocessing from 'https://cdn.jsdelivr.net/npm/postprocessing@6.23.5/build/postprocessing.esm.js';
 // import { ArcballControls } from 'https://cdn.skypack.dev/three/examples/jsm/controls/ArcballControls.js';
+import TWEEN from 'https://unpkg.com/@tweenjs/tween.js@18.6.4/dist/tween.esm.js';
 
 // HELPER
 window.THREE = THREE;
+window.TWEEN = TWEEN;
+
+export function getAllChildren(objects){
+    const mixed = [objects];
+
+    const child = objects.children;
+
+    // mixed.push(...child);
+    child.forEach(function(el, i){
+        mixed.push(...getAllChildren(el));
+    });
+
+    return mixed;
+}
 
 function HaloIora(params){
     let frame = 0;
@@ -28,6 +43,10 @@ function HaloIora(params){
     $container.append(renderer.domElement);
     const clock = new THREE.Clock(true);
 
+    let model = null;
+    let mixer = null;
+    let action = null;
+
     (async ()=>{
         await load_lights();
         await load_cameras();
@@ -45,11 +64,22 @@ function HaloIora(params){
     })();
 
     async function load_lights(){
-        //
+        // Point Light - Top Front Left
+        const point1 = new THREE.PointLight( 0xffffff, 0.8, 10000 );
+        point1.position.set(-113,-598,480);
+        scene.add(point1);
+
+        // Point Light - Bottom Front Right
+        const point2 = new THREE.PointLight( 0xffffff, 0.5, 10000 );
+        point2.position.set(100,-585,-463);
+        scene.add(point2);
     }
 
     async function load_cameras(){
-        //
+        camera = new THREE.PerspectiveCamera(75, $container.width() / $container.height(), 0.1, 10000);
+        camera.position.set(0, -210, 90);
+        camera.rotation.set(90 * Math.PI / 180, 0, 0);
+        cameras.add(camera);
     }
 
     async function load_controls(){
@@ -57,7 +87,10 @@ function HaloIora(params){
     }
 
     async function load_effects(){
-        //
+        // Renderer
+        renderer.outputEncoding = THREE.sRGBEncoding;
+        renderer.toneMapping = THREE.ACESFilmicToneMapping;
+        renderer.setPixelRatio(window.devicePixelRatio);
     }
 
     async function register_materials(){
@@ -69,21 +102,95 @@ function HaloIora(params){
     }
 
     async function load_objects(){
-        // const loader = new GLTFLoader();
+        const loader = new GLTFLoader();
 
-        // var gltf = new Promise((res, rej)=>loader.load('./file.gltf', res, undefined, rej));
+        const gltf = await new Promise((res, rej)=>loader.load('./assets/3d/halo.glb', res, undefined, rej));
+        const halo = gltf.scene;
+        halo.gltf = gltf;
+        model = halo;
+
+        halo.name = 'iora';
+        halo.scale.set(100,100,100);
+        halo.rotation.set(92 * Math.PI / 180, 0, 0);
+        halo.children[0].rotation.set(0, 0 * Math.PI / 180, 0);
+        halo.position.set(0,0,-25);
+        halo.castShadow = true;
+        halo.receiveShadow = false;
+
+        halo.traverse(function(el){
+            if(typeof el.material == 'object'){
+                el.material.metalness = 0;
+                el.material.roughness = 0.5;
+            }
+        });
+
+        scene.add(halo);
     }
 
-    function render() {
-        return renderer.render(scene, camera);
+    function do_render() {
+        if(camera) return renderer.render(scene, camera);
     }
 
     scene.addEventListener('ready', function(){
-        //
+        var mesh = model.children[0];
+        mixer = new THREE.AnimationMixer( mesh );
+        var clips = model.gltf.animations;
+        var clip = clips[0];
+        action = mixer.clipAction(clip);
+        action.loop = THREE.LoopOnce;
+        // mixer.addEventListener('loop', function(){console.log([arguments])});
+        mixer.addEventListener('finished', reset);
+
+        $container.click(play);
+        $container.mouseenter(play);
+        function play(e){
+            action.play();
+        }
+        function reset(e){
+            action.stop();
+            action.reset();
+        }
+
+        const tween = [
+            [{z:-25}],
+            [{z:0}, 5000, TWEEN.Easing.Quadratic.In],
+            [{z:25}, 5000, TWEEN.Easing.Quadratic.Out],
+            [{z:0}, 5000, TWEEN.Easing.Quadratic.In],
+            [{z:-25}, 5000, TWEEN.Easing.Quadratic.Out],
+        ];
+
+        function doTween(tweens, update, finish){
+            function nextTween(i=1){
+                console.log([tweens, i, tweens[i], tweens[i-1]]);
+                let pos = Object.assign({}, tweens[i-1][0]);
+                let tween = tweens[i];
+                var x = new TWEEN.Tween(pos)
+                                .to(tween[0], tween[1])
+                                .easing(tween[2])
+                                .onUpdate(function(){
+                                    update(pos, tween, x);
+                                }).onComplete(function(){
+                                    if(i+1 < tweens.length) nextTween(i+1);
+                                    else finish(pos, tween, x);
+                                });
+                x.start();
+            }
+            nextTween(1);
+        }
+
+        function loop(){
+            doTween(tween, function(pos, props, tween){
+                model.position.setZ(pos.z);
+            }, function(pos, props, tween){
+                loop();
+            });
+        }
+        loop();
     });
 
     scene.addEventListener('update', function(){
-        //
+        mixer.update(clock.getDelta());
+        TWEEN.update();
     });
 
     scene.addEventListener('animate', function(){
@@ -97,22 +204,24 @@ function HaloIora(params){
         requestAnimationFrame(_tick);
 
         renderer.setSize($container.width(), $container.height());
-        camera.aspect = $container.width() / $container.height();
+        if(camera) camera.aspect = $container.width() / $container.height();
         if(camera) camera.updateProjectionMatrix()
 
         scene.dispatchEvent({type:'update', renderer});
         scene.dispatchEvent({type:'animate', renderer});
-        render();
+        do_render();
     }
 
     function assign2renderer(){
         Object.assign(renderer, {
             frame, _time, state, $container, scene, 
             cameras, camera, materials, textures, clock,
-            _tick,
+            _tick, do_render, model, mixer, action
             // composer
         });
     }
 
     return renderer;
 }
+
+export default HaloIora;

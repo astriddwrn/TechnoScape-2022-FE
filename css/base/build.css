@@ -538,6 +538,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   z-index: 50;
 }
 
+.m-0 {
+  margin: 0px;
+}
+
 .mt-4 {
   margin-top: 1rem;
 }
@@ -564,6 +568,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .h-screen {
   height: 100vh;
+}
+
+.h-full {
+  height: 100%;
 }
 
 .h-\[260px\] {
@@ -692,6 +700,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-image: linear-gradient(90deg, #FF7D7D 50%, #EF7373 122.98%);
 }
 
+.p-0 {
+  padding: 0px;
+}
+
 .py-10 {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
@@ -757,6 +769,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-5xl {
   font-size: 3rem;
   line-height: 1;
+}
+
+.leading-normal {
+  line-height: 1.5;
 }
 
 .tracking-wide {
