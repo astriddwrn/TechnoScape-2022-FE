@@ -1,0 +1,42 @@
+.title-colored-shadow{
+    background: linear-gradient(90.35deg, #FFC0E2 7.53%, #B2B6FF 99.4%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0px 5px 20px rgba(255, 192, 226, 0.55);
+}
+
+.title-colored{
+    background: linear-gradient(90.35deg, #FFC0E2 7.53%, #B2B6FF 99.4%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+.border-colored{
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    padding: 0 20px;
+    height: 50px;
+}
+
+.border-colored::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    border-radius:15px; 
+    padding:2px; 
+    background: linear-gradient(90.35deg, #FFC0E2 7.53%, #B2B6FF 99.4%);
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude; 
+}
