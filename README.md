@@ -35,6 +35,11 @@ So here is the list...
 <script async src="https://ga.jspm.io/npm:es-module-shims@1.4.3/dist/es-module-shims.js"></script>
 ```
 
+- ESM Tween.JS
+```js
+import TWEEN from 'https://unpkg.com/@tweenjs/tween.js@18.6.4/dist/tween.esm.js';
+```
+
 **3D Asset**
 - ThreeJS v0.136.0
 - [Postprocessing](https://github.com/vanruesc/postprocessing) v6.23.5 by vanruesc
