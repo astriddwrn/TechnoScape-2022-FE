@@ -151,46 +151,17 @@ function HaloIora(params){
             action.reset();
         }
 
-        var min=-25, max=25;
-        var mid = min + ((max - min) / 2);
-        var period = 20000 / 1.5;
-        var climax = period / 4;
-        const tween = [
-            [{z:min}],
-            [{z:mid}, climax, TWEEN.Easing.Quadratic.In],
-            [{z:max}, climax, TWEEN.Easing.Quadratic.Out],
-            [{z:mid}, climax, TWEEN.Easing.Quadratic.In],
-            [{z:min}, climax, TWEEN.Easing.Quadratic.Out],
-        ];
-
-        function doTween(tweens, update, finish){
-            function nextTween(i=1){
-                // console.log([tweens, i, tweens[i], tweens[i-1]]);
-                let pos = Object.assign({}, tweens[i-1][0]);
-                let tween = tweens[i];
-                // console.log([pos.z, tween[0].z]);
-                var x = new TWEEN.Tween(pos)
-                                .to(tween[0], tween[1])
-                                .easing(tween[2])
-                                .onUpdate(function(){
-                                    update(pos, tween, x);
-                                }).onComplete(function(){
-                                    if(i+1 < tweens.length) nextTween(i+1);
-                                    else finish(pos, tween, x);
-                                });
-                x.start();
-            }
-            nextTween(1);
-        }
-
-        function loop(){
-            doTween(tween, function(pos, props, tween){
-                model.position.setZ(pos.z);
-            }, function(pos, props, tween){
-                loop();
-            });
-        }
-        loop();
+        var min=-25, max=25, period=12000;
+        var pos = {z:min}
+        var tween = new TWEEN.Tween(pos)
+                        .to({z:max}, period)
+                        .easing(TWEEN.Easing.Sinusoidal.InOut)
+                        .repeat(Infinity)
+                        .yoyo(true)
+                        .onUpdate(function(){
+                            model.position.setZ(pos.z);
+                        });
+        tween.start();
     });
 
     scene.addEventListener('update', function(){
