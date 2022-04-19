@@ -150,7 +150,7 @@ function HaloIora(params){
             action.stop();
             action.reset();
         }
-
+        // //
         var min=-25, max=25, period=12000;
         var pos = {z:min}
         var tween = new TWEEN.Tween(pos)
