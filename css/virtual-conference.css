@@ -15,6 +15,10 @@
     letter-spacing: 0.02em;
 }
 
+.title-colored .underline{
+    background: linear-gradient(90.35deg, #FFC0E2 7.53%, #B2B6FF 99.4%);
+}
+
 .border-colored{
     position:relative;
     display:flex;
@@ -39,4 +43,21 @@
         linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
             mask-composite: exclude; 
+}
+
+.event-wrapper .date, .event-wrapper .card-list{
+    opacity: 0;
+}
+
+.event-active *{
+    transition: all 1s ease;
+}
+
+.event-active .date{
+    opacity: 1 !important;
+}
+
+.card-list-active{
+    opacity: 1 !important;
+    transform: translatey(-10px);
 }

@@ -15,7 +15,8 @@ module.exports = {
         boxShadow: {
             'bsInput': '5px 7px 25px 5px rgba(213, 213, 213, 0.16)',
             'bsBtn' : '9px 11px 29px 7px rgba(104, 149, 235, 0.26)',
-
+            'bsVCCard': '0px 5px 20px rgba(255, 192, 226, 0.55);',
+            'bsVCMain': '4px 5px 20px rgba(103, 103, 103, 0.15)',
         },
         extend: {
             backgroundImage: {
