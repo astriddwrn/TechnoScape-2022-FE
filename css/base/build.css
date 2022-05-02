@@ -8,7 +8,7 @@
 
 /* @import "./page1.css"; */
 
-/* ! tailwindcss v3.0.13 | MIT License | https://tailwindcss.com */
+/* ! tailwindcss v3.0.24 | MIT License | https://tailwindcss.com */
 
 /*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
@@ -522,6 +522,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   position: relative;
 }
 
+.inset-x-0 {
+  left: 0px;
+  right: 0px;
+}
+
 .top-0 {
   top: 0px;
 }
@@ -534,8 +539,24 @@ Ensure the default browser behavior of the `hidden` attribute.
   left: 50%;
 }
 
+.right-5 {
+  right: 1.25rem;
+}
+
+.top-\[26px\] {
+  top: 26px;
+}
+
+.top-\[34px\] {
+  top: 34px;
+}
+
 .z-50 {
   z-index: 50;
+}
+
+.z-10 {
+  z-index: 10;
 }
 
 .my-5 {
@@ -616,6 +637,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-left: 2.5rem;
 }
 
+.ml-5 {
+  margin-left: 1.25rem;
+}
+
+.-mt-\[50px\] {
+  margin-top: -50px;
+}
+
 .flex {
   display: flex;
 }
@@ -648,20 +677,26 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 0.5rem;
 }
 
-.h-\[700px\] {
-  height: 700px;
+.h-\[600px\] {
+  height: 600px;
 }
 
 .h-auto {
   height: auto;
 }
 
-.h-\[650px\] {
-  height: 650px;
+.h-\[90px\] {
+  height: 90px;
 }
 
-.h-\[600px\] {
-  height: 600px;
+.h-fit {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.h-\[115px\] {
+  height: 115px;
 }
 
 .min-h-screen {
@@ -756,6 +791,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 41.666667%;
 }
 
+.w-\[90\%\] {
+  width: 90%;
+}
+
+.w-\[10px\] {
+  width: 10px;
+}
+
+.w-\[95\%\] {
+  width: 95%;
+}
+
 .max-w-\[500px\] {
   max-width: 500px;
 }
@@ -769,13 +816,26 @@ Ensure the default browser behavior of the `hidden` attribute.
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.-translate-y-1\/2 {
-  --tw-translate-y: -50%;
+.rotate-90 {
+  --tw-rotate: 90deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.rotate-180 {
+  --tw-rotate: 180deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+.list-disc {
+  list-style-type: disc;
+}
+
+.list-decimal {
+  list-style-type: decimal;
 }
 
 .flex-row {
@@ -850,6 +910,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-radius: 0.75rem;
 }
 
+.rounded-3xl {
+  border-radius: 1.5rem;
+}
+
 .rounded-tr-none {
   border-top-right-radius: 0px;
 }
@@ -880,6 +944,15 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .bg-cLinearGradientRed {
   background-image: linear-gradient(90deg, #FF7D7D 50%, #EF7373 122.98%);
+}
+
+.bg-gradient-to-r {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+.bg-clip-text {
+  -webkit-background-clip: text;
+          background-clip: text;
 }
 
 .p-10 {
@@ -991,6 +1064,19 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 1.75rem;
 }
 
+.text-\[22px\] {
+  font-size: 22px;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.text-\[10px\] {
+  font-size: 10px;
+}
+
 .leading-normal {
   line-height: 1.5;
 }
@@ -1042,10 +1128,28 @@ Ensure the default browser behavior of the `hidden` attribute.
   opacity: 0;
 }
 
+.opacity-75 {
+  opacity: 0.75;
+}
+
+.opacity-100 {
+  opacity: 1;
+}
+
 .shadow-bsVCMain {
   --tw-shadow: 4px 5px 20px rgba(103, 103, 103, 0.15);
   --tw-shadow-colored: 4px 5px 20px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.drop-shadow-md {
+  --tw-drop-shadow: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.drop-shadow-lg {
+  --tw-drop-shadow: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .grayscale {
@@ -1067,6 +1171,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .duration-300 {
   transition-duration: 300ms;
+}
+
+.duration-500 {
+  transition-duration: 500ms;
+}
+
+.duration-1000 {
+  transition-duration: 1000ms;
 }
 
 .ease-in-out {
@@ -1165,8 +1277,40 @@ textarea:focus, input:focus{
 }
 
 @media (min-width: 768px) {
+  .md\:right-7 {
+    right: 1.75rem;
+  }
+
+  .md\:top-\[46\.5px\] {
+    top: 46.5px;
+  }
+
+  .md\:top-\[60px\] {
+    top: 60px;
+  }
+
   .md\:mt-0 {
     margin-top: 0px;
+  }
+
+  .md\:mt-32 {
+    margin-top: 8rem;
+  }
+
+  .md\:mt-20 {
+    margin-top: 5rem;
+  }
+
+  .md\:ml-24 {
+    margin-left: 6rem;
+  }
+
+  .md\:mt-5 {
+    margin-top: 1.25rem;
+  }
+
+  .md\:block {
+    display: block;
   }
 
   .md\:h-\[180px\] {
@@ -1181,6 +1325,22 @@ textarea:focus, input:focus{
     width: 10rem;
   }
 
+  .md\:w-\[80\%\] {
+    width: 80%;
+  }
+
+  .md\:w-\[75\%\] {
+    width: 75%;
+  }
+
+  .md\:w-\[13px\] {
+    width: 13px;
+  }
+
+  .md\:w-\[70\%\] {
+    width: 70%;
+  }
+
   .md\:flex-row {
     flex-direction: row;
   }
@@ -1190,8 +1350,33 @@ textarea:focus, input:focus{
     padding-right: 0.75rem;
   }
 
+  .md\:px-7 {
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+  }
+
+  .md\:py-5 {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+
   .md\:text-left {
     text-align: left;
+  }
+
+  .md\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .md\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .md\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -1230,7 +1415,80 @@ textarea:focus, input:focus{
 }
 
 @media (min-width: 1280px) {
+  .xl\:right-7 {
+    right: 1.75rem;
+  }
+
+  .xl\:top-\[46px\] {
+    top: 46px;
+  }
+
+  .xl\:top-\[60px\] {
+    top: 60px;
+  }
+
+  .xl\:mt-0 {
+    margin-top: 0px;
+  }
+
+  .xl\:mt-20 {
+    margin-top: 5rem;
+  }
+
+  .xl\:ml-14 {
+    margin-left: 3.5rem;
+  }
+
+  .xl\:ml-0 {
+    margin-left: 0px;
+  }
+
+  .xl\:flex {
+    display: flex;
+  }
+
   .xl\:w-9\/12 {
     width: 75%;
+  }
+
+  .xl\:w-1\/2 {
+    width: 50%;
+  }
+
+  .xl\:w-\[75\%\] {
+    width: 75%;
+  }
+
+  .xl\:w-\[13px\] {
+    width: 13px;
+  }
+
+  .xl\:w-\[70\%\] {
+    width: 70%;
+  }
+
+  .xl\:px-7 {
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+  }
+
+  .xl\:py-5 {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+
+  .xl\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .xl\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .xl\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
