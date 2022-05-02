@@ -47,6 +47,8 @@ function HaloIora(params){
     let mixer = null;
     let action = null;
 
+    assign2renderer();
+
     (async ()=>{
         await load_lights();
         await load_cameras();
