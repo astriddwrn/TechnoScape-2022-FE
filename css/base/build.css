@@ -1541,6 +1541,10 @@ textarea:focus, input:focus{
     justify-content: flex-start;
   }
 
+  .lg\:justify-center {
+    justify-content: center;
+  }
+
   .lg\:justify-between {
     justify-content: space-between;
   }
@@ -1618,6 +1622,10 @@ textarea:focus, input:focus{
 
   .xl\:w-\[70\%\] {
     width: 70%;
+  }
+
+  .xl\:max-w-\[650px\] {
+    max-width: 650px;
   }
 
   .xl\:flex-row {
