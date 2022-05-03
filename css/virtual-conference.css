@@ -61,3 +61,17 @@
     opacity: 1 !important;
     transform: translatey(-10px);
 }
+
+/* faq */
+.answer-container{
+    opacity: 0;
+    overflow: hidden;
+    max-height: 0px;
+    transition: all .5s ;
+}
+
+.answer-container.active{
+    opacity: 1 !important;
+    transition: all .5s ;
+}
+/* end faq */

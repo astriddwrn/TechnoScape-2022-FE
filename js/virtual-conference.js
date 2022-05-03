@@ -1,14 +1,29 @@
 $(document).ready(() => {
     // FAQ
-    $('.answer-container').hide();
-    $('.question-button').click(function(){
-        if($(this).parent().next().is(':visible')){
-            $(this).parent().next().slideUp();
+    $('.faq-button').click(function(){
+        if( $(this).siblings('.answer-container').hasClass('active')){
+            $(this).siblings('.answer-container').removeClass('active');
+            $(this).siblings('.answer-container').css('max-height', '0px');
         }
         else{
-            $(this).parent().next().slideDown();
+            $('.answer-container').each(function(){
+                $(this).removeClass('active');
+                $(this).css('max-height', '0px');
+                console.log('hi');
+            });
+            $(this).siblings('.answer-container').addClass('active');
+            setHeight(this);
         }
+        
     });
+
+    function setHeight(a){
+        let faq_height = document.getElementsByClassName('active')[0].scrollHeight+'px';
+        console.log(faq_height);
+        $('.answer-container.active').css('max-height', faq_height);  
+    }
+
+    //end faq
 
     $('.event-day .title').each(function(){
         $(this).click(function(){

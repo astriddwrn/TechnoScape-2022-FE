@@ -38,11 +38,12 @@
         <!-- javascript -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <!-- <script async src="https://ga.jspm.io/npm:es-module-shims@1.4.3/dist/es-module-shims.js"></script> -->
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
     </head>
 <body class="bg-cBgLight">
 
     <!-- HIGHLIGHTS section -->
-    <div class="highlights-section mt-36">
+    <!-- <div class="highlights-section mt-36">
         <div class="hightlight-title title-colored-shadow font-Ethno text-5xl tracking-wide text-cTitleVC text-center">HIGHLIGHTS</div>
         <div class="highlight-text text-center text-lg my-5 text-cGray leading-relaxed">Here are the key highlights of Virtual Conference 2021 in case you missed it.</div>
         <div class="video w-[600px] h-[300px] bg-cLighterGray mx-auto my-0 rounded-lg">
@@ -50,10 +51,10 @@
                 <img class="w-2/12" src="./assets/virtual-conference/highlights-video-button.svg" alt="">
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- WHY section -->
-    <div class="why-section mt-36">
+    <!-- <div class="why-section mt-36">
         <div class="title-colored-shadow font-Ethno text-5xl tracking-wide text-cTitleVC text-center leading-relaxed mb-8">Why You Should <br>Join Us?</div>
         <div class="card-wrapper flex flex-row gap-5 justify-center">
             <div class="card group w-3/12 max-w-[350px] flex flex-col items-center bg-cWhite rounded-[40px] p-10 hover:shadow-md hover:shadow-bsVCCard">
@@ -73,10 +74,10 @@
             </div>
         </div>
 
-    </div>
+    </div> -->
 
     <!-- MEET Section -->
-    <div class="meet-section mt-36 text-cGray">
+    <!-- <div class="meet-section mt-36 text-cGray">
         <div class="title-colored-shadow font-Ethno text-5xl tracking-wide text-cTitleVC text-center leading-relaxed mb-8">Meet OUr SPEAKERS</div>
         <div class="card-wrapper flex flex-wrap flex-row justify-center mx-32 gap-10">
             <div class="card bg-cWhite rounded-[40px] w-[250px] flex flex-col items-center p-8 gap-1 hover:shadow-md hover:shadow-bsVCCard">
@@ -116,10 +117,10 @@
                 <div class="text-sm">ABC Company</div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- EVENT Section -->
-    <div class="event-section mt-36">
+    <!-- <div class="event-section mt-36">
         <div class="title-colored-shadow font-Ethno text-5xl tracking-wide text-cTitleVC text-center">Event Schedule</div>
         <div class="day-container flex flex-direction-row justify-center font-PJSBold text-xl gap-40 mt-10 text-[#AAAAAA] text-center">
             <div class="event-day day1 title-colored w-28">
@@ -138,7 +139,7 @@
         <hr style="color: #CACACA" class="w-[650px] mx-auto"></hr>
 
         <div class="event-container text-[#676767] relative w-full h-[600px]">
-            <!-- day1 -->
+           
             <div class="event-day1 event-wrapper w-6/12 mx-auto absolute left-1/2 -translate-x-1/2 event-active">
                 <div class="date font-PJSBold text-center text-xl my-10">Friday, 11 June 2022</div>
                 <div class="card1 card-list bg-cWhite w-full rounded-lg py-5 px-10 flex flex-direction-row mb-8 shadow-md shadow-bsVCMain card-list-active">
@@ -182,7 +183,7 @@
                 </div>
 
             </div>
-            <!-- day2 -->
+            
             <div class="event-day1 event-wrapper w-6/12 mx-auto absolute left-1/2 -translate-x-1/2">
                 <div class="date font-PJSBold text-center text-xl my-10">Saturday, 4 June 2022</div>
                 <div class="card1 card-list bg-cWhite w-full rounded-lg py-5 px-10 flex flex-direction-row mb-8 shadow-md shadow-bsVCMain">
@@ -225,7 +226,7 @@
                     </div>
                 </div>
             </div>
-            <!-- day3 -->
+            
             <div class="event-day1 event-wrapper w-6/12 mx-auto absolute left-1/2 -translate-x-1/2">
                 <div class="date font-PJSBold text-center text-xl my-10">Sunday, 5 June 2022</div>
                 <div class="card1 card-list bg-cWhite w-full rounded-lg py-5 px-10 flex flex-direction-row mb-8 shadow-md shadow-bsVCMain">
@@ -269,7 +270,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- FAQ section -->
     <!-- <div class="faq-section mt-36 text-cGray">
@@ -296,61 +297,116 @@
         </div>
     </div> -->
 
-    <div class="w-full h-screen xl:mt-0 md:mt-32">
+    <div class="w-full h-screen xl:mt-48 md:mt-48">
         <div class="">
-            <h1 class="font-Ethno xl:text-5xl md:text-5xl text-[22px] text-center bg-gradient-to-r from-CBlueLight to-CGreen text-transparent bg-clip-text shadow-cBlack drop-shadow-md">
+            <h1 class="font-Ethno mx-5 xl:text-5xl md:text-5xl text-[22px] text-center title-colored shadow-cBlack drop-shadow-md">
                 Frequently Asked Questions
             </h1>
         </div>
 
-        <div class="xl:flex xl:mt-20 md:mt-20 mt-10 md:block">
+        <div class="xl:flex xl:mt-20 md:mt-20 mt-10 md:block gap-10">
             <!--Left-->
-            <div class="xl:w-1/2 md:w-[80%] xl:ml-14 md:ml-24 ml-5">
+            <div class="xl:w-1/2 md:w-[80%] xl:ml-14 md:ml-24 mx-5 md:mx-0 sm:mx-20">
                 <div @click.away="open = false" x-data="{ open: false }" class="relative">
-                    <input @click="open = !open" type="checkbox" class="absolute inset-x-0 w-[90%] h-[90px] opacity-0 z-10 cursor-pointer">
-                    <div class="flex justify-between xl:px-7 md:px-7 px-5 xl:py-5 md:py-5 py-3 bg-cWhite w-[90%] shadow-cBlack drop-shadow-lg rounded-3xl">
+                    <input @click="open = !open" type="checkbox" class="absolute faq-button inset-x-0 w-full h-[90px] opacity-0 z-10 cursor-pointer">
+                    <div class="flex justify-between xl:px-7 md:px-7 px-5 xl:py-5 md:py-5 py-3 bg-cWhite  shadow-cBlack drop-shadow-lg rounded-[30px]">
                         <p class="xl:w-[75%] md:w-[75%] w-[90%] xl:text-lg md:text-lg text-xs">Apa saja persyaratan untuk berpartisipasi di Hackathon 5.0?</p>
                         <img class="xl:w-[13px] md:w-[13px] w-[10px]" src="assets/icon/minus.svg" alt="">
-                        <img class="xl:w-[13px] md:w-[13px] w-[10px] absolute rotate-90 xl:right-7 md:right-7 right-5 xl:top-[46px] md:top-[46.5px] top-[26px] transition-all duration-500" :class="{'rotate-180': open, 'rotate-90': !open}" src="assets/icon/minus.svg" alt="">
+                        <img class="xl:w-[13px] md:w-[13px] w-[10px] absolute rotate-90 xl:right-7 md:right-7 right-5 top-1/2 -translate-y-1/2 transition-all duration-500" :class="{'rotate-180': open, 'rotate-90': !open}" src="assets/icon/minus.svg" alt="">
                     </div>
-
-                    <div x-show="open" x-transition:enter="transition-all duration-1000" x-transition:enter-start="-mt-[50px] opacity-75" x-transition:enter-end="mt-5 opacity-100" x-transition:leave="transition-all duration-500" x-transition:leave-start="mt-5 opacity-100" x-transition:leave-end="-mt-[50px] opacity-0" class="relative w-[90%] mt-5 px-5 py-5 bg-cWhite overflow-hidden rounded-3xl h-fit">
-                        <ul class="list-disc ml-5 xl:text-base md:text-base text-[10px]">
-                            <li>Peserta hanya dapat bergabung dalam 1 tim, baik secara individu maupun kolaboratif (Setiap tim dapat beranggotakan maksimal 4 orang)</li>
-                            <li>Peserta adalah warga negara Indonesia berusia 18 hingga 25 tahun untuk memenuhi syarat.</li>
-                            <li>Untuk Informasi lebih lanjut, peserta dapat melihat buku panduan Hackathon 5.0 di situs web kami (Link Guidebook Hackathon 5.0)</li>
-                            <li>Peserta harus menyerahkan dokumen yang dipersyaratkan pada halaman pendaftaran Hackathon, seperti:</li>
-                        </ul>
-                        <ul class="list-decimal ml-10 xl:text-base md:text-base text-[10px]">
-                            <li>CV (Curriculum Vitae)</li>
-                            <li>Non-Binusian: KTP (KTP/SIM/dll)</li>
-                            <li>Binusian: Kartu Binusian</li>
-                        </ul>
+                    
+                    <div class="answer-container relative ml-10 bg-cWhite overflow-hidden rounded-[30px] rounded-tr-none shadow-cBlack drop-shadow-lg my-2 md:my-5" >
+                        <div class="answer p-6">
+                            <ul class="list-disc ml-5 xl:text-base md:text-base text-[10px]">
+                                <li>Peserta hanya dapat bergabung dalam 1 tim, baik secara individu maupun kolaboratif (Setiap tim dapat beranggotakan maksimal 4 orang)</li>
+                                <li>Peserta adalah warga negara Indonesia berusia 18 hingga 25 tahun untuk memenuhi syarat.</li>
+                                <li>Untuk Informasi lebih lanjut, peserta dapat melihat buku panduan Hackathon 5.0 di situs web kami (Link Guidebook Hackathon 5.0)</li>
+                                <li>Peserta harus menyerahkan dokumen yang dipersyaratkan pada halaman pendaftaran Hackathon, seperti:</li>
+                            </ul>
+                            <ul class="list-decimal ml-10 xl:text-base md:text-base text-[10px]">
+                                <li>CV (Curriculum Vitae)</li>
+                                <li>Non-Binusian: KTP (KTP/SIM/dll)</li>
+                                <li>Binusian: Kartu Binusian</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div @click.away="open = false" x-data="{ open: false }" class="relative">
+                    <input @click="open = !open" type="checkbox" class="absolute faq-button inset-x-0 w-full h-[90px] opacity-0 z-10 cursor-pointer">
+                    <div class="flex justify-between xl:px-7 md:px-7 px-5 xl:py-5 md:py-5 py-3 bg-cWhite  shadow-cBlack drop-shadow-lg rounded-[30px]">
+                        <p class="xl:w-[75%] md:w-[75%] w-[90%] xl:text-lg md:text-lg text-xs">Apa saja persyaratan untuk berpartisipasi di Hackathon 5.0?</p>
+                        <img class="xl:w-[13px] md:w-[13px] w-[10px]" src="assets/icon/minus.svg" alt="">
+                        <img class="xl:w-[13px] md:w-[13px] w-[10px] absolute rotate-90 xl:right-7 md:right-7 right-5 top-1/2 -translate-y-1/2 transition-all duration-500" :class="{'rotate-180': open, 'rotate-90': !open}" src="assets/icon/minus.svg" alt="">
+                    </div>
+                    
+                    <div class="answer-container relative ml-10 bg-cWhite overflow-hidden rounded-[30px] rounded-tr-none shadow-cBlack drop-shadow-lg my-2 md:my-5" >
+                        <div class="answer p-6">
+                            <ul class="list-disc ml-5 xl:text-base md:text-base text-[10px]">
+                                <li>Peserta hanya dapat bergabung dalam 1 tim, baik secara individu maupun kolaboratif (Setiap tim dapat beranggotakan maksimal 4 orang)</li>
+                                <li>Peserta adalah warga negara Indonesia berusia 18 hingga 25 tahun untuk memenuhi syarat.</li>
+                                <li>Untuk Informasi lebih lanjut, peserta dapat melihat buku panduan Hackathon 5.0 di situs web kami (Link Guidebook Hackathon 5.0)</li>
+                                <li>Peserta harus menyerahkan dokumen yang dipersyaratkan pada halaman pendaftaran Hackathon, seperti:</li>
+                            </ul>
+                            <ul class="list-decimal ml-10 xl:text-base md:text-base text-[10px]">
+                                <li>CV (Curriculum Vitae)</li>
+                                <li>Non-Binusian: KTP (KTP/SIM/dll)</li>
+                                <li>Binusian: Kartu Binusian</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-    
+            
             <!--Right-->
-            <div class="xl:w-1/2 md:w-[80%] xl:ml-0 md:ml-24 ml-5 xl:mt-0 md:mt-5 mt-5">
+            <div class="xl:w-1/2 md:w-[80%] xl:ml-14 md:ml-24 mx-5 md:mx-0 sm:mx-20">
                 <div @click.away="open = false" x-data="{ open: false }" class="relative">
-                    <input @click="open = !open" type="checkbox" class="absolute inset-x-0 w-[90%] h-[115px] opacity-0 z-10 cursor-pointer">
-                    <div class="flex justify-between xl:px-7 md:px-7 px-5 xl:py-5 md:py-5 py-3 bg-cWhite w-[90%] shadow-cBlack drop-shadow-lg rounded-3xl">
-                        <p class="xl:w-[70%] md:w-[70%] w-[95%] xl:text-lg md:text-lg text-xs">Bagaimana jika para peserta sudah menyiapkan dan menggunakan source code sebelum acara dimulai?</p>
+                    <input @click="open = !open" type="checkbox" class="absolute faq-button inset-x-0 w-full h-[90px] opacity-0 z-10 cursor-pointer">
+                    <div class="flex justify-between xl:px-7 md:px-7 px-5 xl:py-5 md:py-5 py-3 bg-cWhite  shadow-cBlack drop-shadow-lg rounded-[30px]">
+                        <p class="xl:w-[75%] md:w-[75%] w-[90%] xl:text-lg md:text-lg text-xs">Apa saja persyaratan untuk berpartisipasi di Hackathon 5.0?</p>
                         <img class="xl:w-[13px] md:w-[13px] w-[10px]" src="assets/icon/minus.svg" alt="">
-                        <img class="xl:w-[13px] md:w-[13px] w-[10px] absolute rotate-90 xl:right-7 md:right-7 right-5 xl:top-[60px] md:top-[60px] top-[34px] transition-all duration-500" :class="{'rotate-180': open, 'rotate-90': !open}" src="assets/icon/minus.svg" alt="">
+                        <img class="xl:w-[13px] md:w-[13px] w-[10px] absolute rotate-90 xl:right-7 md:right-7 right-5 top-1/2 -translate-y-1/2 transition-all duration-500" :class="{'rotate-180': open, 'rotate-90': !open}" src="assets/icon/minus.svg" alt="">
                     </div>
-
-                    <div x-show="open" x-transition:enter="transition-all duration-1000" x-transition:enter-start="-mt-[50px] opacity-75" x-transition:enter-end="mt-5 opacity-100" x-transition:leave="transition-all duration-500" x-transition:leave-start="mt-5 opacity-100" x-transition:leave-end="-mt-[50px] opacity-0" class="relative w-[90%] mt-5 px-5 py-5 bg-cWhite overflow-hidden rounded-3xl h-fit">
-                        <p>Peserta hanya dapat bergabung dalam 1 tim, baik secara individu maupun kolaboratif (Setiap tim dapat beranggotakan maksimal 4 orang)</p>
-                        <p>Peserta adalah warga negara Indonesia berusia 18 hingga 25 tahun untuk memenuhi syarat.</p>
-                        <p>Untuk Informasi lebih lanjut, peserta dapat melihat buku panduan Hackathon 5.0 di situs web kami (Link Guidebook Hackathon 5.0)</p>
-                        <p>Peserta harus menyerahkan dokumen yang dipersyaratkan pada halaman pendaftaran Hackathon, seperti:</p>
-                        <p>1. CV (Curriculum Vitae)</p>
-                        <p>2. Non-Binusian: KTP (KTP/SIM/dll)</p>
-                        <p>3. Binusian: Kartu Binusian</p>
+                    
+                    <div class="answer-container relative ml-10 bg-cWhite overflow-hidden rounded-[30px] rounded-tr-none shadow-cBlack drop-shadow-lg my-2 md:my-5" >
+                        <div class="answer p-6">
+                            <ul class="list-disc ml-5 xl:text-base md:text-base text-[10px]">
+                                <li>Peserta hanya dapat bergabung dalam 1 tim, baik secara individu maupun kolaboratif (Setiap tim dapat beranggotakan maksimal 4 orang)</li>
+                                <li>Peserta adalah warga negara Indonesia berusia 18 hingga 25 tahun untuk memenuhi syarat.</li>
+                                <li>Untuk Informasi lebih lanjut, peserta dapat melihat buku panduan Hackathon 5.0 di situs web kami (Link Guidebook Hackathon 5.0)</li>
+                                <li>Peserta harus menyerahkan dokumen yang dipersyaratkan pada halaman pendaftaran Hackathon, seperti:</li>
+                            </ul>
+                            <ul class="list-decimal ml-10 xl:text-base md:text-base text-[10px]">
+                                <li>CV (Curriculum Vitae)</li>
+                                <li>Non-Binusian: KTP (KTP/SIM/dll)</li>
+                                <li>Binusian: Kartu Binusian</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-
+                <div @click.away="open = false" x-data="{ open: false }" class="relative">
+                    <input @click="open = !open" type="checkbox" class="absolute faq-button inset-x-0 w-full h-[90px] opacity-0 z-10 cursor-pointer">
+                    <div class="flex justify-between xl:px-7 md:px-7 px-5 xl:py-5 md:py-5 py-3 bg-cWhite  shadow-cBlack drop-shadow-lg rounded-[30px]">
+                        <p class="xl:w-[75%] md:w-[75%] w-[90%] xl:text-lg md:text-lg text-xs">Apa saja persyaratan untuk berpartisipasi di Hackathon 5.0?</p>
+                        <img class="xl:w-[13px] md:w-[13px] w-[10px]" src="assets/icon/minus.svg" alt="">
+                        <img class="xl:w-[13px] md:w-[13px] w-[10px] absolute rotate-90 xl:right-7 md:right-7 right-5 top-1/2 -translate-y-1/2 transition-all duration-500" :class="{'rotate-180': open, 'rotate-90': !open}" src="assets/icon/minus.svg" alt="">
+                    </div>
+                    
+                    <div class="answer-container relative ml-10 bg-cWhite overflow-hidden rounded-[30px] rounded-tr-none shadow-cBlack drop-shadow-lg my-2 md:my-5" >
+                        <div class="answer p-6">
+                            <ul class="list-disc ml-5 xl:text-base md:text-base text-[10px]">
+                                <li>Peserta hanya dapat bergabung dalam 1 tim, baik secara individu maupun kolaboratif (Setiap tim dapat beranggotakan maksimal 4 orang)</li>
+                                <li>Peserta adalah warga negara Indonesia berusia 18 hingga 25 tahun untuk memenuhi syarat.</li>
+                                <li>Untuk Informasi lebih lanjut, peserta dapat melihat buku panduan Hackathon 5.0 di situs web kami (Link Guidebook Hackathon 5.0)</li>
+                                <li>Peserta harus menyerahkan dokumen yang dipersyaratkan pada halaman pendaftaran Hackathon, seperti:</li>
+                            </ul>
+                            <ul class="list-decimal ml-10 xl:text-base md:text-base text-[10px]">
+                                <li>CV (Curriculum Vitae)</li>
+                                <li>Non-Binusian: KTP (KTP/SIM/dll)</li>
+                                <li>Binusian: Kartu Binusian</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
