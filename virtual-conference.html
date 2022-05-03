@@ -304,9 +304,9 @@
             </h1>
         </div>
 
-        <div class="xl:flex xl:mt-20 md:mt-20 mt-10 md:block gap-10">
+        <div class="flex lg:flex-row flex-col items-center xl:mt-20 md:mt-20 mt-10 lg:gap-10 xl:mx-20 lg:mx-10 md:mx-20 sm:mx-10 mx-5 ">
             <!--Left-->
-            <div class="xl:w-1/2 md:w-[80%] xl:ml-14 md:ml-24 mx-5 md:mx-0 sm:mx-20">
+            <div class="xl:w-1/2 lg:w-full ">
                 <div @click.away="open = false" x-data="{ open: false }" class="relative">
                     <input @click="open = !open" type="checkbox" class="absolute faq-button inset-x-0 w-full h-[90px] opacity-0 z-10 cursor-pointer">
                     <div class="flex justify-between xl:px-7 md:px-7 px-5 xl:py-5 md:py-5 py-3 bg-cWhite  shadow-cBlack drop-shadow-lg rounded-[30px]">
@@ -358,7 +358,7 @@
             </div>
             
             <!--Right-->
-            <div class="xl:w-1/2 md:w-[80%] xl:ml-14 md:ml-24 mx-5 md:mx-0 sm:mx-20">
+            <div class="xl:w-1/2 lg:w-full ">
                 <div @click.away="open = false" x-data="{ open: false }" class="relative">
                     <input @click="open = !open" type="checkbox" class="absolute faq-button inset-x-0 w-full h-[90px] opacity-0 z-10 cursor-pointer">
                     <div class="flex justify-between xl:px-7 md:px-7 px-5 xl:py-5 md:py-5 py-3 bg-cWhite  shadow-cBlack drop-shadow-lg rounded-[30px]">
