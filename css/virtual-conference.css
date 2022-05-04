@@ -75,3 +75,10 @@
     transition: all .5s ;
 }
 /* end faq */
+
+/* share */
+.share-button.active .text{
+    transition: all .3s ease;
+    transform: translateX(-100%);
+}
+/* end share */

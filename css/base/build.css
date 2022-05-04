@@ -543,20 +543,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   right: 1.25rem;
 }
 
-.top-\[26px\] {
-  top: 26px;
-}
-
-.top-\[34px\] {
-  top: 34px;
-}
-
 .z-50 {
   z-index: 50;
 }
 
 .z-10 {
   z-index: 10;
+}
+
+.z-0 {
+  z-index: 0;
+}
+
+.-m-10 {
+  margin: -2.5rem;
 }
 
 .my-5 {
@@ -594,19 +594,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-right: 1.25rem;
 }
 
-.mx-10 {
-  margin-left: 2.5rem;
-  margin-right: 2.5rem;
-}
-
 .my-2 {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-}
-
-.mx-20 {
-  margin-left: 5rem;
-  margin-right: 5rem;
 }
 
 .mt-4 {
@@ -649,8 +639,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 0.25rem;
 }
 
-.mt-5 {
-  margin-top: 1.25rem;
+.mt-48 {
+  margin-top: 12rem;
 }
 
 .ml-10 {
@@ -661,16 +651,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-left: 1.25rem;
 }
 
-.-mt-\[50px\] {
-  margin-top: -50px;
+.mt-14 {
+  margin-top: 3.5rem;
 }
 
-.mb-5 {
-  margin-bottom: 1.25rem;
-}
-
-.mr-0 {
-  margin-right: 0px;
+.mb-10 {
+  margin-bottom: 2.5rem;
 }
 
 .flex {
@@ -717,14 +703,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 90px;
 }
 
-.h-\[115px\] {
-  height: 115px;
+.h-12 {
+  height: 3rem;
 }
 
-.h-fit {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+.h-\[250px\] {
+  height: 250px;
 }
 
 .min-h-screen {
@@ -815,10 +799,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 0.75rem;
 }
 
-.w-5\/12 {
-  width: 41.666667%;
-}
-
 .w-\[90\%\] {
   width: 90%;
 }
@@ -827,24 +807,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 10px;
 }
 
-.w-\[95\%\] {
-  width: 95%;
-}
-
-.w-\[100\%\] {
-  width: 100%;
-}
-
-.w-\[80\%\] {
-  width: 80%;
-}
-
 .max-w-\[500px\] {
   max-width: 500px;
 }
 
 .max-w-\[350px\] {
   max-width: 350px;
+}
+
+.max-w-\[1200px\] {
+  max-width: 1200px;
 }
 
 .-translate-x-1\/2 {
@@ -864,6 +836,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .rotate-180 {
   --tw-rotate: 180deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -907,6 +883,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   justify-content: space-between;
 }
 
+.justify-around {
+  justify-content: space-around;
+}
+
 .justify-evenly {
   justify-content: space-evenly;
 }
@@ -947,20 +927,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-radius: 25px;
 }
 
-.rounded-xl {
-  border-radius: 0.75rem;
-}
-
-.rounded-3xl {
-  border-radius: 1.5rem;
-}
-
-.rounded-\[4xl\] {
-  border-radius: 4xl;
-}
-
 .rounded-\[30px\] {
   border-radius: 30px;
+}
+
+.rounded-xl {
+  border-radius: 0.75rem;
 }
 
 .rounded-tr-none {
@@ -995,13 +967,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-image: linear-gradient(90deg, #FF7D7D 50%, #EF7373 122.98%);
 }
 
-.bg-gradient-to-r {
-  background-image: linear-gradient(to right, var(--tw-gradient-stops));
-}
-
-.bg-clip-text {
-  -webkit-background-clip: text;
-          background-clip: text;
+.bg-cBtnGradientBlue {
+  background-image: linear-gradient(90deg, #6288E2  0%, #73ACF9  100%);
 }
 
 .p-10 {
@@ -1012,12 +979,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding: 2rem;
 }
 
-.p-5 {
-  padding: 1.25rem;
-}
-
 .p-6 {
   padding: 1.5rem;
+}
+
+.p-3 {
+  padding: 0.75rem;
 }
 
 .py-10 {
@@ -1070,11 +1037,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 0.75rem;
 }
 
-.px-7 {
-  padding-left: 1.75rem;
-  padding-right: 1.75rem;
-}
-
 .text-center {
   text-align: center;
 }
@@ -1085,6 +1047,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .font-Ethno {
   font-family: Ethno;
+}
+
+.font-PJSMedium {
+  font-family: PJSMedium;
 }
 
 .text-base {
@@ -1130,12 +1096,21 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-size: 10px;
 }
 
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
 .leading-normal {
   line-height: 1.5;
 }
 
 .leading-relaxed {
   line-height: 1.625;
+}
+
+.leading-snug {
+  line-height: 1.375;
 }
 
 .tracking-wide {
@@ -1181,23 +1156,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   opacity: 0;
 }
 
-.opacity-75 {
-  opacity: 0.75;
-}
-
-.opacity-100 {
-  opacity: 1;
-}
-
 .shadow-bsVCMain {
   --tw-shadow: 4px 5px 20px rgba(103, 103, 103, 0.15);
   --tw-shadow-colored: 4px 5px 20px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.drop-shadow-md {
-  --tw-drop-shadow: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .drop-shadow-lg {
@@ -1228,10 +1190,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .duration-500 {
   transition-duration: 500ms;
-}
-
-.duration-1000 {
-  transition-duration: 1000ms;
 }
 
 .ease-in-out {
@@ -1266,33 +1224,34 @@ textarea:focus, input:focus{
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.hover\:shadow-bsBtnBlue:hover {
+  --tw-shadow: 0px 2px 20px 0px #6997EC96;;
+  --tw-shadow-colored: 0px 2px 20px 0px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.hover\:grayscale-0:hover {
+  --tw-grayscale: grayscale(0);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.hover\:ease-in-out:hover {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .group:hover .group-hover\:grayscale-0 {
   --tw-grayscale: grayscale(0);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 @media (min-width: 640px) {
-  .sm\:mx-0 {
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-
   .sm\:mx-10 {
     margin-left: 2.5rem;
     margin-right: 2.5rem;
   }
 
-  .sm\:mx-20 {
-    margin-left: 5rem;
-    margin-right: 5rem;
-  }
-
   .sm\:ml-5 {
     margin-left: 1.25rem;
-  }
-
-  .sm\:mr-0 {
-    margin-right: 0px;
   }
 
   .sm\:h-\[280px\] {
@@ -1305,6 +1264,10 @@ textarea:focus, input:focus{
 
   .sm\:h-\[450px\] {
     height: 450px;
+  }
+
+  .sm\:h-\[300px\] {
+    height: 300px;
   }
 
   .sm\:w-10\/12 {
@@ -1321,6 +1284,18 @@ textarea:focus, input:focus{
 
   .sm\:w-\[400px\] {
     width: 400px;
+  }
+
+  .sm\:w-60 {
+    width: 15rem;
+  }
+
+  .sm\:w-6 {
+    width: 1.5rem;
+  }
+
+  .sm\:w-96 {
+    width: 24rem;
   }
 
   .sm\:max-w-full {
@@ -1346,6 +1321,11 @@ textarea:focus, input:focus{
     font-size: 4.5rem;
     line-height: 1;
   }
+
+  .sm\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -1353,17 +1333,9 @@ textarea:focus, input:focus{
     right: 1.75rem;
   }
 
-  .md\:top-\[46\.5px\] {
-    top: 46.5px;
-  }
-
-  .md\:top-\[60px\] {
-    top: 60px;
-  }
-
-  .md\:mx-0 {
-    margin-left: 0px;
-    margin-right: 0px;
+  .md\:mx-20 {
+    margin-left: 5rem;
+    margin-right: 5rem;
   }
 
   .md\:my-5 {
@@ -1371,59 +1343,20 @@ textarea:focus, input:focus{
     margin-bottom: 1.25rem;
   }
 
-  .md\:mx-10 {
-    margin-left: 2.5rem;
-    margin-right: 2.5rem;
-  }
-
-  .md\:mx-5 {
-    margin-left: 1.25rem;
-    margin-right: 1.25rem;
-  }
-
-  .md\:mx-20 {
-    margin-left: 5rem;
-    margin-right: 5rem;
-  }
-
   .md\:mt-0 {
     margin-top: 0px;
-  }
-
-  .md\:mt-48 {
-    margin-top: 12rem;
   }
 
   .md\:mt-20 {
     margin-top: 5rem;
   }
 
-  .md\:ml-24 {
-    margin-left: 6rem;
-  }
-
-  .md\:mt-5 {
-    margin-top: 1.25rem;
-  }
-
-  .md\:mr-24 {
-    margin-right: 6rem;
-  }
-
-  .md\:mr-0 {
-    margin-right: 0px;
-  }
-
-  .md\:ml-0 {
-    margin-left: 0px;
-  }
-
-  .md\:block {
-    display: block;
-  }
-
   .md\:h-\[180px\] {
     height: 180px;
+  }
+
+  .md\:h-\[400px\] {
+    height: 400px;
   }
 
   .md\:w-96 {
@@ -1434,10 +1367,6 @@ textarea:focus, input:focus{
     width: 10rem;
   }
 
-  .md\:w-\[80\%\] {
-    width: 80%;
-  }
-
   .md\:w-\[75\%\] {
     width: 75%;
   }
@@ -1446,12 +1375,8 @@ textarea:focus, input:focus{
     width: 13px;
   }
 
-  .md\:w-\[70\%\] {
-    width: 70%;
-  }
-
-  .md\:w-full {
-    width: 100%;
+  .md\:w-\[380px\] {
+    width: 380px;
   }
 
   .md\:flex-row {
@@ -1494,23 +1419,17 @@ textarea:focus, input:focus{
 }
 
 @media (min-width: 1024px) {
+  .lg\:left-0 {
+    left: 0px;
+  }
+
   .lg\:mx-10 {
     margin-left: 2.5rem;
     margin-right: 2.5rem;
   }
 
-  .lg\:mx-5 {
-    margin-left: 1.25rem;
-    margin-right: 1.25rem;
-  }
-
-  .lg\:mx-20 {
-    margin-left: 5rem;
-    margin-right: 5rem;
-  }
-
-  .lg\:mr-0 {
-    margin-right: 0px;
+  .lg\:mt-0 {
+    margin-top: 0px;
   }
 
   .lg\:block {
@@ -1531,6 +1450,15 @@ textarea:focus, input:focus{
 
   .lg\:w-full {
     width: 100%;
+  }
+
+  .lg\:w-7\/12 {
+    width: 58.333333%;
+  }
+
+  .lg\:translate-x-0 {
+    --tw-translate-x: 0px;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
   .lg\:flex-row {
@@ -1556,6 +1484,11 @@ textarea:focus, input:focus{
   .lg\:text-left {
     text-align: left;
   }
+
+  .lg\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
 }
 
 @media (min-width: 1280px) {
@@ -1563,45 +1496,13 @@ textarea:focus, input:focus{
     right: 1.75rem;
   }
 
-  .xl\:top-\[46px\] {
-    top: 46px;
-  }
-
-  .xl\:top-\[60px\] {
-    top: 60px;
-  }
-
   .xl\:mx-20 {
     margin-left: 5rem;
     margin-right: 5rem;
   }
 
-  .xl\:mt-0 {
-    margin-top: 0px;
-  }
-
   .xl\:mt-20 {
     margin-top: 5rem;
-  }
-
-  .xl\:ml-14 {
-    margin-left: 3.5rem;
-  }
-
-  .xl\:ml-0 {
-    margin-left: 0px;
-  }
-
-  .xl\:mt-48 {
-    margin-top: 12rem;
-  }
-
-  .xl\:mr-14 {
-    margin-right: 3.5rem;
-  }
-
-  .xl\:flex {
-    display: flex;
   }
 
   .xl\:w-9\/12 {
@@ -1620,20 +1521,8 @@ textarea:focus, input:focus{
     width: 13px;
   }
 
-  .xl\:w-\[70\%\] {
-    width: 70%;
-  }
-
   .xl\:max-w-\[650px\] {
     max-width: 650px;
-  }
-
-  .xl\:flex-row {
-    flex-direction: row;
-  }
-
-  .xl\:flex-col {
-    flex-direction: column;
   }
 
   .xl\:px-7 {

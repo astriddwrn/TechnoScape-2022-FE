@@ -14,7 +14,6 @@ $(document).ready(() => {
             $(this).siblings('.answer-container').addClass('active');
             setHeight(this);
         }
-        
     });
 
     function setHeight(a){
@@ -22,9 +21,9 @@ $(document).ready(() => {
         console.log(faq_height);
         $('.answer-container.active').css('max-height', faq_height);  
     }
-
     //end faq
 
+    //event
     $('.event-day .title').each(function(){
         $(this).click(function(){
             // title
@@ -50,4 +49,12 @@ $(document).ready(() => {
 
         })
     })
+    //end event 
+
+    //share
+    $('.share-button').click(function(){
+        console.log('hi');
+        $(this).addClass('active');
+    });
+    //end share
 });

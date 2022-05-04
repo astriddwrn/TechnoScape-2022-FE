@@ -39,8 +39,9 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <!-- <script async src="https://ga.jspm.io/npm:es-module-shims@1.4.3/dist/es-module-shims.js"></script> -->
         <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+        <script async src="https://ga.jspm.io/npm:es-module-shims@1.4.3/dist/es-module-shims.js"></script>
     </head>
-<body class="bg-cBgLight">
+<body class="bg-cBgWhite">
 
     <!-- HIGHLIGHTS section -->
     <!-- <div class="highlights-section mt-36">
@@ -77,7 +78,7 @@
     </div> -->
 
     <!-- MEET Section -->
-    <!-- <div class="meet-section mt-36 text-cGray">
+    <div class="meet-section mt-36 text-cGray">
         <div class="title-colored-shadow font-Ethno text-5xl tracking-wide text-cTitleVC text-center leading-relaxed mb-8">Meet OUr SPEAKERS</div>
         <div class="card-wrapper flex flex-wrap flex-row justify-center mx-32 gap-10">
             <div class="card bg-cWhite rounded-[40px] w-[250px] flex flex-col items-center p-8 gap-1 hover:shadow-md hover:shadow-bsVCCard">
@@ -117,7 +118,7 @@
                 <div class="text-sm">ABC Company</div>
             </div>
         </div>
-    </div> -->
+    </div>
 
     <!-- EVENT Section -->
     <!-- <div class="event-section mt-36">
@@ -273,39 +274,14 @@
     </div> -->
 
     <!-- FAQ section -->
-    <!-- <div class="faq-section mt-36 text-cGray">
-        <div class="title-colored-shadow font-Ethno text-5xl tracking-wide text-cTitleVC text-center leading-relaxed mb-8">Frequently Asked Questions</div>
-        <div class="faq-wrapper flex flex-row justify-center gap-10">
-            <div class="faq-subwrapper w-5/12 max-width-[550px]">
-                <div class="question-container bg-cWhite rounded-[25px] py-3 px-7 flex flex-row justify-between items-center shadow-bsVCMain">
-                    <div class="question w-10/12">Apa saja persyaratan untuk mengikuti Virtual Conference?</div>
-                    <img class="question-button" src="./assets/virtual-conference/faq-plus.svg" alt="">
-                </div>
-                <div class="answer-container bg-cWhite rounded-[25px] py-3 px-7 rounded-tr-none mt-5 ml-10 shadow-bsVCMain">
-                    <div class="answer">Tidak ada syarat untuk berpartisipasi, jadi siapa saja yang ingin belajar dapat berpartisipasi dalam acara ini.</div>
-                </div>
-            </div>
-            <div class="faq-subwrapper w-5/12 max-width-[550px]">
-                <div class="question-container bg-cWhite rounded-xl p-5 flex flex-row justify-between items-center">
-                    <div class="question">Apa saja persyaratan untuk mengikuti Virtual Conference?</div>
-                    <img class="question-button" src="./assets/virtual-conference/faq-plus.svg" alt="">
-                </div>
-                <div class="answer-container bg-cWhite">
-                    <div class="answer">Tidak ada syarat untuk berpartisipasi, jadi siapa saja yang ingin belajar dapat berpartisipasi dalam acara ini.</div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-
-    <div class="w-full h-screen xl:mt-48 md:mt-48">
+    <div class="w-full mt-48">
         <div class="">
-            <h1 class="font-Ethno mx-5 xl:text-5xl md:text-5xl text-[22px] text-center title-colored shadow-cBlack drop-shadow-md">
+            <h1 class="font-Ethno mx-5 xl:text-5xl md:text-5xl sm:text-3xl text-[22px] text-center title-colored title-colored-shadow">
                 Frequently Asked Questions
             </h1>
         </div>
 
         <div class="flex lg:flex-row lg:justify-center flex-col items-center xl:mt-20 md:mt-20 mt-10 lg:gap-10 xl:mx-20 lg:mx-10 md:mx-20 sm:mx-10 mx-5 ">
-            <!--Left-->
             <div class="xl:w-1/2 xl:max-w-[650px] lg:w-full ">
                 <div @click.away="open = false" x-data="{ open: false }" class="relative">
                     <input @click="open = !open" type="checkbox" class="absolute faq-button inset-x-0 w-full h-[90px] opacity-0 z-10 cursor-pointer">
@@ -356,8 +332,6 @@
                     </div>
                 </div>
             </div>
-            
-            <!--Right-->
             <div class="xl:w-1/2 xl:max-w-[650px] lg:w-full ">
                 <div @click.away="open = false" x-data="{ open: false }" class="relative">
                     <input @click="open = !open" type="checkbox" class="absolute faq-button inset-x-0 w-full h-[90px] opacity-0 z-10 cursor-pointer">
@@ -411,9 +385,57 @@
         </div>
     </div>
 
+    <!-- SHARE section -->
+    <div class="share-section mt-36 text-cGray relative flex lg:flex-row flex-col-reverse lg:justify-between justify-center items-center w-10/12 mx-auto max-w-[1200px]">
+        <div class="left lg:w-7/12 w-11/12 lg:mt-0 mt-14">
+            <div class="lg:text-2xl sm:text-lg text-xs lg:text-left text-center">Suka dengan apa yang kamu lihat?</div>
+            <div class="title-colored-shadow font-Ethno text-5xl tracking-wide text-cTitleVC leading-snug mb-10 lg:text-left text-center xl:text-5xl md:text-5xl sm:text-3xl text-2xl">SHARE IT WITH <br>YOUR FRIENDS!</div>
+            <div class="share-button overflow-hidden sm:w-60 w-52 relative h-12 rounded-xl hover:ease-in-out duration-300 hover:shadow-bsBtnBlue lg:left-0 lg:translate-x-0 left-1/2 transform -translate-x-1/2">
+                <div class="text absolute h-12 sm:w-60 w-52 sm:text-lg text-xs text-center bg-cBtnGradientBlue font-PJSMedium text-cWhite p-3 rounded-xl hover:ease-in-out duration-300 tracking-wide z-10 cursor-pointer ">Share to Friend</div>
+                <div class="sm:w-60 w-52 flex flex-row justify-around items-center h-full z-0">
+                    <img class="grayscale hover:grayscale-0 sm:w-6 w-5" src="./assets/icon/twitter-blue.svg" alt="">
+                    <img class="grayscale hover:grayscale-0 sm:w-6 w-5" src="./assets/icon/facebook-blue.svg" alt="">
+                    <img class="grayscale hover:grayscale-0 sm:w-6 w-5" src="./assets/icon/line-blue.svg" alt="">
+                    <img class="grayscale hover:grayscale-0 sm:w-6 w-5" src="./assets/icon/whatsapp-blue.svg" alt="">
+                    <img class="grayscale hover:grayscale-0 sm:w-6 w-5" src="./assets/icon/link-blue.svg" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="flex flex-col items-center justify-center">
+            <div id="model" class="3d md:w-[380px] md:h-[400px] w-full sm:h-[300px] h-[250px]"></div>
+            <img class="-m-10 sm:w-96 w-56" src="./assets/icon/iora-shadow.svg" alt="">
+        </div>
+
+
+    </div>
+
+    
+
+    <div class="mt-48"></div>
     
 
     <script src="./js/virtual-conference.js"></script>
+    <script type="importmap-shim" src="./js/base/esm-maps.json"></script>
+    <script type="module-shim">
+        import Iora from './js/base/Iora.js';
+        window.Iora = Iora;
+
+        var iora = new Iora({alpha:true, antialias:true, container:$("#model")});
+        iora.setPixelRatio(window.devicePixelRatio);
+        window.iora = iora;
+
+        iora.camera.position.set(0, -200, 100);
+        
+
+        iora.scene.addEventListener("iora_loaded", () => {
+            $("body").unbind()
+            var model = iora.scene.getObjectByName("iora")
+            var deg = 0;
+            model.children[0].rotation.set(0, deg * Math.PI / 180, 0);
+
+         })
+    </script>
     
 </body>
 </html>

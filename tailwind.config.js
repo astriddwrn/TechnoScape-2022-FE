@@ -11,19 +11,21 @@ module.exports = {
             cPinkVC: '#FFC0E2',
             cPurPleVC: '#D9BBF0',
             CBlueVC: '#B2B6FF',
+            cBgwhite: "#FAFAFF",
         },
         boxShadow: {
             'bsInput': '5px 7px 25px 5px rgba(213, 213, 213, 0.16)',
             'bsBtn' : '9px 11px 29px 7px rgba(104, 149, 235, 0.26)',
             'bsVCCard': '0px 5px 20px rgba(255, 192, 226, 0.55);',
             'bsVCMain': '4px 5px 20px rgba(103, 103, 103, 0.15)',
+            'bsBtnBlue': '0px 2px 20px 0px #6997EC96;',
         },
         extend: {
             backgroundImage: {
                 cBtnGradientCS: 'linear-gradient(90deg, #547EE2 0%, #5DA0FA 100%)',
                 cLinearGradientRed: 'linear-gradient(90deg, #FF7D7D 50%, #EF7373 122.98%)',
                 cLinearGradient: 'linear-gradient(90deg, rgba(84, 126, 226, 0.7) 0%, rgba(93, 160, 250, 0.7) 100%)',
-               
+                cBtnGradientBlue: "linear-gradient(90deg, #6288E2  0%, #73ACF9  100%)",
             },
             fontFamily: {
                 'sans' : ['PJSRegular','Helvetica', 'Arial', 'sans-serif'],
