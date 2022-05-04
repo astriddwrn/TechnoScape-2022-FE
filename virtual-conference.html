@@ -43,12 +43,80 @@
         <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
         <script async src="https://ga.jspm.io/npm:es-module-shims@1.4.3/dist/es-module-shims.js"></script>
     </head>
-<body class="bg-cBgwhite">
+<body class="bg-cBgwhite text-cTextBlack">
+
+<!-- Navbar for Web-->
+<nav class="items-center justify-between mx-20 py-10 hidden lg:flex">
+    <img src="./assets/logo/TSLogoSmall.svg" alt="">
+    <ul class="flex space-x-14">
+        <li class="active"><a href="">Virtual Conference</a></li>
+        <li><a href="">Developer Workshop</a></li>
+        <li><a href="">Hackathon 5.0</a></li>
+    </ul>
+    <button class="sign-in-btn border py-1 px-6 rounded-xl">Sign In</button>
+</nav>
+<!-- Navbar for Mobile -->
+<nav class="sticky z-20 bg-[#FAFAFF] justify-between font-PJSMedium text-lg text-cTextBlack top-0 py-8 px-6 flex md:px-14 lg:hidden">
+    <img src="./assets/logo/TSLogoSmall.svg" alt="Technoscape Logo" class="w-[12%] md:w-[7%]">
+    <button id="navToggler"><img src="./assets/home/navbarToggler.svg" class="w-[94%] md:w-8" alt="Burger Button"></button>
+    <div id="navMobile" class="navMobile fixed h-screen right-0 top-0 py-8 px-4 z-30 hidden">
+        <img src="./assets/home/X-Button.png" alt="" class="ml-auto w-1/6 mb-14" id="xButtonNav">
+        <ul class="space-y-12 text-sm pr-9 pl-0 md:space-y-20 md:text-2xl md:pr-20 md:pl-4">
+            <li><a href="">Virtual Conference</a></li>
+            <li class="active"><a href="">Developer Workshop</a></li>
+            <li><a href="">Hackathon 5.0</a></li>
+        </ul>
+        <button class="sign-in-btn border py-2 px-10 rounded-lg w-full mt-80 mx-auto text-sm md:py-4 md:rounded-2xl md:mt-[45rem] md:text-2xl">Sign In</button>
+    </div>
+</nav>
+<div class="flex flex-col items-center mt-3 mb-32 md:mt-8 md:mb-36 w-full overflow-x-hidden">
+    <div class="flex justify-center items-center space-x-4 w-2/6 md:w-max lg:w-auto mt-auto md:mt-8 mx-4 md:mx-0">
+        <img src="./assets/logo/tslogo.png" alt="" class="mt-auto w-auto md:w-48">
+        <p class="text-[#808080] md:text-4xl text-2xl md:translate-y-[-15%]">&times;</p>
+        <img src="./assets/logo/tslogo.png" alt="" class="mt-auto w-auto md:w-48">
+    </div>
+    <div class="w-fit font-Ethno md:space-y-0 mt-12 md:mt-10 lg:mt-14 mb-0 md:mb-4 mx-4 md:mx-12 bg-clip-text text-transparent bg-cDW">
+        <h1 class="text-[2rem] leading-none md:text-[4rem] md:leading-tight xl:text-[5rem] title-colored-shadow">Vitrual</h1>
+        <h1 class="text-[2rem] leading-none md:text-[4rem] md:leading-tight xl:text-[5rem] ml-8 md:ml-36 title-colored-shadow">Conference</h1>
+    </div>
+    <div class="w-fit font-PJSBold text-cTextBlack mt-6 md:mt-4 lg:mt-8 mb-0 md:mb-4 mx-4 md:mx-12">
+        <p class="text-[0.8rem] md:text-[1.4rem]  ">
+            Aquiring <span class="title-colored">Valuable Insights</span> to Achieve <span class="title-colored">Success</span> in the <span class="title-coloredA">Digital Era</span>
+        </p>
+    </div>
+    <div class="w-fit font-PJSMedium text-cTextBlack mt-4 md:mt-4 lg:mt-8 mb-0 md:mb-12 mx-4 md:mx-12">
+        <p class="text-[0.8rem] md:text-[1.5rem] lg:text-[2rem]">
+            9 - 12 Juni 2022
+        </p>
+    </div>
+    <div class="flex flex-col items-center w-full">
+        <button class="order-2 lg:order-1 button-blue bg-cBtnGradientCS font-PJSSemiBold text-cWhite p-2 px-6 rounded-xl hover:ease-in-out duration-300 mb-8 lg:mb-0">Let’s Talk</button>
+        <div id="model" class="relative h-[200px] w-[500px] max-w-full m-4 mb-8 order-1 md:h-[400px] lg:mb-4 lg:order-2">
+            <img class="dw-cone absolute right-0 top-0 w-16 md:w-28 z-0 translate-x-full" src="./assets/dw/Cone2.png" alt="">
+            <img class="dw-cube absolute left-0 top-1/2 w-16 md:w-28 z-[-1] -translate-x-full" src="./assets/dw/Round Cube.png" alt="">
+            <img class="dw-dome absolute right-0 bottom-0 w-16 md:w-28 z-[1]" src="./assets/dw/Dome 3.png" alt="">
+        </div>
+    </div>
+    <div class="text-center flex flex-col items-center mx-8" style="width:calc(100% - 2rem);">
+        <h3 class="title-colored font-PJSExtraBold leading-snug text-[1.4rem] md:text-[2rem] lg:text-[2.6rem]">
+            A Webinar and Talkshow Series
+        </h3>
+        <p class="text-cTextBlack w-[50rem] max-w-full tracking-wide mt-8 text-sm md:text-base lg:text-lg">
+            <span style="color:  #B2B6FF;" class="font-PJSExtraBold">Virtual Conference</span> merupakan rangkaian webinar dan talkshow secara online selama 3 hari dengan mengangkat topik seputar teknologi, bisnis, dan desain. 
+            <span style="color:  #B2B6FF;" class="title-colored font-PJSExtraBold">Virtual Conference</span> menjadi wadah bagi para peserta untuk mendapatkan insights dan memperkenalkan mereka ke dalam topik-topik yang relevan dengan dunia IT bersama pembicara yang ahli di bidangnya.
+            trainer yang ahli di bidang IT.
+        </p>
+        <div class="flex mt-8">
+            <button class="button-blue bg-cBtnGradientCS font-PJSMedium text-cWhite p-2 px-6 rounded-xl hover:ease-in-out duration-300 mr-4">Buy Ticket</button>
+            <button class="button-outline-blue py-1 px-6 rounded-xl font-PJSMedium bg-clip-text text-transparent bg-cBtnGradientCS">Guidebook</button>
+        </div>
+    </div>
+    <img src="./assets/dw/Liquify.png" alt="" class="absolute -z-10 top-0 right-0 opacity-75 w-[95%] h-[70rem] ">
 
     <!-- HIGHLIGHTS section -->
     <!-- <div class="highlights-section md:mt-36 mt-20">
         <div class="hightlight-title title-colored-shadow font-Ethno text-5xl tracking-wide text-cTitleVC text-center">HIGHLIGHTS</div>
-        <div class="highlight-text text-center text-lg my-5 text-cGray leading-relaxed">Here are the key highlights of Virtual Conference 2021 in case you missed it.</div>
+        <div class="highlight-text text-center text-lg my-5   leading-relaxed">Here are the key highlights of Virtual Conference 2021 in case you missed it.</div>
         <div class="video w-[600px] h-[300px] bg-cLighterGray mx-auto my-0 rounded-lg">
             <div class="flex justify-center items-center flex-row h-full">
                 <img class="w-2/12" src="./assets/virtual-conference/highlights-video-button.svg" alt="">
@@ -63,24 +131,24 @@
             <div class="card group lg:w-3/12 md:w-4/12 w-[300px] flex flex-col items-center justify-around bg-cWhite rounded-[40px] py-10 lg:px-10 px-5 hover:shadow-md hover:shadow-bsVCCard transition duration-300 hover:-translate-y-2">
                 <img class="md:w-[100px] w-[70px] grayscale group-hover:grayscale-0 transition duration-300" src="./assets/virtual-conference/why-1-star.svg" alt="">
                 <div class="sub-title title my-7 font-PJSBold title-colored lg:text-xl text-lg text-center leading-relaxed">Temukan dan Dapatkan Inspirasi dari Pakarnya</div>
-                <div class="content-text text-center md:text-base text-xs text-cGray leading-relaxed">Kesempatan ini bisa kamu dapatkan untuk membantumu mencapai keunggulan dalam pekerjaan yang kamu impikan.</div>
+                <div class="content-text text-center md:text-base text-xs   leading-relaxed">Kesempatan ini bisa kamu dapatkan untuk membantumu mencapai keunggulan dalam pekerjaan yang kamu impikan.</div>
             </div>
             <div class="card group lg:w-3/12 md:w-4/12 w-[300px] flex flex-col items-center justify-around bg-cWhite rounded-[40px] py-10 lg:px-10 px-5 hover:shadow-md hover:shadow-bsVCCard transition duration-300 hover:-translate-y-2">
                 <img class="md:w-[100px] w-[70px] grayscale group-hover:grayscale-0 transition duration-300" src="./assets/virtual-conference/why-2-bulb.svg" alt="">
                 <div class="sub-title title my-7 font-PJSBold title-colored lg:text-xl text-lg text-center leading-relaxed">Mendapatkan Wawasan Tentang Teknologi yang Relevan</div>
-                <div class="content-text text-center md:text-base text-xs text-cGray leading-relaxed">Kamu dapat memperluas pengetahuan tentang tren dan inovasi terbaru di bidang teknologi melalui pembicara yang berpengalaman.</div>
+                <div class="content-text text-center md:text-base text-xs   leading-relaxed">Kamu dapat memperluas pengetahuan tentang tren dan inovasi terbaru di bidang teknologi melalui pembicara yang berpengalaman.</div>
             </div>
             <div class="card group lg:w-3/12 md:w-4/12 w-[300px] flex flex-col items-center justify-around bg-cWhite rounded-[40px] py-10 lg:px-10 px-5 hover:shadow-md hover:shadow-bsVCCard transition duration-300 hover:-translate-y-2">
                 <img class="md:w-[100px] w-[70px] grayscale group-hover:grayscale-0 transition duration-300" src="./assets/virtual-conference/why-3-chat.svg" alt="">
                 <div class="sub-title title my-7 font-PJSBold title-colored lg:text-xl text-lg text-center leading-relaxed">Mendapatkan Jaringan Profesional</div>
-                <div class="content-text text-center md:text-base text-xs text-cGray leading-relaxed">Kamu akan mendapatkan kesempatan untuk berinteraksi bersama pembicara yang inspiratif dan para peserta lainnya secara virtual.</div>
+                <div class="content-text text-center md:text-base text-xs   leading-relaxed">Kamu akan mendapatkan kesempatan untuk berinteraksi bersama pembicara yang inspiratif dan para peserta lainnya secara virtual.</div>
             </div>
         </div>
 
     </div>
 
     <!-- MEET Section -->
-    <div class="meet-section md:mt-36 mt-20 text-cGray md:w-11/12 w-full mx-auto max-w-[1000px]  lg:px-0 px-5">
+    <div class="meet-section md:mt-36 mt-20   md:w-11/12 w-full mx-auto max-w-[1000px]  lg:px-0 px-5">
         <div class="title-colored-shadow font-Ethno xl:text-5xl md:text-5xl sm:text-3xl text-[22px] tracking-wide text-cTitleVC text-center leading-relaxed mb-8">MEET OUR SPEAKERS</div>
         <div class="card-wrapper flex flex-wrap flex-row justify-center lg:gap-7 gap-5 ">
             <div class="card bg-cWhite rounded-[40px] lg:w-[250px] md:w-[220px] w-[190px] flex flex-col items-center lg:p-8 p-5 gap-1 transition duration-300 hover:-translate-y-2 hover:shadow-md hover:shadow-bsVCCard ">
@@ -385,7 +453,7 @@
     </div>
 
     <!-- GET section -->
-    <div class="get-section relative md:mt-36 mt-20 text-cGray relative flex flex-col justify-center h-screen max-h-[700px] min-h-[500px] items-center w-full px-5 mx-auto max-w-[1200px] overflow-x-hidden overflow-y-clip">
+    <div class="get-section relative md:mt-36 mt-20   relative flex flex-col justify-center h-screen max-h-[700px] min-h-[500px] items-center w-full px-5 mx-auto max-w-[1200px] overflow-x-hidden overflow-y-clip">
         <img style="z-index:-1;" class="absolute md:top-[10%] sm:top-[15%] top-[20%] left-[30%] transform -translate-x-1/2 -translate-y-1/2 md:w-24 sm:w-20 w-16" src="./assets/virtual-conference/get-vector-1.svg" alt="">
         <img style="z-index:-1;" class="absolute sm:top-[15%] top-[20%] left-[90%] transform -translate-x-1/2 -translate-y-1/2 md:w-72 sm:w-56 w-48" src="./assets/virtual-conference/get-vector-2.svg" alt="">
         <img style="z-index:-1;" class="absolute top-[75%] left-[10%] transform -translate-x-1/2 -translate-y-1/2 md:w-96 sm:w-72 w-60" src="./assets/virtual-conference/get-vector-3.svg" alt="">
@@ -400,7 +468,7 @@
     <!-- SHARE section -->
     <div class="share-section relative md:mt-36 mt-10">
         <img class="w-screen absolute top-0 left-1/2 transform -translate-x-1/2" src="./assets/virtual-conference/share-wave.svg" alt="">
-        <div class=" pt-20 text-cGray relative flex lg:flex-row flex-col-reverse lg:justify-between justify-center items-center w-10/12 mx-auto max-w-[1200px]">
+        <div class=" pt-20   relative flex lg:flex-row flex-col-reverse lg:justify-between justify-center items-center w-10/12 mx-auto max-w-[1200px]">
             
             <div class="left lg:w-8/12 w-11/12 lg:mt-0 mt-14">
                 <div class="lg:text-2xl sm:text-xl text-xs lg:text-left text-center">Suka dengan apa yang kamu lihat?</div>
@@ -564,7 +632,7 @@
                   <img src="./assets/home/X-Button.png" alt="" class="w-6 md:w-10 lg:w-12 xl:w-10 ml-auto md:mr-1">
                </button>
                <h1 class="h1-gradient text-shadow-etno text-[.9rem] md:text-[2rem] lg:text-[3rem] font-PJSExtraBold xl:leading-tight">Ada yang bisa kami bantu?</h1>
-               <p class="text-[.4rem] md:text-[.9rem] lg:text-xl text-cGray">Tulis pesanmu dan kami akan menghubungimu segera!</p>
+               <p class="text-[.4rem] md:text-[.9rem] lg:text-xl  ">Tulis pesanmu dan kami akan menghubungimu segera!</p>
                <form class="mt-6" action="" method="POST" enctype="application/x-www-form-urlencoded">
                   <div class="mb-7 lg:mb-9 xl:mb-5">
                      <label for="username" class="block text-sm md:text-lg lg:text-[1.4rem] xl:text-lg font-PJSSemiBold">Nama Lengkap</label>
@@ -645,6 +713,7 @@
     <script src="./js/navbar.js"></script>
     <script src="./js/media-partner.js"></script>
     <script src="./js/virtual-conference.js"></script>
+    <script src="./js/base/base.js"></script>
     <script type="importmap-shim" src="./js/base/esm-maps.json"></script>
     <script type="module-shim">
         import Iora from './js/base/Iora.js';

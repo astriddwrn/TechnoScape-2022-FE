@@ -548,6 +548,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   right: 0px;
 }
 
+.left-0 {
+  left: 0px;
+}
+
+.bottom-0 {
+  bottom: 0px;
+}
+
 .right-5 {
   right: 1.25rem;
 }
@@ -592,20 +600,40 @@ Ensure the default browser behavior of the `hidden` attribute.
   z-index: 30;
 }
 
-.z-10 {
-  z-index: 10;
-}
-
 .z-0 {
   z-index: 0;
+}
+
+.z-\[-1\] {
+  z-index: -1;
+}
+
+.z-\[1\] {
+  z-index: 1;
 }
 
 .-z-10 {
   z-index: -10;
 }
 
+.z-10 {
+  z-index: 10;
+}
+
+.order-2 {
+  order: 2;
+}
+
+.order-1 {
+  order: 1;
+}
+
 .float-right {
   float: right;
+}
+
+.m-4 {
+  margin: 1rem;
 }
 
 .-m-10 {
@@ -669,6 +697,16 @@ Ensure the default browser behavior of the `hidden` attribute.
 .my-auto {
   margin-top: auto;
   margin-bottom: auto;
+}
+
+.mx-4 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.mx-8 {
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 .my-5 {
@@ -778,12 +816,44 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 3rem;
 }
 
-.mt-20 {
-  margin-top: 5rem;
+.mt-3 {
+  margin-top: 0.75rem;
+}
+
+.mb-32 {
+  margin-bottom: 8rem;
+}
+
+.mt-auto {
+  margin-top: auto;
+}
+
+.mb-0 {
+  margin-bottom: 0px;
+}
+
+.ml-8 {
+  margin-left: 2rem;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
 }
 
 .mb-8 {
   margin-bottom: 2rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
+}
+
+.mr-4 {
+  margin-right: 1rem;
+}
+
+.mt-20 {
+  margin-top: 5rem;
 }
 
 .mt-10 {
@@ -806,20 +876,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-left: 1.25rem;
 }
 
-.mt-8 {
-  margin-top: 2rem;
-}
-
 .mt-14 {
   margin-top: 3.5rem;
 }
 
 .mt-48 {
   margin-top: 12rem;
-}
-
-.mt-6 {
-  margin-top: 1.5rem;
 }
 
 .mb-12 {
@@ -870,6 +932,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+}
+
+.h-\[200px\] {
+  height: 200px;
+}
+
+.h-\[70rem\] {
+  height: 70rem;
 }
 
 .h-2 {
@@ -1010,6 +1080,32 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 20rem;
 }
 
+.w-2\/6 {
+  width: 33.333333%;
+}
+
+.w-fit {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.w-\[500px\] {
+  width: 500px;
+}
+
+.w-16 {
+  width: 4rem;
+}
+
+.w-\[50rem\] {
+  width: 50rem;
+}
+
+.w-\[95\%\] {
+  width: 95%;
+}
+
 .w-\[600px\] {
   width: 600px;
 }
@@ -1036,10 +1132,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .w-\[10px\] {
   width: 10px;
-}
-
-.w-16 {
-  width: 4rem;
 }
 
 .w-48 {
@@ -1082,12 +1174,26 @@ Ensure the default browser behavior of the `hidden` attribute.
   max-width: 500px;
 }
 
+.max-w-full {
+  max-width: 100%;
+}
+
 .max-w-\[1200px\] {
   max-width: 1200px;
 }
 
 .max-w-\[1000px\] {
   max-width: 1000px;
+}
+
+.translate-x-full {
+  --tw-translate-x: 100%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.-translate-x-full {
+  --tw-translate-x: -100%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .-translate-x-1\/2 {
@@ -1371,6 +1477,15 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-image: linear-gradient(90deg, #6288E2  0%, #73ACF9  100%);
 }
 
+.bg-clip-text {
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
 .p-10 {
   padding: 2.5rem;
 }
@@ -1579,6 +1694,23 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-size: .5rem;
 }
 
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-\[2rem\] {
+  font-size: 2rem;
+}
+
+.text-\[0\.8rem\] {
+  font-size: 0.8rem;
+}
+
+.text-\[1\.4rem\] {
+  font-size: 1.4rem;
+}
+
 .text-\[22px\] {
   font-size: 22px;
 }
@@ -1594,11 +1726,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .text-\[5\.5rem\] {
   font-size: 5.5rem;
-}
-
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
 }
 
 .text-\[1rem\] {
@@ -1633,16 +1760,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 1rem;
 }
 
-.leading-relaxed {
-  line-height: 1.625;
-}
-
 .leading-none {
   line-height: 1;
 }
 
 .leading-snug {
   line-height: 1.375;
+}
+
+.leading-relaxed {
+  line-height: 1.625;
 }
 
 .leading-tight {
@@ -1682,6 +1809,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(103 103 103 / var(--tw-text-opacity));
 }
 
+.text-cTextBlack {
+  --tw-text-opacity: 1;
+  color: rgb(103 103 103 / var(--tw-text-opacity));
+}
+
+.text-\[\#808080\] {
+  --tw-text-opacity: 1;
+  color: rgb(128 128 128 / var(--tw-text-opacity));
+}
+
+.text-transparent {
+  color: transparent;
+}
+
 .text-\[\#AAAAAA\] {
   --tw-text-opacity: 1;
   color: rgb(170 170 170 / var(--tw-text-opacity));
@@ -1705,10 +1846,19 @@ Ensure the default browser behavior of the `hidden` attribute.
   opacity: 0.25;
 }
 
+.opacity-75 {
+  opacity: 0.75;
+}
+
 .shadow-bsVCMain {
   --tw-shadow: 4px 5px 20px rgba(103, 103, 103, 0.15);
   --tw-shadow-colored: 4px 5px 20px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-cBlack {
+  --tw-shadow-color: #676767;
+  --tw-shadow: var(--tw-shadow-colored);
 }
 
 .drop-shadow-lg {
@@ -2011,6 +2161,11 @@ textarea:focus, input:focus{
     margin-right: 0px;
   }
 
+  .md\:mx-12 {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+
   .md\:mx-20 {
     margin-left: 5rem;
     margin-right: 5rem;
@@ -2060,6 +2215,30 @@ textarea:focus, input:focus{
 
   .md\:mt-10 {
     margin-top: 2.5rem;
+  }
+
+  .md\:mt-\[45rem\] {
+    margin-top: 45rem;
+  }
+
+  .md\:mb-36 {
+    margin-bottom: 9rem;
+  }
+
+  .md\:mb-4 {
+    margin-bottom: 1rem;
+  }
+
+  .md\:ml-36 {
+    margin-left: 9rem;
+  }
+
+  .md\:mt-4 {
+    margin-top: 1rem;
+  }
+
+  .md\:mb-12 {
+    margin-bottom: 3rem;
   }
 
   .md\:mt-36 {
@@ -2158,6 +2337,20 @@ textarea:focus, input:focus{
     width: 83.333333%;
   }
 
+  .md\:w-max {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+  }
+
+  .md\:w-48 {
+    width: 12rem;
+  }
+
+  .md\:w-28 {
+    width: 7rem;
+  }
+
   .md\:w-4\/12 {
     width: 33.333333%;
   }
@@ -2194,10 +2387,6 @@ textarea:focus, input:focus{
     width: 18rem;
   }
 
-  .md\:w-28 {
-    width: 7rem;
-  }
-
   .md\:w-\[380px\] {
     width: 380px;
   }
@@ -2218,10 +2407,9 @@ textarea:focus, input:focus{
     width: 43rem;
   }
 
-  .md\:w-max {
-    width: -webkit-max-content;
-    width: -moz-max-content;
-    width: max-content;
+  .md\:translate-y-\[-15\%\] {
+    --tw-translate-y: -15%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
   .md\:-translate-y-9 {
@@ -2267,6 +2455,12 @@ textarea:focus, input:focus{
     --tw-space-x-reverse: 0;
     margin-right: calc(2rem * var(--tw-space-x-reverse));
     margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .md\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0px * var(--tw-space-y-reverse));
   }
 
   .md\:space-x-6 > :not([hidden]) ~ :not([hidden]) {
@@ -2394,6 +2588,22 @@ textarea:focus, input:focus{
     font-size: 0.83rem;
   }
 
+  .md\:text-\[4rem\] {
+    font-size: 4rem;
+  }
+
+  .md\:text-\[1\.4rem\] {
+    font-size: 1.4rem;
+  }
+
+  .md\:text-\[1\.5rem\] {
+    font-size: 1.5rem;
+  }
+
+  .md\:text-\[2rem\] {
+    font-size: 2rem;
+  }
+
   .md\:text-5xl {
     font-size: 3rem;
     line-height: 1;
@@ -2402,10 +2612,6 @@ textarea:focus, input:focus{
   .md\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
-  }
-
-  .md\:text-\[2rem\] {
-    font-size: 2rem;
   }
 
   .md\:text-\[\.9rem\] {
@@ -2418,6 +2624,10 @@ textarea:focus, input:focus{
 
   .md\:leading-7 {
     line-height: 1.75rem;
+  }
+
+  .md\:leading-tight {
+    line-height: 1.25;
   }
 
   .md\:placeholder\:text-base::-moz-placeholder {
@@ -2443,6 +2653,14 @@ textarea:focus, input:focus{
 
   .lg\:z-0 {
     z-index: 0;
+  }
+
+  .lg\:order-1 {
+    order: 1;
+  }
+
+  .lg\:order-2 {
+    order: 2;
   }
 
   .lg\:mx-28 {
@@ -2530,12 +2748,20 @@ textarea:focus, input:focus{
     margin-top: 4rem;
   }
 
-  .lg\:mt-0 {
-    margin-top: 0px;
+  .lg\:mt-14 {
+    margin-top: 3.5rem;
+  }
+
+  .lg\:mt-8 {
+    margin-top: 2rem;
   }
 
   .lg\:mb-4 {
     margin-bottom: 1rem;
+  }
+
+  .lg\:mt-0 {
+    margin-top: 0px;
   }
 
   .lg\:mt-4 {
@@ -2612,6 +2838,10 @@ textarea:focus, input:focus{
 
   .lg\:w-1\/2 {
     width: 50%;
+  }
+
+  .lg\:w-auto {
+    width: auto;
   }
 
   .lg\:w-3\/12 {
@@ -2851,6 +3081,19 @@ textarea:focus, input:focus{
     line-height: 1.25rem;
   }
 
+  .lg\:text-\[2rem\] {
+    font-size: 2rem;
+  }
+
+  .lg\:text-\[2\.6rem\] {
+    font-size: 2.6rem;
+  }
+
+  .lg\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
   .lg\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
@@ -2863,11 +3106,6 @@ textarea:focus, input:focus{
   .lg\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
-  }
-
-  .lg\:text-lg {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
   }
 
   .lg\:text-\[3rem\] {
@@ -2971,6 +3209,10 @@ textarea:focus, input:focus{
   .xl\:px-10 {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
+  }
+
+  .xl\:text-\[5rem\] {
+    font-size: 5rem;
   }
 
   .xl\:text-5xl {
