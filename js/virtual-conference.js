@@ -57,4 +57,16 @@ $(document).ready(() => {
         $(this).addClass('active');
     });
     //end share
+
+    // highlight 
+    $(".highlight-card").click(function(e) {
+        $(".highlight-card").each(function(){
+          $(this).removeClass("active");
+        });
+        // let index = $(this).index();
+        // console.log(index);
+        // $('.highlight-card').eq(index).addClass("active");
+        $(this).addClass("active");
+    })
+    // end highlight
 });

@@ -717,14 +717,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-right: 1rem;
 }
 
-.my-5 {
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
-}
-
-.my-0 {
-  margin-top: 0px;
-  margin-bottom: 0px;
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .my-7 {
@@ -966,6 +961,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 70rem;
 }
 
+.h-\[2\.5rem\] {
+  height: 2.5rem;
+}
+
 .h-2 {
   height: 0.5rem;
 }
@@ -1142,14 +1141,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 95%;
 }
 
-.w-\[600px\] {
-  width: 600px;
-}
-
-.w-2\/12 {
-  width: 16.666667%;
-}
-
 .w-\[70px\] {
   width: 70px;
 }
@@ -1311,6 +1302,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .justify-evenly {
   justify-content: space-evenly;
+}
+
+.gap-2 {
+  gap: 0.5rem;
 }
 
 .gap-5 {
@@ -1507,11 +1502,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-cBgwhite {
   --tw-bg-opacity: 1;
   background-color: rgb(250 250 255 / var(--tw-bg-opacity));
-}
-
-.bg-cLighterGray {
-  --tw-bg-opacity: 1;
-  background-color: rgb(199 199 199 / var(--tw-bg-opacity));
 }
 
 .bg-cBtnGradientCS {
@@ -1778,17 +1768,21 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-size: 1.4rem;
 }
 
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.text-\[7px\] {
+  font-size: 7px;
+}
+
 .text-\[22px\] {
   font-size: 22px;
 }
 
 .text-\[10px\] {
   font-size: 10px;
-}
-
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
 }
 
 .text-\[5\.5rem\] {
@@ -1817,6 +1811,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .font-medium {
   font-weight: 500;
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
 
 .leading-normal {
@@ -1890,6 +1888,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(128 128 128 / var(--tw-text-opacity));
 }
 
+.text-cInpGray {
+  --tw-text-opacity: 1;
+  color: rgb(128 128 128 / var(--tw-text-opacity));
+}
+
 .text-\[\#AAAAAA\] {
   --tw-text-opacity: 1;
   color: rgb(170 170 170 / var(--tw-text-opacity));
@@ -1917,15 +1920,15 @@ Ensure the default browser behavior of the `hidden` attribute.
   opacity: 0.75;
 }
 
-.shadow-bsVCMain {
-  --tw-shadow: 4px 5px 20px rgba(103, 103, 103, 0.15);
-  --tw-shadow-colored: 4px 5px 20px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
 .shadow-bsVCRegist {
   --tw-shadow: 1px 1px 50px rgba(104, 108, 169, 0.1);;
   --tw-shadow-colored: 1px 1px 50px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-bsVCMain {
+  --tw-shadow: 4px 5px 20px rgba(103, 103, 103, 0.15);
+  --tw-shadow-colored: 4px 5px 20px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
@@ -2244,6 +2247,11 @@ textarea:focus, input:focus{
     margin-right: 3rem;
   }
 
+  .md\:my-32 {
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+  }
+
   .md\:mx-20 {
     margin-left: 5rem;
     margin-right: 5rem;
@@ -2252,11 +2260,6 @@ textarea:focus, input:focus{
   .md\:my-5 {
     margin-top: 1.25rem;
     margin-bottom: 1.25rem;
-  }
-
-  .md\:my-32 {
-    margin-top: 8rem;
-    margin-bottom: 8rem;
   }
 
   .md\:mt-0 {
@@ -2349,6 +2352,10 @@ textarea:focus, input:focus{
 
   .md\:h-\[400px\] {
     height: 400px;
+  }
+
+  .md\:h-\[4\.75rem\] {
+    height: 4.75rem;
   }
 
   .md\:h-20 {
@@ -2511,6 +2518,10 @@ textarea:focus, input:focus{
     flex-wrap: nowrap;
   }
 
+  .md\:gap-4 {
+    gap: 1rem;
+  }
+
   .md\:gap-40 {
     gap: 10rem;
   }
@@ -2587,6 +2598,16 @@ textarea:focus, input:focus{
   .md\:px-10 {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
+  }
+
+  .md\:px-16 {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  .md\:py-8 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 
   .md\:px-7 {
@@ -2685,6 +2706,10 @@ textarea:focus, input:focus{
   .md\:text-5xl {
     font-size: 3rem;
     line-height: 1;
+  }
+
+  .md\:text-\[15px\] {
+    font-size: 15px;
   }
 
   .md\:text-xl {
@@ -2882,6 +2907,10 @@ textarea:focus, input:focus{
     height: 22rem;
   }
 
+  .lg\:h-\[24rem\] {
+    height: 24rem;
+  }
+
   .lg\:h-1\/6 {
     height: 16.666667%;
   }
@@ -2928,6 +2957,10 @@ textarea:focus, input:focus{
 
   .lg\:w-auto {
     width: auto;
+  }
+
+  .lg\:w-\[10\%\] {
+    width: 10%;
   }
 
   .lg\:w-3\/12 {
