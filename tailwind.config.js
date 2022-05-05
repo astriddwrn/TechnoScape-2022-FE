@@ -38,6 +38,7 @@ module.exports = {
             'bsVCCard': '0px 5px 20px rgba(255, 192, 226, 0.55);',
             'bsVCMain': '4px 5px 20px rgba(103, 103, 103, 0.15)',
             'bsBtnBlue': '0px 2px 20px 0px #6997EC96;',
+            'bsVCRegist' : '1px 1px 50px rgba(104, 108, 169, 0.1);',
         },
         extend: {
             backgroundImage: {
@@ -45,6 +46,7 @@ module.exports = {
                 cLinearGradientRed: 'linear-gradient(90deg, #FF7D7D 50%, #EF7373 122.98%)',
                 cLinearGradient: 'linear-gradient(90deg, rgba(84, 126, 226, 0.7) 0%, rgba(93, 160, 250, 0.7) 100%)',
                 cBtnGradientBlue: "linear-gradient(90deg, #6288E2  0%, #73ACF9  100%)",
+                cBgVc: 'linear-gradient(154.47deg, #FFC0E2 0%, #B2B6FF 100%)',
             },
             fontFamily: {
                 'sans' : ['PJSRegular','Helvetica', 'Arial', 'sans-serif'],
