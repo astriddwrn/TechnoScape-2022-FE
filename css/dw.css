@@ -1,0 +1,68 @@
+.text-dw{
+    text-shadow: 0px 5px 20px rgba(255, 192, 226, 0.55);
+}
+
+@keyframes ani-3 {
+    0% {
+        transform: translate(var(--translate-x), -2rem);
+    }
+    50% {
+        transform: translate(var(--translate-x), 2rem);
+    }
+    100% {
+        transform: translate(var(--translate-x), -2rem);
+    }
+}
+
+@keyframes ani-2 {
+    0% {
+        transform: translate(var(--translate-x), 1.5rem);
+    }
+    50% {
+        transform: translate(var(--translate-x), -1.5rem);
+    }
+    100% {
+        transform: translate(var(--translate-x), 1.5rem);
+    }
+}
+
+@keyframes ani-1 {
+    0% {
+        transform: translate(var(--translate-x), -1rem);
+    }
+    50% {
+        transform: translate(var(--translate-x), 1rem);
+    }
+    100% {
+        transform: translate(var(--translate-x), -1rem);
+    }
+}
+
+.dw-dome{
+    --translate-x: -50%;
+    animation: ani-1 12s ease-in-out 0s infinite normal;
+}
+
+.dw-cube{
+    --translate-x: -20%;
+    animation: ani-2 16s ease-in-out 0s infinite normal;
+}
+
+.dw-cone{
+    --translate-x: 20%;
+    animation: ani-3 20s ease-in-out 0s infinite normal;
+}
+
+@media screen and (min-width: 768px){
+    .dw-dome{
+        --translate-x: 0%;
+    }
+
+    .dw-cube{
+        --translate-x: -100%;
+    }
+    
+    .dw-cone{
+        --translate-x: 100%;
+    }
+}

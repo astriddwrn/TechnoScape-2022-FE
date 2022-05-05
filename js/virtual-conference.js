@@ -17,7 +17,7 @@ $(document).ready(() => {
     });
 
     function setHeight(a){
-        let faq_height = document.getElementsByClassName('active')[0].scrollHeight+'px';
+        let faq_height = document.getElementsByClassName('answer-container active')[0].scrollHeight+'px';
         console.log(faq_height);
         $('.answer-container.active').css('max-height', faq_height);  
     }

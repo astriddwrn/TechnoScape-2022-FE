@@ -632,6 +632,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   float: right;
 }
 
+.m-0 {
+  margin: 0px;
+}
+
 .m-4 {
   margin: 1rem;
 }
@@ -702,11 +706,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mx-4 {
   margin-left: 1rem;
   margin-right: 1rem;
-}
-
-.mx-8 {
-  margin-left: 2rem;
-  margin-right: 2rem;
 }
 
 .my-5 {
@@ -896,6 +895,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-left: -1rem;
 }
 
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
 .block {
   display: block;
 }
@@ -912,6 +915,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 100vh;
 }
 
+.h-full {
+  height: 100%;
+}
+
 .h-\[260px\] {
   height: 260px;
 }
@@ -922,10 +929,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .h-\[300px\] {
   height: 300px;
-}
-
-.h-full {
-  height: 100%;
 }
 
 .h-fit {
@@ -1184,6 +1187,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .max-w-\[1000px\] {
   max-width: 1000px;
+}
+
+.max-w-\[1537px\] {
+  max-width: 1537px;
 }
 
 .translate-x-full {
@@ -1480,6 +1487,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-clip-text {
   -webkit-background-clip: text;
           background-clip: text;
+}
+
+.p-0 {
+  padding: 0px;
 }
 
 .p-2 {

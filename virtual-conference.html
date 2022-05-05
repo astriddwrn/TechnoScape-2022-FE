@@ -36,6 +36,7 @@
         <link rel="stylesheet" href="./css/virtual-conference.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
         <link rel="stylesheet" href="./css/home.css">
+        <link rel="stylesheet" href="./css/dw.css">
     
         <!-- javascript -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -45,73 +46,76 @@
     </head>
 <body class="bg-cBgwhite text-cTextBlack">
 
-<!-- Navbar for Web-->
-<nav class="items-center justify-between mx-20 py-10 hidden lg:flex">
-    <img src="./assets/logo/TSLogoSmall.svg" alt="">
-    <ul class="flex space-x-14">
-        <li class="active"><a href="">Virtual Conference</a></li>
-        <li><a href="">Developer Workshop</a></li>
-        <li><a href="">Hackathon 5.0</a></li>
-    </ul>
-    <button class="sign-in-btn border py-1 px-6 rounded-xl">Sign In</button>
-</nav>
-<!-- Navbar for Mobile -->
-<nav class="sticky z-20 bg-[#FAFAFF] justify-between font-PJSMedium text-lg text-cTextBlack top-0 py-8 px-6 flex md:px-14 lg:hidden">
-    <img src="./assets/logo/TSLogoSmall.svg" alt="Technoscape Logo" class="w-[12%] md:w-[7%]">
-    <button id="navToggler"><img src="./assets/home/navbarToggler.svg" class="w-[94%] md:w-8" alt="Burger Button"></button>
-    <div id="navMobile" class="navMobile fixed h-screen right-0 top-0 py-8 px-4 z-30 hidden">
-        <img src="./assets/home/X-Button.png" alt="" class="ml-auto w-1/6 mb-14" id="xButtonNav">
-        <ul class="space-y-12 text-sm pr-9 pl-0 md:space-y-20 md:text-2xl md:pr-20 md:pl-4">
-            <li><a href="">Virtual Conference</a></li>
-            <li class="active"><a href="">Developer Workshop</a></li>
+    <!-- Navbar for Web-->
+    <nav class="items-center justify-between mx-20 py-10 hidden lg:flex">
+        <img src="./assets/logo/TSLogoSmall.svg" alt="">
+        <ul class="flex space-x-14">
+            <li class="active"><a href="">Virtual Conference</a></li>
+            <li><a href="">Developer Workshop</a></li>
             <li><a href="">Hackathon 5.0</a></li>
         </ul>
-        <button class="sign-in-btn border py-2 px-10 rounded-lg w-full mt-80 mx-auto text-sm md:py-4 md:rounded-2xl md:mt-[45rem] md:text-2xl">Sign In</button>
-    </div>
-</nav>
-<div class="flex flex-col items-center mt-3 mb-32 md:mt-8 md:mb-36 w-full overflow-x-hidden">
-    <div class="flex justify-center items-center space-x-4 w-2/6 md:w-max lg:w-auto mt-auto md:mt-8 mx-4 md:mx-0">
-        <img src="./assets/logo/tslogo.png" alt="" class="mt-auto w-auto md:w-48">
-        <p class="text-[#808080] md:text-4xl text-2xl md:translate-y-[-15%]">&times;</p>
-        <img src="./assets/logo/tslogo.png" alt="" class="mt-auto w-auto md:w-48">
-    </div>
-    <div class="w-fit font-Ethno md:space-y-0 mt-12 md:mt-10 lg:mt-14 mb-0 md:mb-4 mx-4 md:mx-12 bg-clip-text text-transparent bg-cDW">
-        <h1 class="text-[2rem] leading-none md:text-[4rem] md:leading-tight xl:text-[5rem] title-colored-shadow">Vitrual</h1>
-        <h1 class="text-[2rem] leading-none md:text-[4rem] md:leading-tight xl:text-[5rem] ml-8 md:ml-36 title-colored-shadow">Conference</h1>
-    </div>
-    <div class="w-fit font-PJSBold text-cTextBlack mt-6 md:mt-4 lg:mt-8 mb-0 md:mb-4 mx-4 md:mx-12">
-        <p class="text-[0.8rem] md:text-[1.4rem]  ">
-            Aquiring <span class="title-colored">Valuable Insights</span> to Achieve <span class="title-colored">Success</span> in the <span class="title-coloredA">Digital Era</span>
-        </p>
-    </div>
-    <div class="w-fit font-PJSMedium text-cTextBlack mt-4 md:mt-4 lg:mt-8 mb-0 md:mb-12 mx-4 md:mx-12">
-        <p class="text-[0.8rem] md:text-[1.5rem] lg:text-[2rem]">
-            9 - 12 Juni 2022
-        </p>
-    </div>
-    <div class="flex flex-col items-center w-full">
-        <button class="order-2 lg:order-1 button-blue bg-cBtnGradientCS font-PJSSemiBold text-cWhite p-2 px-6 rounded-xl hover:ease-in-out duration-300 mb-8 lg:mb-0">Let’s Talk</button>
-        <div id="model" class="relative h-[200px] w-[500px] max-w-full m-4 mb-8 order-1 md:h-[400px] lg:mb-4 lg:order-2">
-            <img class="dw-cone absolute right-0 top-0 w-16 md:w-28 z-0 translate-x-full" src="./assets/dw/Cone2.png" alt="">
-            <img class="dw-cube absolute left-0 top-1/2 w-16 md:w-28 z-[-1] -translate-x-full" src="./assets/dw/Round Cube.png" alt="">
-            <img class="dw-dome absolute right-0 bottom-0 w-16 md:w-28 z-[1]" src="./assets/dw/Dome 3.png" alt="">
+        <button class="sign-in-btn border py-1 px-6 rounded-xl">Sign In</button>
+    </nav>
+    <!-- Navbar for Mobile -->
+    <nav class="sticky z-20 bg-[#FAFAFF] justify-between font-PJSMedium text-lg text-cTextBlack top-0 py-8 px-6 flex md:px-14 lg:hidden">
+        <img src="./assets/logo/TSLogoSmall.svg" alt="Technoscape Logo" class="w-[12%] md:w-[7%]">
+        <button id="navToggler"><img src="./assets/home/navbarToggler.svg" class="w-[94%] md:w-8" alt="Burger Button"></button>
+        <div id="navMobile" class="navMobile fixed h-screen right-0 top-0 py-8 px-4 z-30 hidden">
+            <img src="./assets/home/X-Button.png" alt="" class="ml-auto w-1/6 mb-14" id="xButtonNav">
+            <ul class="space-y-12 text-sm pr-9 pl-0 md:space-y-20 md:text-2xl md:pr-20 md:pl-4">
+                <li><a href="">Virtual Conference</a></li>
+                <li class="active"><a href="">Developer Workshop</a></li>
+                <li><a href="">Hackathon 5.0</a></li>
+            </ul>
+            <button class="sign-in-btn border py-2 px-10 rounded-lg w-full mt-80 mx-auto text-sm md:py-4 md:rounded-2xl md:mt-[45rem] md:text-2xl">Sign In</button>
         </div>
-    </div>
-    <div class="text-center flex flex-col items-center mx-8" style="width:calc(100% - 2rem);">
-        <h3 class="title-colored font-PJSExtraBold leading-snug text-[1.4rem] md:text-[2rem] lg:text-[2.6rem]">
-            A Webinar and Talkshow Series
-        </h3>
-        <p class="text-cTextBlack w-[50rem] max-w-full tracking-wide mt-8 text-sm md:text-base lg:text-lg">
-            <span style="color:  #B2B6FF;" class="font-PJSExtraBold">Virtual Conference</span> merupakan rangkaian webinar dan talkshow secara online selama 3 hari dengan mengangkat topik seputar teknologi, bisnis, dan desain. 
-            <span style="color:  #B2B6FF;" class="title-colored font-PJSExtraBold">Virtual Conference</span> menjadi wadah bagi para peserta untuk mendapatkan insights dan memperkenalkan mereka ke dalam topik-topik yang relevan dengan dunia IT bersama pembicara yang ahli di bidangnya.
-            trainer yang ahli di bidang IT.
-        </p>
-        <div class="flex mt-8">
-            <button class="button-blue bg-cBtnGradientCS font-PJSMedium text-cWhite p-2 px-6 rounded-xl hover:ease-in-out duration-300 mr-4">Buy Ticket</button>
-            <button class="button-outline-blue py-1 px-6 rounded-xl font-PJSMedium bg-clip-text text-transparent bg-cBtnGradientCS">Guidebook</button>
+    </nav>
+
+    <!-- HERO section -->
+    <div class="flex flex-col items-center mt-3 mb-32 md:mt-8 md:mb-36 w-full overflow-hidden">
+        <div class="flex justify-center items-center space-x-4 w-2/6 md:w-max lg:w-auto mt-auto md:mt-8 mx-4 md:mx-0">
+            <img src="./assets/logo/tslogo.png" alt="" class="mt-auto w-auto md:w-48">
+            <p class="text-[#808080] md:text-4xl text-2xl md:translate-y-[-15%]">&times;</p>
+            <img src="./assets/logo/tslogo.png" alt="" class="mt-auto w-auto md:w-48">
         </div>
+        <div class="w-fit font-Ethno md:space-y-0 mt-12 md:mt-10 lg:mt-14 mb-0 md:mb-4 mx-4 md:mx-12 bg-clip-text text-transparent bg-cDW">
+            <h1 class="text-[2rem] leading-none md:text-[4rem] md:leading-tight xl:text-[5rem] title-colored-shadow">Vitrual</h1>
+            <h1 class="text-[2rem] leading-none md:text-[4rem] md:leading-tight xl:text-[5rem] ml-8 md:ml-36 title-colored-shadow">Conference</h1>
+        </div>
+        <div class="w-fit font-PJSBold text-cTextBlack mt-6 md:mt-4 lg:mt-8 mb-0 md:mb-4 mx-5 md:mx-12">
+            <p class="text-[0.8rem] md:text-[1.4rem] text-center">
+                Aquiring <span class="title-colored">Valuable Insights</span> to Achieve <span class="title-colored">Success</span> in the <span class="title-coloredA">Digital Era</span>
+            </p>
+        </div>
+        <div class="w-fit font-PJSMedium text-cTextBlack mb-6 mx-4 md:mx-12">
+            <p class="text-base md:text-lg lg:text-xl">
+                9 - 12 Juni 2022
+            </p>
+        </div>
+        <div class="flex flex-col items-center w-full">
+            <button class="order-2 lg:order-1 button-blue bg-cBtnGradientCS font-PJSMedium text-cWhite p-2 px-6 rounded-xl hover:ease-in-out duration-300 mb-8 lg:mb-0">Let’s Talk</button>
+            <div id="model-halo" class="relative h-[200px] w-[500px] max-w-full m-4 my-8 order-1 md:h-[400px] lg:mb-4 lg:order-2">
+                <img class="dw-cone absolute right-0 top-0 w-16 md:w-28 z-0 translate-x-full" src="./assets/virtual-conference/hero-cone.png" alt="">
+                <img class="dw-cube absolute left-0 top-1/2 w-16 md:w-28 z-[-1] -translate-x-full" src="./assets/virtual-conference/hero-cube.png" alt="">
+                <img class="dw-dome absolute right-0 bottom-0 w-16 md:w-28 z-[1]" src="./assets/virtual-conference/hero-dome.png" alt="">
+            </div>
+        </div>
+        <div class="text-center flex flex-col items-center mx-10" style="width:calc(100% - 2rem);">
+            <h3 class="title-colored font-PJSExtraBold leading-snug text-[1.4rem] md:text-[2rem] lg:text-[2.6rem]">
+                A Webinar and Talkshow Series
+            </h3>
+            <p class="text-cTextBlack w-[50rem] sm:px-10 px-5 max-w-full tracking-wide mt-8 text-sm md:text-base lg:text-lg">
+                <span style="color:  #B2B6FF;" class="font-PJSExtraBold">Virtual Conference</span> merupakan rangkaian webinar dan talkshow secara online selama 3 hari dengan mengangkat topik seputar teknologi, bisnis, dan desain. 
+                <span style="color:  #B2B6FF;" class="font-PJSExtraBold">Virtual Conference</span> menjadi wadah bagi para peserta untuk mendapatkan insights dan memperkenalkan mereka ke dalam topik-topik yang relevan dengan dunia IT bersama pembicara yang ahli di bidangnya.
+                trainer yang ahli di bidang IT.
+            </p>
+            <div class="flex mt-8">
+                <button class="button-blue bg-cBtnGradientCS font-PJSMedium text-cWhite p-2 px-6 rounded-xl hover:ease-in-out duration-300 mr-4">Buy Ticket</button>
+                <button class="button-outline-blue py-1 px-6 rounded-xl font-PJSMedium bg-clip-text text-transparent bg-cBtnGradientCS">Guidebook</button>
+            </div>
+        </div>
+        <img src="./assets/virtual-conference/hero-liquify.svg" alt="" class="absolute -z-10 top-0 right-0 opacity-75 w-[95%] h-[70rem] ">
     </div>
-    <img src="./assets/dw/Liquify.png" alt="" class="absolute -z-10 top-0 right-0 opacity-75 w-[95%] h-[70rem] ">
 
     <!-- HIGHLIGHTS section -->
     <!-- <div class="highlights-section md:mt-36 mt-20">
@@ -144,7 +148,6 @@
                 <div class="content-text text-center md:text-base text-xs   leading-relaxed">Kamu akan mendapatkan kesempatan untuk berinteraksi bersama pembicara yang inspiratif dan para peserta lainnya secara virtual.</div>
             </div>
         </div>
-
     </div>
 
     <!-- MEET Section -->
@@ -453,11 +456,11 @@
     </div>
 
     <!-- GET section -->
-    <div class="get-section relative md:mt-36 mt-20   relative flex flex-col justify-center h-screen max-h-[700px] min-h-[500px] items-center w-full px-5 mx-auto max-w-[1200px] overflow-x-hidden overflow-y-clip">
-        <img style="z-index:-1;" class="absolute md:top-[10%] sm:top-[15%] top-[20%] left-[30%] transform -translate-x-1/2 -translate-y-1/2 md:w-24 sm:w-20 w-16" src="./assets/virtual-conference/get-vector-1.svg" alt="">
-        <img style="z-index:-1;" class="absolute sm:top-[15%] top-[20%] left-[90%] transform -translate-x-1/2 -translate-y-1/2 md:w-72 sm:w-56 w-48" src="./assets/virtual-conference/get-vector-2.svg" alt="">
-        <img style="z-index:-1;" class="absolute top-[75%] left-[10%] transform -translate-x-1/2 -translate-y-1/2 md:w-96 sm:w-72 w-60" src="./assets/virtual-conference/get-vector-3.svg" alt="">
-        <img style="z-index:-1;" class="absolute top-[60%] left-[85%] transform -translate-x-1/2 -translate-y-1/2 md:w-28 sm:w-24 w-20" src="./assets/virtual-conference/get-vector-4.svg" alt="">
+    <div class="get-section relative md:mt-36 mt-20 relative flex flex-col justify-center h-screen max-h-[700px] min-h-[500px] items-center w-full px-5 mx-auto max-w-[1537px] overflow-x-hidden overflow-y-clip">
+        <img style="z-index:-1;" class="absolute md:top-[10%] sm:top-[15%] top-[20%] left-[30%] transform -translate-x-1/2 -translate-y-1/2 md:w-24 sm:w-20 w-16" src="./assets/virtual-conference/get-vector-1.png" alt="">
+        <img style="z-index:-1;" class="absolute sm:top-[15%] top-[20%] left-[90%] transform -translate-x-1/2 -translate-y-1/2 md:w-72 sm:w-56 w-48" src="./assets/virtual-conference/get-vector-2.png" alt="">
+        <img style="z-index:-1;" class="absolute top-[75%] left-[10%] transform -translate-x-1/2 -translate-y-1/2 md:w-96 sm:w-72 w-60" src="./assets/virtual-conference/get-vector-3.png" alt="">
+        <img style="z-index:-1;" class="absolute top-[60%] left-[85%] transform -translate-x-1/2 -translate-y-1/2 md:w-28 sm:w-24 w-20" src="./assets/virtual-conference/get-vector-4.png" alt="">
         <div class="title-colored-shadow font-Ethno lg:text-4xl sm:text-3xl text-xl text-center tracking-wide text-cTitleVC leading-none">GET YOUR TICKET</div>
         <div class="title-colored-shadow font-Ethno lg:text-[10rem] sm:text-[8rem] text-[5.5rem] text-center tracking-wide text-cTitleVC leading-none">NOW</div>
         <div class="lg:text-2xl sm:text-xl text-base text-center">Buy ticket now to be a part of TechnoScape 2022!!</div>
@@ -466,7 +469,7 @@
     </div>
 
     <!-- SHARE section -->
-    <div class="share-section relative md:mt-36 mt-10">
+    <div class="share-section relative md:mt-36 mt-10 w-screen">
         <img class="w-screen absolute top-0 left-1/2 transform -translate-x-1/2" src="./assets/virtual-conference/share-wave.svg" alt="">
         <div class=" pt-20   relative flex lg:flex-row flex-col-reverse lg:justify-between justify-center items-center w-10/12 mx-auto max-w-[1200px]">
             
@@ -486,7 +489,7 @@
             </div>
 
             <div class="flex flex-col items-center justify-center">
-                <div id="model" class="3d md:w-[380px] md:h-[400px] w-full sm:h-[300px] h-[250px]"></div>
+                <div id="model-normal" class="3d md:w-[380px] md:h-[400px] w-full sm:h-[300px] h-[250px]"></div>
                 <img class="-m-10 sm:w-96 w-56" src="./assets/icon/iora-shadow.svg" alt="">
             </div>
         </div>
@@ -717,9 +720,11 @@
     <script type="importmap-shim" src="./js/base/esm-maps.json"></script>
     <script type="module-shim">
         import Iora from './js/base/Iora.js';
+        import HaloIora from './js/base/halo-iora.js';
         window.Iora = Iora;
+        window.HaloIora = HaloIora;
 
-        var iora = new Iora({alpha:true, antialias:true, container:$("#model")});
+        var iora = new Iora({alpha:true, antialias:true, container:$("#model-normal")});
         iora.setPixelRatio(window.devicePixelRatio);
         window.iora = iora;
 
@@ -730,7 +735,15 @@
             var deg = 0;
             model.children[0].rotation.set(0, deg * Math.PI / 180, 0);
 
-         })
+         });
+
+        var halo_iora = new HaloIora({alpha:true, antialias:true, container:$("#model-halo")});
+        window.halo_iora = halo_iora;
+
+        halo_iora.scene.addEventListener('ready', function(){
+            halo_iora.camera.position.set(0, -180, 88);
+            halo_iora.camera.rotation.set(90 * Math.PI / 180, 0, 0);
+        });
     </script>
     
 </body>

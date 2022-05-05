@@ -79,7 +79,7 @@
 
 /* share */
 .share-button.active .text{
-    transition: all .3s ease;
-    transform: translateX(-100%);
+    transition: all .4s ease;
+    transform: translateX(-110%);
 }
 /* end share */
