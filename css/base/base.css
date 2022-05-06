@@ -168,3 +168,26 @@ nav ul li.active a {
     background: rgba(250, 250, 255, 0.849);
     backdrop-filter: blur(1rem);
 }
+
+.border-vc{
+    position: relative;
+    border: 1px solid transparent;
+    border-radius: 16px;
+    background:white;
+    background-clip: padding-box;
+}
+
+.border-vc::after{
+    position: absolute;
+    top: -1px; bottom: -1px;
+    left: -1px; right: -1px;
+    background: linear-gradient(90.35deg, #FFC0E2 7.53%, #B2B6FF 99.4%);
+    content: '';
+    z-index: -1;
+    border-radius: 16px;
+}
+
+.border-bg-vc{
+    border: 1px solid;
+    border-image-source: linear-gradient(90.35deg, #FFC0E2 7.53%, #B2B6FF 99.4%);
+}

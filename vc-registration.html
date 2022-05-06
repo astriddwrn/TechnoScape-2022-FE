@@ -36,7 +36,8 @@
         <link rel="stylesheet" href="./css/virtual-conference.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
         <link rel="stylesheet" href="./css/home.css">
-        <link rel="stylesheet" href="./css/dw.css">
+        <link rel="stylesheet" href="./css/vc-registration.css">
+
     
         <!-- javascript -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -45,29 +46,256 @@
     </head>
 
     <body>
-        <body class="bg-cBgGreenRegis">
-            <div class=" flex flex-col items-center justify-center min-h-screen relative ">
+        
+        <div class="text-cTextBlack relative">
+            <div class="popup-rundown w-screen h-screen fixed bg-cGray/50 z-50 hidden">
+                <div class="bg-cWhite absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-10/12 h-5/6 py-7 px-16" style="border-radius: 50px;">
+                    <div class="close-rundown absolute right-10 top-10 text-2xl">X</div>
+                    <div class="font-PJSExtraBold title-colored text-6xl text-center mb-5">Rundown</div>
+                    
+                    <div class="rundown-wrapper h-5/6 overflow-y-scroll w-full px-10">
+                        <!-- day 1 -->
+                        <div class="border-2 border-cLighterGray rounded-xl py-3 px-10 mb-10">
+                            <div class="title-colored text-4xl text-center font-PJSExtraBold">Day 1</div>
+                            <div class="text-center mt-3 mb-10 text-lg font-PJSSemiBold">Friday, 3 June 2022</div>
+                            <div class="relative">
+                                <div class="h-full bg-cBgVc absolute top-0 left-3 z-0" style="width: 1px;"></div>
+                                <div class="day-wrapper mb-10">
+                                    <div class="flex flex-row w-full">
+                                        <div class="w-1/12">
+                                            <div style="background: linear-gradient(180.07deg, #FFC0E2 0.06%, #B2B6FF 1353.29%);" class="w-7 h-7 rounded-full"></div>
+                                        </div>
+                                        <div class="w-3/12">
+                                            <div class="border-vc py-2 text-center w-36">09.00 - 11.00</div>
+                                        </div>
+                                        <div class="w-7/12">
+                                            <div class="font-PJSBold text-lg">Design Thinking: Does your design solve problems?</div>
+                                            <div class="text-sm">Rose Bush</div>
+                                            <div class="text-sm">UX Researcher at ABC Company</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="day-wrapper mb-10">
+                                    <div class="flex flex-row w-full">
+                                        <div class="w-1/12">
+                                            <div style="background: linear-gradient(180deg, #FFC0E2 -630.65%, #B2B6FF 724.19%);" class="w-7 h-7 rounded-full"></div>
+                                        </div>
+                                        <div class="w-3/12">
+                                            <div class="border-vc py-2 text-center w-36">09.00 - 11.00</div>
+                                        </div>
+                                        <div class="w-7/12">
+                                            <div class="font-PJSBold text-lg">Design Thinking: Does your design solve problems?</div>
+                                            <div class="text-sm">Rose Bush</div>
+                                            <div class="text-sm">UX Researcher at ABC Company</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="day-wrapper mb-10 relative z-10">
+                                    <div class="flex flex-row w-full">
+                                        <div class="w-1/12 bg-cWhite">
+                                            <div style="background: linear-gradient(179.93deg, #FFC0E2 -1246.84%, #B2B6FF 99.94%);" class="w-7 h-7 rounded-full"></div>
+                                        </div>
+                                        <div class="w-3/12">
+                                            <div class="border-vc py-2 text-center w-36">09.00 - 11.00</div>
+                                        </div>
+                                        <div class="w-7/12">
+                                            <div class="font-PJSBold text-lg">Design Thinking: Does your design solve problems?</div>
+                                            <div class="text-sm">Rose Bush</div>
+                                            <div class="text-sm">UX Researcher at ABC Company</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>    
+                        </div>
+                        <!-- day 2 -->
+                        <div class="border-2 border-cLighterGray rounded-xl py-3 px-10 mb-10">
+                            <div class="title-colored text-4xl text-center font-PJSExtraBold">Day 2</div>
+                            <div class="text-center mt-3 mb-10 text-lg font-PJSSemiBold">Friday, 3 June 2022</div>
+                            <div class="relative">
+                                <div class="h-full bg-cBgVc absolute top-0 left-3 z-0" style="width: 1px;"></div>
+                                <div class="day-wrapper mb-10">
+                                    <div class="flex flex-row w-full">
+                                        <div class="w-1/12">
+                                            <div style="background: linear-gradient(180.07deg, #FFC0E2 0.06%, #B2B6FF 1353.29%);" class="w-7 h-7 rounded-full"></div>
+                                        </div>
+                                        <div class="w-3/12">
+                                            <div class="border-vc py-2 text-center w-36">09.00 - 11.00</div>
+                                        </div>
+                                        <div class="w-7/12">
+                                            <div class="font-PJSBold text-lg">Design Thinking: Does your design solve problems?</div>
+                                            <div class="text-sm">Rose Bush</div>
+                                            <div class="text-sm">UX Researcher at ABC Company</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="day-wrapper mb-10">
+                                    <div class="flex flex-row w-full">
+                                        <div class="w-1/12">
+                                            <div style="background: linear-gradient(180deg, #FFC0E2 -630.65%, #B2B6FF 724.19%);" class="w-7 h-7 rounded-full"></div>
+                                        </div>
+                                        <div class="w-3/12">
+                                            <div class="border-vc py-2 text-center w-36">09.00 - 11.00</div>
+                                        </div>
+                                        <div class="w-7/12">
+                                            <div class="font-PJSBold text-lg">Design Thinking: Does your design solve problems?</div>
+                                            <div class="text-sm">Rose Bush</div>
+                                            <div class="text-sm">UX Researcher at ABC Company</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="day-wrapper mb-10 relative z-10">
+                                    <div class="flex flex-row w-full">
+                                        <div class="w-1/12 bg-cWhite">
+                                            <div style="background: linear-gradient(179.93deg, #FFC0E2 -1246.84%, #B2B6FF 99.94%);" class="w-7 h-7 rounded-full"></div>
+                                        </div>
+                                        <div class="w-3/12">
+                                            <div class="border-vc py-2 text-center w-36">09.00 - 11.00</div>
+                                        </div>
+                                        <div class="w-7/12">
+                                            <div class="font-PJSBold text-lg">Design Thinking: Does your design solve problems?</div>
+                                            <div class="text-sm">Rose Bush</div>
+                                            <div class="text-sm">UX Researcher at ABC Company</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center justify-center min-h-screen relative  bg-cBgwhite">
         
                 <!-- main-container -->
                 <div class="w-full overflow-hidden">
-                
-                    <div class="w-4/12 fixed left flex flex-col items-center bg-cBgVc min-h-screen rounded-r-[2.5rem] top-0">
-                        <div class="my-28 w-full flex justify-center" >
-                            <a href="http://technoscape.id/" > <img  src="./assets/logo/tslogo-white.svg" alt="TechnoScape 2022"></a>
+                    <!-- content left -->
+                    <div class="z-50 lg:w-4/12 lg:h-screen w-screen lg:fixed left-0 lg:py-0 py-5 flex flex-col items-center bg-cBgVc  lg:rounded-r-[2.5rem] rounded-b-[2.5rem] top-0">
+                        <div class="lg:my-28 lg:w-56 w-48 w-full flex justify-center" >
+                            <a href="http://technoscape.id/"><img src="./assets/logo/tslogo-white.svg" alt="TechnoScape 2022"></a>
                         </div>
-        
-                        <div  id="model" class="w-72 h-72 md:w-[30rem] md:h-[35rem] lg:w-[22rem] lg:h-[22rem]"></div>
+                        <div  id="model" class=" xl:h-72 lg:h-64 w-full h-36"></div>
                         <!-- <img  class="w-80" src="./assets/login/iora 3.png" alt=""> -->
                     </div>
-    
-                   
                    <!-- content right -->
-                   <div class="ml-96 px-8 overflow-hidden flex flex-col justify-center items-center">
-                        <div class="title-colored text-transparent bg-cColorTittle text-6xl font-PJSExtraBold text-center mb-5 py-4 tracking-wider">
-                            Virtual Coonference <br> Ticket
-                        </div>
+                   <div class="content-right bg-cBgwhite overflow-hidden flex flex-col justify-center items-center lg:mb-0 mb-10" >
+                        <div class="title-colored text-transparent bg-cColorTittle lg:text-6xl md:text-5xl sm:text-4xl text-3xl font-PJSExtraBold text-center lg:my-4 my-7 tracking-wider">Virtual Conference <br> Ticket</div>
                         <form action="">
-                            <div class=" bg-cBgwhite flex flex-col items-center justify-between px-14  w-[41.75rem] h-[30rem] rounded-[2.5rem] drop-shadow-md shadow-bsVCRegist m-5 form-card  " data-form="1" >  
+                            <!-- WHITE CONTAINER -->
+                            <div class="white-container bg-cWhite flex flex-col items-center md:w-[40rem] sm:w-[33rem] lg:h-[34rem] min-h-[34rem] rounded-[2.5rem] shadow-bsVCRegist  form-card  " data-form="1" >  
+                                <!-- steps -->
+                                <div class="steps-container w-11/12 sm:text-base text-sm mx-auto bg-cBgVc rounded-xl flex flex-row justify-center mt-7 h-10  overflow-hidden mb-10" style="border: 1.5px solid transparent;">
+                                    <div class="step w-4/12 flex justify-center items-center relative z-30 current">
+                                        <div class="absolute z-30 text">Step 1</div> 
+                                        <div class="white-cover w-11/12 bg-cWhite absolute z-0 h-full left-0"></div>
+                                        <div class="white-cover triangle-right w-10 h-10 bg-cWhite rotate-45 z-0 -right-1 absolute"></div>
+                                    </div>
+                                    <div class="step w-4/12 flex justify-center items-center relative z-20">
+                                        <div class="absolute z-30 text">Step 2</div> 
+                                        <div class="white-cover w-10 h-10 bg-cWhite rotate-45 z-10 left-0 top-0 -translate-y-1/2 absolute"></div>
+                                        <div class="white-cover w-10 h-10 bg-cWhite rotate-45 z-10 left-0 bottom-0 translate-y-1/2 absolute"></div>
+                                        <div class="white-cover w-10/12 bg-cWhite absolute z-0 h-full left-3"></div>
+                                        <div class="white-cover triangle-right w-10 h-10 bg-cWhite rotate-45 z-0 -right-1 absolute"></div>
+                                    </div>
+                                    <div class="step w-4/12 flex justify-center items-center relative z-10">
+                                        <div class="absolute z-30 text">Step 3</div> 
+                                        <div class="white-cover w-10 h-10 bg-cWhite rotate-45 z-10 left-0 top-0 -translate-y-1/2 absolute"></div>
+                                        <div class="white-cover w-10 h-10 bg-cWhite rotate-45 z-10 left-0 bottom-0 translate-y-1/2 absolute"></div>
+                                        <div class="white-cover w-11/12 bg-cWhite absolute z-0 h-full left-3"></div>
+                                        <div class="white-cover w-10 h-10 bg-cWhite rotate-45 z-0 right-0 absolute -right-2"></div>
+                                    </div>
+                                </div>
+                                <div class="main-wrapper w-full relative">
+                                    <!-- Event Pass -->
+                                    <div class="absolute wrapper-section event-pass sm:w-10/12 w-11/12 transform left-1/2 -translate-x-1/2">
+                                        <div class="ticket-container border-vc flex flex-row items-center w-full h-28">
+                                            <div class="w-4/12 sm:px-5 px-3 text-center">
+                                                <div class="title-colored sm:text-xl text-lg font-PJSBold mb-2">Early Bird</div>
+                                                <div class="font-PJSSemiBold">FREE</div>
+                                            </div>
+                                            <div style="width: 1px;" class="h-full bg-cBgVc"></div>
+                                            <div class="w-8/12 sm:px-5 px-3 font-PJSSemiBold sm:text-base text-sm">
+                                                <div class="mb-1">All Event Pass</div>
+                                                <div>Registration Period: May 21 - 23, 2022</div>
+                                            </div>
+                                        </div>
+                                        <!-- rundown button -->
+                                        <div style="color: #B2B6FF;" class="sm:text-lg text-base font-PJSSemiBold w-full text-center mt-10"><span class="see-rundown cursor-pointer">Click here to see the rundown!</span></div>
+                                        <!-- next button -->
+                                        <div class="next-btn bg-cBgVc sm:text-xl text-lg text-cWhite font-PJSSemiBold w-36 text-center mx-auto sm:py-3 py-2 rounded-xl hover:shadow-bsVCMain hover:shadow-lg sm:mt-16 mt-20">Checkout</div>
+                                    </div>
+                                    <!-- requirement -->
+                                    <div class="relative wrapper-section requirements w-10/12 transform left-1/2 -translate-x-1/2 hidden">
+                                        <!-- free -->
+                                        <div class="font-PJSSemiBold text-xl mb-5 text-center hidden">Free Ticket Requirement</div>
+                                        <!-- pay -->
+                                        <div class="font-PJSSemiBold text-xl mb-5 text-center">Payment Method Instruction</div>
+                                        <div class="relative">
+                                            <!-- free -->
+                                            <ul style="list-style-position:inside;" class="free list-disc lg:h-52 w-full overflow-x-clip lg:overflow-y-scroll hidden">
+                                                <li style="text-indent:-20px; padding-left:20px" class="pr-3 mb-3 text-sm">Follow Instagram @technoscapebncc and @bnccbinus.</li>
+                                                <li style="text-indent:-20px; padding-left:20px" class="pr-3 mb-3 text-sm">Subscribe YouTube Bina Nusantara Computer Club.                                            </li>
+                                                <li style="text-indent:-20px; padding-left:20px" class="pr-3 mb-3 text-sm">Diperlukan partisipasi di challenge TechnoScape Twibbon 2021. Harap melihat post Instagram @technoscapebncc tentang TechnoScape Twibbon Challenge 2021 untuk informasi lebih lanjut.</li>
+                                                <li style="text-indent:-20px; padding-left:20px" class="pr-3 mb-3 text-sm">Peserta mengunggah file bukti dengan batas maksimum 5 MB dalam bentuk .JPG, .JPEG, .PNG, atau .PDF melalui button di bawah.</li>
+                                                <li style="text-indent:-20px; padding-left:20px" class="pr-3 mb-3 text-sm">Calon peserta yang telah mengupload bukti akan memiliki status Pending dan akan diverifikasi oleh panitia dalam rentang waktu 24 jam. Apabila calon peserta belum diverifikasi dalam rentang waktu tersebut, calon peserta  dapat menghubungi panitia melalui Contact Person.</li>
+                                                <li style="text-indent:-20px; padding-left:20px" class="pr-3 mb-3 text-sm">Pendaftar yang telah terverifikasi akan secara resmi terdaftar sebagai peserta Virtual Conference.</li>
+                                                <li style="text-indent:-20px; padding-left:20px" class="pr-3 mb-3 text-sm">Setelah terverifikasi, peserta dapat melihat link Zoom Virtual Conference di Dashboard - Schedule (link zoom akan keluar saat H-1 Virtual Conference).</li>
+                                            </ul>
+                                            <!-- pay -->
+                                            <ul style="list-style-position:inside;" class="free list-disc lg:h-72 w-full overflow-x-clip lg:overflow-y-scroll ">
+                                                <li style="text-indent:-20px; padding-left:20px" class="pr-3 mb-3 text-sm">Periode Pembayaran : 19 Mei hingga 02 Juni 2022 Pukul 23.59 WIB</li>
+                                                <li style="text-indent:-20px; padding-left:20px" class="pr-3 mb-3 text-sm">Lakukan pembayaran biaya pendaftaran melalui QR code atau ke nomor rekening berikut:</li>
+                                                <div class="flex sm:flex-row flex-col gap-5 items-center ml-3 mb-3">
+                                                    <div class="flex flex-col items-center border-vc p-5">
+                                                        <img class="w-36" src="./assets/vc-registrations/requirements-qr-payment.svg" alt="">
+                                                        <div class="font-PJSSemiBold">Scan for Account Code</div>
+                                                    </div>
+                                                    <div class="flex-col flex justify-around h-full sm:text-left text-center">
+                                                        <div class="title-colored text-xl font-PJSSemiBold mb-3">Bank Central Asia (BCA)</div>
+                                                        <div class="mb-3">Account Number</div>
+                                                        <div class="font-PJSSemiBold mb-3">5215169771</div>
+                                                        <div class="mb-3">Account's Holder Name</div>
+                                                        <div class="font-PJSSemiBold mb-3">BERTRAND</div>
+                                                    </div>
+                                                </div>
+                                                <li style="text-indent:-20px; padding-left:20px" class="pr-3 mb-3 text-sm">Peserta mengunggah file bukti pembayaran dengan batas maksimum 5 mb dalam bentuk .JPG, .JPEG, .PNG, atau .PDF.</li>
+                                                <li style="text-indent:-20px; padding-left:20px" class="pr-3 mb-3 text-sm">Calon peserta yang telah mengupload bukti pembayaran akan memiliki status pending dan akan diverifikasi oleh panitia dalam rentang waktu 24 jam. Apabila calon peserta belum diverifikasi dalam rentang waktu tersebut, calon peserta dapat menghubungi panitia melalui contact person.</li>
+                                                <li style="text-indent:-20px; padding-left:20px" class="pr-3 mb-3 text-sm">Pendaftar yang telah diverifikasi  secara resmi telah terdaftar sebagai peserta Virtual Conference.</li>
+                                                <li style="text-indent:-20px; padding-left:20px" class="pr-3 mb-3 text-sm">Setelah itu, peserta dapat melihat link Zoom Virtual Conference di Dashboard - Schedule pada H-1 Virtual Conference.</li>
+                                            </ul>
+                                            <!-- <div class="fading-cover absolute h-36"></div> -->
+                                        </div>
+                                        
+                                        <!-- next button -->
+                                        <div class="button-wrapper flex w-full justify-around items-center sm:flex-row flex-col sm:mt-7 mt-10 lg:mb-0 mb-10">
+                                            <div class="prev-btn border-vc sm:text-xl text-lg font-PJSSemiBold sm:w-36 min-w-36 w-8/12 text-center mx-auto sm:mb-0 mb-3 sm:py-3 py-2 hover:shadow-bsVCMain hover:shadow-lg"><span class="title-colored">Back</span></div>
+                                            <div class="next-btn bg-cBgVc sm:text-xl text-lg text-cWhite font-PJSSemiBold sm:w-36 min-w-36 w-8/12 text-center mx-auto sm:py-3 py-2 rounded-xl hover:shadow-bsVCMain hover:shadow-lg">Next</div>
+                                        </div>
+                                    </div>
+                                    <!-- proof -->
+                                    <div class="relative wrapper-section proof w-10/12 transform left-1/2 -translate-x-1/2 hidden">
+                                        <div class="font-PJSSemiBold text-xl mb-5 text-center">Participation Proof</div>
+                                        <div class="w-full h-72 rounded-lg py-3 flex flex-col justify-around items-center" style="border: 1px solid rgba(128, 128, 128, 0.3);">
+                                            <div class="title-colored font-PJSSemiBold text-2xl">Upload your file</div>
+                                            <div class="font-PJSSemiBold text-sm">File should be in .PDF format</div>
+                                            <img class="w-16" src="./assets/vc-registrations/proof-file-icon.svg" alt="">
+                                            <div class="border-vc sm:text-lg text-base font-PJSSemiBold w-36 text-center mx-auto sm:py-2 py-1 hover:shadow-bsVCMain hover:shadow-lg"><span class="title-colored">Choose File</span></div>
+                                            <div class="font-PJSSemiBold text-xs">or drag & drop your file here</div>
+                                        </div>
+                                        <div class="button-wrapper flex w-full justify-around items-center sm:flex-row flex-col sm:mt-7 mt-10 lg:mb-0 mb-10">
+                                            <div class="prev-btn border-vc sm:text-xl text-lg font-PJSSemiBold sm:w-36 min-w-36 w-8/12 text-center mx-auto sm:mb-0 mb-3 sm:py-3 py-2 hover:shadow-bsVCMain hover:shadow-lg"><span class="title-colored">Back</span></div>
+                                            <div class="next-btn bg-cBgVc sm:text-xl text-lg text-cWhite font-PJSSemiBold sm:w-36 min-w-36 w-8/12 text-center mx-auto sm:py-3 py-2 rounded-xl hover:shadow-bsVCMain hover:shadow-lg">Next</div>
+                                        </div>
+                                    </div>
+                                    <!-- thank you -->
+                                    <div class="absolute wrapper-section thank-you w-10/12 transform left-1/2 -translate-x-1/2 flex flex-col items-center hidden">
+                                        <div class="title-colored sm:text-3xl text-xl font-PJSBold text-center mb-4">Thank you for your participation!</div>
+                                        <div class="sm:text-lg text-sm text-center">Your registration has been accepted<br>and now is being processed!</div>
+                                        <img class="sm:w-64 w-52" src="./assets/vc-registrations/thankyou-hourglass.svg" alt="">
+                                        <div class="border-vc sm:text-xl text-base font-PJSSemiBold sm:w-68 w-10/12 text-center mx-auto sm:mb-0 mb-3 sm:py-3 py-2 hover:shadow-bsVCMain hover:shadow-lg"><span class="title-colored">Go to User Dashboard</span></div>
+                                    </div>
+                                </div>
                             </div>
                         </form>
                     </div>

@@ -1,0 +1,52 @@
+.popup-rundown {
+    opacity: 0;
+}
+
+.steps-container{
+    color: rgba(128, 128, 128, 0.5);
+}
+
+.steps-container .current .triangle-right{
+    right: 0 !important;
+}
+.steps-container .current .text{
+    background: linear-gradient(90.35deg, #FFC0E2 7.53%, #B2B6FF 99.4%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight:700;
+}
+
+.steps-container .before .white-cover{
+    opacity: 0;
+    color: #F5F5F6 !important;
+}
+.steps-container .before .text{
+    color: #F5F5F6 !important;
+}
+
+.steps-container .step{
+    transition: all .3s !important;
+}
+
+.requirements .fading-cover{
+    background: linear-gradient(180deg, #ae202000 72.22%, #FAFAFF 99.78%);
+    opacity: 0.8;
+    width:100%;
+    bottom:0;
+}
+
+@media (min-width: 1024px){
+    .content-right{
+        margin-left: 33vw;
+    }
+
+}
+
+@media (max-width: 640px){
+    .white-container{
+        width: 90vw;
+    }
+
+}
+
