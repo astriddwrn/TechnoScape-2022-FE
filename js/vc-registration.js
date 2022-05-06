@@ -40,4 +40,19 @@ $(document).ready(function() {
         $('.step').eq(index-1).removeClass('before');
         $('.step').eq(index-1).addClass('current');
     })
+
+    $('#input-proof').change(function(){
+        if($('input[type=file]').val()){
+            $('.input-wrapper').addClass('hidden');
+            var filename = $('input[type=file]').val().replace(/C:\\fakepath\\/i, '');
+            console.log(filename);
+            $('.file-name').html(filename);
+            $('.inputed-wrapper').removeClass('hidden');
+        }
+    })
+    $('.remove-file').click(function() {
+        $('.input-wrapper').removeClass('hidden');
+        $('.inputed-wrapper').addClass('hidden');
+        $('input[type=file]').val('');
+    })
 });
