@@ -37,6 +37,7 @@ module.exports = {
             'bsBtn' : '9px 11px 29px 7px rgba(104, 149, 235, 0.26)',
             'bsVCCard': '0px 5px 20px rgba(255, 192, 226, 0.55);',
             'bsVCMain': '4px 5px 20px rgba(103, 103, 103, 0.15)',
+            'bsVCColored': '0px 5px 10px rgba(217, 187, 241, 0.7);',
             'bsBtnBlue': '0px 2px 20px 0px #6997EC96;',
             'bsVCRegist' : '1px 1px 50px rgba(104, 108, 169, 0.1);',
         },

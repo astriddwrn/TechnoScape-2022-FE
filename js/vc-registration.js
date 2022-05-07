@@ -15,7 +15,11 @@ $(document).ready(function() {
     $('.wrapper-section.hidden').animate({opacity: 0});
 
     $('.next-btn').click(function(){
-        // $(this).parents('.wrapper-section').addClass('hidden');
+        if($(this).hasClass('submit-btn') && !$('input[type=file]').val()){
+            console.log($(this).eq())
+            alert('no file');
+            return;
+        }
         $(this).parents('.wrapper-section').next().removeClass('hidden');
         $(this).parents('.wrapper-section').animate({opacity: 0},
             function(){
@@ -54,5 +58,5 @@ $(document).ready(function() {
         $('.input-wrapper').removeClass('hidden');
         $('.inputed-wrapper').addClass('hidden');
         $('input[type=file]').val('');
-    })
+    });
 });

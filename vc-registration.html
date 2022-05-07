@@ -50,7 +50,7 @@
         <div class="text-cTextBlack relative">
             <div class="popup-rundown w-screen h-screen fixed bg-cGray/50 z-50 hidden">
                 <div class="bg-cWhite absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 lg:w-10/12 w-11/12 h-5/6 py-7 lg:px-16 md:px-5" style="border-radius: 50px;">
-                    <div class="close-rundown absolute right-10 top-10 text-2xl">X</div>
+                    <img class="close-rundown absolute sm:right-10 right-8 top-8 text-2xl cursor-pointer sm:w-5 w-5" src="./assets/vc-registrations/close-icon.svg">
                     <div class="font-PJSExtraBold title-colored lg:text-6xl md:text-5xl text-4xl text-center mb-5">Rundown</div>
                     
                     <div class="rundown-wrapper h-5/6 overflow-y-scroll w-full sm:px-10 px-5">
@@ -168,18 +168,18 @@
                 <!-- main-container -->
                 <div class="w-full overflow-hidden">
                     <!-- content left -->
-                    <div class="z-40 lg:w-4/12 lg:h-screen w-screen lg:fixed left-0 lg:py-0 py-5 flex flex-col items-center bg-cBgVc lg:rounded-bl-none lg:rounded-r-[2.5rem]  rounded-b-[2.5rem] top-0">
-                        <div class="lg:my-28 lg:w-56 w-48 w-full flex justify-center" >
+                    <div class="z-40 lg:w-4/12 lg:h-screen w-screen lg:fixed left-0 lg:pb-44 py-5 flex flex-col items-center justify-around bg-cBgVc lg:rounded-bl-none lg:rounded-r-[2.5rem] rounded-b-[2.5rem] top-0">
+                        <div class="lg:w-56 w-48 w-full flex justify-center" >
                             <a href="http://technoscape.id/"><img src="./assets/logo/tslogo-white.svg" alt="TechnoScape 2022"></a>
                         </div>
-                        <div  id="model" class=" xl:h-72 lg:h-64 w-full h-36"></div>
+                        <div id="model" class=" xl:h-96 lg:h-72 w-full h-36"></div>
                     </div>
                    <!-- content right -->
                    <div class="content-right bg-cBgwhite overflow-hidden flex flex-col justify-center items-center lg:mb-0 mb-10" >
                         <div class="title-colored text-transparent bg-cColorTittle lg:text-6xl md:text-5xl sm:text-4xl text-3xl font-PJSExtraBold text-center lg:my-4 my-7 tracking-wider">Virtual Conference <br> Ticket</div>
                         <form action="">
                             <!-- WHITE CONTAINER -->
-                            <div class="white-container bg-cWhite flex flex-col items-center md:w-[40rem] sm:w-[33rem] lg:h-[34rem] min-h-[34rem] rounded-[2.5rem] shadow-bsVCRegist  form-card  " data-form="1" >  
+                            <div class="white-container bg-cWhite flex flex-col items-center md:w-[40rem] sm:w-[33rem] lg:h-[34rem] min-h-[34rem] rounded-[2.5rem] shadow-bsVCRegist  form-card mb-5" data-form="1" >  
                                 <!-- steps -->
                                 <div class="steps-container w-11/12 sm:text-base text-sm mx-auto bg-cBgVc rounded-xl flex flex-row justify-center mt-7 h-10  overflow-hidden mb-10" style="border: 1.5px solid transparent;">
                                     <div class="step w-4/12 flex justify-center items-center relative z-30 current">
@@ -204,8 +204,9 @@
                                 </div>
                                 <div class="main-wrapper w-full relative">
                                     <!-- Event Pass -->
-                                    <div class="absolute wrapper-section event-pass sm:w-10/12 w-11/12 transform left-1/2 -translate-x-1/2 hidden">
-                                        <div class="ticket-container border-vc flex flex-row items-center w-full h-28">
+                                    <div class="absolute wrapper-section event-pass sm:w-10/12 w-11/12 transform left-1/2 -translate-x-1/2">
+                                        <!-- free -->
+                                        <div class="ticket-container border-vc flex flex-row items-center w-full h-28 hidden">
                                             <div class="w-4/12 sm:px-5 px-3 text-center">
                                                 <div class="title-colored sm:text-xl text-lg font-PJSBold mb-2">Early Bird</div>
                                                 <div class="font-PJSSemiBold">FREE</div>
@@ -216,10 +217,22 @@
                                                 <div>Registration Period: May 21 - 23, 2022</div>
                                             </div>
                                         </div>
+                                        <!-- pay -->
+                                        <div class="ticket-container border-vc flex flex-row items-center w-full h-28">
+                                            <div class="w-4/12 sm:px-5 px-3 text-center">
+                                                <div class="title-colored sm:text-xl text-lg font-PJSBold mb-2">General</div>
+                                                <div class="font-PJSSemiBold">Rp 30.000</div>
+                                            </div>
+                                            <div style="width: 1px;" class="h-full bg-cBgVc"></div>
+                                            <div class="w-8/12 sm:px-5 px-3 font-PJSSemiBold sm:text-base text-sm">
+                                                <div class="mb-1">All Event Pass</div>
+                                                <div>Registration Period: May 21 - 23, 2022</div>
+                                            </div>
+                                        </div>
                                         <!-- rundown button -->
                                         <div style="color: #B2B6FF;" class="sm:text-lg text-base font-PJSSemiBold w-full text-center mt-10"><span class="see-rundown cursor-pointer">Click here to see the rundown!</span></div>
                                         <!-- next button -->
-                                        <div class="next-btn cursor-pointer bg-cBgVc sm:text-xl text-lg text-cWhite font-PJSSemiBold w-36 text-center mx-auto sm:py-3 py-2 rounded-xl hover:shadow-bsVCMain hover:shadow-lg sm:mt-16 mt-20">Checkout</div>
+                                        <div class="next-btn cursor-pointer bg-cBgVc sm:text-xl text-lg text-cWhite font-PJSSemiBold w-36 text-center mx-auto sm:py-3 py-2 rounded-xl hover:shadow-bsVCColored duration-300 transition ease-in-out hover:shadow-lg sm:mt-16 mt-20">Checkout</div>
                                     </div>
                                     <!-- requirement -->
                                     <div class="lg:absolute relative wrapper-section requirements w-10/12 transform left-1/2 -translate-x-1/2 hidden">
@@ -265,35 +278,35 @@
                                         
                                         <!-- next button -->
                                         <div class="button-wrapper flex w-full justify-around items-center sm:flex-row flex-col sm:mt-7 mt-10 lg:mb-0 mb-10">
-                                            <div class="prev-btn cursor-pointer border-vc sm:text-xl text-lg font-PJSSemiBold sm:w-36 min-w-36 w-8/12 text-center mx-auto sm:mb-0 mb-3 sm:py-3 py-2 hover:shadow-bsVCMain hover:shadow-lg"><span class="title-colored">Back</span></div>
-                                            <div class="next-btn cursor-pointer bg-cBgVc sm:text-xl text-lg text-cWhite font-PJSSemiBold sm:w-36 min-w-36 w-8/12 text-center mx-auto sm:py-3 py-2 rounded-xl hover:shadow-bsVCMain hover:shadow-lg">Next</div>
+                                            <div class="prev-btn cursor-pointer border-vc sm:text-xl text-lg font-PJSSemiBold sm:w-36 min-w-36 w-8/12 text-center mx-auto sm:mb-0 mb-3 sm:py-3 py-2 hover:shadow-bsVCColored duration-300 transition ease-in-out hover:shadow-lg"><span class="title-colored">Back</span></div>
+                                            <div class="next-btn cursor-pointer bg-cBgVc sm:text-xl text-lg text-cWhite font-PJSSemiBold sm:w-36 min-w-36 w-8/12 text-center mx-auto sm:py-3 py-2 rounded-xl hover:shadow-bsVCColored duration-300 transition ease-in-out hover:shadow-lg">Next</div>
                                         </div>
                                     </div>
                                     <!-- proof -->
-                                    <div class="lg:absolute relative wrapper-section proof w-10/12 transform left-1/2 -translate-x-1/2">
+                                    <div class="lg:absolute relative wrapper-section proof w-10/12 transform left-1/2 -translate-x-1/2 hidden">
                                         <div class="font-PJSSemiBold text-xl mb-5 text-center">Participation Proof</div>
                                         <div class="w-full h-72 rounded-lg py-3 " style="border: 1px solid rgba(128, 128, 128, 0.3);">
                                             <div class="input-wrapper h-full flex flex-col justify-around items-center">
                                                 <div class="title-colored font-PJSSemiBold text-2xl">Upload your file</div>
                                                 <div class="font-PJSSemiBold text-sm">File should be in .PDF format</div>
                                                 <img class="w-16" src="./assets/vc-registrations/proof-file-icon.svg" alt="">
-                                                <div class="cursor-pointer border-vc sm:text-lg text-base font-PJSSemiBold w-36 text-center mx-auto sm:py-2 py-1 hover:shadow-bsVCMain hover:shadow-lg">
+                                                <div class="cursor-pointer border-vc sm:text-lg text-base font-PJSSemiBold w-36 text-center mx-auto sm:py-2 py-1 hover:shadow-bsVCColored duration-300 transition ease-in-out hover:shadow-lg">
                                                     <span class="title-colored">Choose File</span>
-                                                    <input class="absolute right-0 top-0 cursor-pointer w-36 opacity-0" style="height: 46px; cursor:pointer;" id="input-proof" type="file">
+                                                    <input class="absolute right-0 top-0 cursor-pointer w-36 opacity-0" style="height: 46px; cursor:pointer;" id="input-proof" type="file" accept="application/pdf, image/*">>
                                                 </div>
                                                 <div class="font-PJSSemiBold text-xs">or drag & drop your file here</div>
                                             </div>
                                             <div class="inputed-wrapper h-5/6 flex flex-col justify-center items-center hidden">
                                                 <div class="title-colored font-PJSSemiBold text-2xl mb-10">File has been uploaded.</div>
                                                 <div class="flex items-center justify-around w-64 h-24 shadow-bsVCMain rounded-xl mx-auto">
-                                                    <div class="font-PJSSemiBold text-lg  file-name" style="color: rgba(103, 103, 103, 0.6);">File name</div>
-                                                    <div class="remove-file cursor-pointer">X</div>
+                                                    <div class="font-PJSSemiBold text-lg  file-name max-w-[200px] overflow-hidden" style="color: rgba(103, 103, 103, 0.6);">File name</div>
+                                                    <img class="remove-file cursor-pointer w-5" src="./assets/vc-registrations/close-icon.svg">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="button-wrapper flex w-full justify-around items-center sm:flex-row flex-col sm:mt-7 mt-10 lg:mb-0 mb-10">
-                                            <div class="prev-btn cursor-pointer border-vc sm:text-xl text-lg font-PJSSemiBold sm:w-36 min-w-36 w-8/12 text-center mx-auto sm:mb-0 mb-3 sm:py-3 py-2 hover:shadow-bsVCMain hover:shadow-lg"><span class="title-colored">Back</span></div>
-                                            <div class="next-btn cursor-pointer bg-cBgVc sm:text-xl text-lg text-cWhite font-PJSSemiBold sm:w-36 min-w-36 w-8/12 text-center mx-auto sm:py-3 py-2 rounded-xl hover:shadow-bsVCMain hover:shadow-lg">Next</div>
+                                            <div class="prev-btn cursor-pointer border-vc sm:text-xl text-lg font-PJSSemiBold sm:w-36 min-w-36 w-8/12 text-center mx-auto sm:mb-0 mb-3 sm:py-3 py-2 hover:shadow-bsVCColored duration-300 transition ease-in-out hover:shadow-lg"><span class="title-colored">Back</span></div>
+                                            <div class="next-btn submit-btn cursor-pointer bg-cBgVc sm:text-xl text-lg text-cWhite font-PJSSemiBold sm:w-36 min-w-36 w-8/12 text-center mx-auto sm:py-3 py-2 rounded-xl hover:shadow-bsVCColored duration-300 transition ease-in-out hover:shadow-lg">Next</div>
                                         </div>
                                     </div>
                                     <!-- thank you -->
@@ -301,7 +314,7 @@
                                         <div class="title-colored sm:text-3xl text-xl font-PJSBold text-center mb-4">Thank you for your participation!</div>
                                         <div class="sm:text-lg text-sm text-center">Your registration has been accepted<br>and now is being processed!</div>
                                         <img class="sm:w-64 w-52" src="./assets/vc-registrations/thankyou-hourglass.svg" alt="">
-                                        <div class="border-vc cursor-pointer sm:text-xl text-base font-PJSSemiBold sm:w-68 w-10/12 text-center mx-auto sm:mb-0 mb-3 sm:py-3 py-2 hover:shadow-bsVCMain hover:shadow-lg"><span class="title-colored">Go to User Dashboard</span></div>
+                                        <div class="border-vc cursor-pointer sm:text-xl text-base font-PJSSemiBold sm:w-68 w-10/12 text-center mx-auto sm:mb-0 mb-3 sm:py-3 py-2 hover:shadow-bsVCColored duration-300 transition ease-in-out hover:shadow-lg"><span class="title-colored">Go to User Dashboard</span></div>
                                     </div>
                                 </div>
                             </div>
