@@ -11,14 +11,41 @@ $(document).ready(function() {
             });
     })
 
-    
     $('.wrapper-section.hidden').animate({opacity: 0});
+
+    $('.ticket-container').click(function(){
+        $(this).children().children("input[type=radio]").prop('checked', true);
+        if((this).hasClass('free-ticket-container')){
+            $('.free-title').removeClass('hidden');
+            $('.free-requirements').removeClass('hidden');
+            $('.paid-title').addClass('hidden');
+            $('.paid-requirements').addClass('hidden');
+        }else{
+            $('.free-title').addClass('hidden');
+            $('.free-requirements').addClass('hidden');
+            $('.paid-title').removeClass('hidden');
+            $('.paid-requirements').removeClass('hidden');
+        }
+    });
 
     $('.next-btn').click(function(){
         if($(this).hasClass('submit-btn') && !$('input[type=file]').val()){
             console.log($(this).eq())
             alert('no file');
             return;
+        }
+        if($(this).hasClass('checkout-btn')){
+            if($('#ticket-free').is(':checked')){
+                $('.free-title').removeClass('hidden');
+                $('.free-requirements').removeClass('hidden');
+                $('.paid-title').addClass('hidden');
+                $('.paid-requirements').addClass('hidden');
+            }else{
+                $('.free-title').addClass('hidden');
+                $('.free-requirements').addClass('hidden');
+                $('.paid-title').removeClass('hidden');
+                $('.paid-requirements').removeClass('hidden');
+            }
         }
         $(this).parents('.wrapper-section').next().removeClass('hidden');
         $(this).parents('.wrapper-section').animate({opacity: 0},
